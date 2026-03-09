@@ -1,0 +1,127 @@
+#upload_resume {
+  margin-top: 50px;
+  .upload-resume-card {
+    background: #ffffff;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    width: 100%;
+    height: 745px;
+
+    .title {
+      font-size: 16px;
+      font-family: "Poppin-Medium";
+      color: #2f3639;
+      line-height: 25px;
+      padding-left: 11px;
+      padding-top: 11px;
+    }
+    hr {
+    }
+    .upload-resume-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        font-size: 14px;
+        font-family: "Roboto-Medium";
+        line-height: 17px;
+        color: #2f3639;
+        width: 400px;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .upload-section {
+        form {
+          .image-section {
+            width: 95px;
+            height: 95px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #277f6a;
+            margin: auto;
+            margin-top: 40px;
+
+            .upload-image-icon {
+            }
+            .empty {
+              color: #b5b5b5;
+              font-family: "Roboto-Regular";
+              font-size: 8px;
+              line-height: 10px;
+              text-align: center;
+              margin-top: 10px;
+            }
+          }
+          .buttons-upload {
+            margin-bottom: 40px;
+            margin-top: 10px;
+            .browse {
+              width: 45px;
+              border: none;
+              background: #2f3639;
+              padding-top: 4px;
+              padding-bottom: 4px;
+              font-family: "Roboto-Regular";
+              font-size: 8px;
+              color: #ffffff;
+              margin-right: 5px;
+            }
+            .upload {
+              width: 45px;
+              border: none;
+              background: #008020;
+              padding-top: 4px;
+              padding-bottom: 4px;
+              font-family: "Roboto-Regular";
+              font-size: 8px;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+
+      .upload-rulls {
+        .rulls-title {
+          font-size: 12px;
+          font-family: "Roboto-Bold";
+          color: #2f3639;
+          line-height: 14px;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        .rulls {
+          font-size: 12px;
+          font-family: "Roboto-Regular";
+          color: #2f3639;
+          line-height: 14px;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+      }
+
+      .upload-resume-footer {
+        width: 515px;
+        height: 65px;
+        background: #277f6a 0% 0% no-repeat padding-box;
+        border-radius: 2px;
+        margin: auto;
+        margin-top: 45px;
+        font-size: 12px;
+        font-family: 'Roboto-Bold';
+        line-height: 14px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 68px;
+        padding-right: 68px;
+        text-align: center;
+      }
+    }
+  }
+}

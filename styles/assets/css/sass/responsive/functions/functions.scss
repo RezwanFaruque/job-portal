@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function make_for_mobile($width:$base-width, $value, $height : $base-height) {
+  @return math.ceil(($value/($base-width*$base-height))*($width*$height));
+}

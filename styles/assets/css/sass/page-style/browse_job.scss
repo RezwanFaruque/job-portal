@@ -1,0 +1,155 @@
+#browse_job {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .title-with-filter {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      color: #191919;
+      font-size: 20px;
+      font-family: "Poppin-Regular";
+      span {
+        font-size: 20px;
+        font-family: "Poppin-SemiBold";
+        line-height: 30px;
+      }
+    }
+    .filter {
+      form {
+        .custom-select {
+          font-family: "Poppin-Medium";
+          font-size: 16px;
+          color: #000000;
+          border: none;
+          &:focus {
+            border: none;
+          }
+          option {
+            font-family: "Poppin-Medium";
+            font-size: 16px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+
+  .job-results {
+      margin-top: 25px;
+    .container {
+      .row {
+        .col-sm-12 {
+          .browse-job-card {
+            background: #ffffff 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            padding: 18px;
+            margin-bottom: 25px;
+            .header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .images {
+                width: 37px;
+                height: 35px;
+                background: #ffffff 0% 0% no-repeat padding-box;
+                box-shadow: 0px 0px 1px #00000029;
+                border-radius: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+              .dot-text {
+                &::after {
+                  content: "\2807";
+                  font-size: 20px;
+                  cursor: pointer;
+                }
+              }
+            }
+            .body {
+              .job-title {
+                font-family: "Poppin-Medium";
+                font-size: 11px;
+                line-height: 17px;
+                color: #000000;
+              }
+              .job-location {
+                font-size: 7px;
+                font-family: "Poppin-Regular";
+                line-height: 10px;
+                color: #6b6b8c;
+              }
+              .job-description {
+                font-family: "Poppin-Light";
+                font-size: 10px;
+                line-height: 12px;
+                color: #b6b6bb;
+                height: 45px;
+                overflow: hidden;
+                text-align: left;
+                margin-top: 15px;
+                margin-bottom: 15px;
+              }
+
+              .job-tags {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .tags {
+                  width: 70px;
+                  height: auto;
+                  background: #f6f7f8 0% 0% no-repeat padding-box;
+                  border-radius: 2px;
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  text-align: center;
+                  margin-right: 5px;
+                  font-size: 7px;
+                  font-family: "Poppin-Medium";
+                  line-height: 10px;
+                  color: #277f6a;
+                }
+              }
+            }
+
+            .footer {
+              margin-top: 15px;
+              .buttons {
+                display: flex;
+                justify-content: space-between;
+                .apply-now-button {
+                  width: 110px;
+                  background: #277f6a 0% 0% no-repeat padding-box;
+                  border-radius: 2px;
+                  border: none;
+                  font-family: "Poppin-Medium";
+                  font-size: 9px;
+                  line-height: 13px;
+                  color: #ffffff;
+                }
+                .love-jobs-button {
+                  border: none;
+                  background-color: none;
+                  border: 0.5px solid #dfdfdf;
+                  border-radius: 4px;
+                  
+                  i{
+                      color: red;
+                      font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

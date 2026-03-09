@@ -1,0 +1,121 @@
+#loginmodal{
+
+	.modal-dialog{
+		.modal-content{
+			.modal-body{
+				padding-top: 45px;
+				padding-left: 45px;
+				padding-right: 45px;
+				padding-bottom: 45px;
+				.header{
+					font-size: 20px;
+					line-height: 30px;
+					color: #2F3639;
+					text-align: center;
+					font-family: 'Poppin-SemiBold';
+					padding-bottom: 20px;
+				}
+
+				.body{
+					.main-login-form{
+						span{
+							form{
+								.email{
+									span{
+										.email{
+											border: none;
+											border: 1px solid #DDDDDD;
+											width: 100%;
+											height: 50px;
+										}
+
+										input::-webkit-input-placeholder{
+											font-size: 14px;
+											font-family: 'Poppin-Light';
+											color: #76899C;
+											padding-left: 15px;
+										}
+
+										input:focus{
+											border: 1px solid #DDDDDD;
+											padding-left: 15px;
+										}
+									}
+									margin-bottom: 10px;
+								}
+								.password{
+
+									span{
+										.password{
+											border: none;
+											border: 1px solid #DDDDDD;
+											width: 100%;
+											height: 50px;
+										}
+
+										input::-webkit-input-placeholder{
+											font-size: 14px;
+											font-family: 'Poppin-Light';
+											color: #76899C;
+											padding-left: 15px;
+										}
+
+										input:focus{
+											border: 1px solid #DDDDDD;
+											padding-left: 15px;
+										}
+
+										.forget-password{
+											display: flex;
+											justify-content: flex-end;
+										}
+									}
+
+									margin-bottom: 10px;
+
+								}
+
+								.login-submit{
+									button{
+										width: 100%;
+										height: 50px;
+										background: transparent linear-gradient(90deg, #2B9CFD 0%, #41EBFE 100%) 0% 0% no-repeat padding-box;
+										font-family: 'Poppin-SemiBold';
+										font-size: 18px;
+										line-height: 27px;
+										color: #FFFFFF;
+										border: none;
+										border-radius: 3px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.footer{
+					margin-top: 45px;
+					.footer-content{
+						display: flex;
+						justify-content: space-between;
+						.footer-content-text{
+							font-family: 'Poppin-Light';
+							font-size: 17px;
+							color: #76899C;
+							line-height: 26px;
+						}
+
+						.create-account-button{
+							border: none;
+							background: white;
+							font-family: 'Poppin-Light';
+							color: #3CD7FE;
+							font-size: 17px;
+
+						}
+					}
+				}
+			}
+		}
+	}
+}

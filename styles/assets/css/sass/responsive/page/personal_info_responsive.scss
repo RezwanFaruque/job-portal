@@ -1,0 +1,143 @@
+@each $width in $resposive-width {
+  @media screen and (max-width: #{$width}px) {
+
+   #personal-info {
+
+
+     .title {
+
+     }
+     hr {
+     }
+
+     .personal-info-sections {
+       .title {
+
+       }
+
+       .section-body {
+
+         &.contact-information {
+
+         }
+
+         &.skills{
+
+         }
+
+         &.without-header {
+
+           .left {
+
+             hr {
+
+             }
+             .info {
+
+               .icon {
+
+                 i {
+                 }
+               }
+               .text {
+
+               }
+             }
+           }
+           .right {
+             button {
+
+             }
+           }
+         }
+
+         .header {
+
+           .plus-button {
+
+             i {
+
+             }
+           }
+           .text {
+
+           }
+         }
+         .body {
+
+           .left {
+
+             .skills{
+
+               .skill-name{
+                @if($width <= 500){
+                  margin-bottom: 10px;
+                }
+              }
+            }
+            .title {
+
+            }
+            .sub-title {
+
+            }
+            .description {
+              @if($width <= 500){
+                width: 100%;
+              }
+
+            }
+            .info {
+             .icon {
+               i {
+               }
+             }
+             .text {
+             }
+           }
+         }
+
+         .right {
+           button {
+
+           }
+         }
+       }
+
+       &.about-me {
+
+         .left {
+
+
+           .image-section {
+
+             .image-upload-button {
+
+
+               i {
+
+               }
+             }
+             .profile-picture {
+
+             }
+           }
+           .info-section {
+
+             .name {
+
+             }
+             .designation {
+
+             }
+             .location {
+
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+}
+}

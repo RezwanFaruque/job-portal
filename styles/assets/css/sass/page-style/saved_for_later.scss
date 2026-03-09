@@ -1,0 +1,118 @@
+#save_for_later{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .title{
+        font-size: 16px;
+        font-family: 'Poppin-Medium';
+        color: #2F3639;
+        line-height: 25px;
+
+    }
+    hr{
+
+    }
+    .save-for-later-body{
+        .container{
+            .row{
+                .col-sm-12{
+                    .save-for-later-card{
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        border-radius: 5px;
+                        padding: 18px;
+                        margin-bottom: 35px;
+                        .header{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 14px;
+                            .left{
+                                .image{
+                                    img{
+                                        width: 57px;
+                                        height: 43px;
+                                    }
+                                 }
+                                .job-title{
+                                    font-size: 11px;
+                                    line-height: 17px;
+                                    font-family: 'Poppin-Medium';
+                                    color: #000000;
+                                }
+                                .job-location{
+                                    font-size: 5px;
+                                    font-family: 'Poppin-Regular';
+                                    color: #6B6B8C;
+                                    line-height: 8px;
+
+                                }
+                            }
+                            .right{
+                                .dot-button{
+                                    &::after{
+                                        content: '\2807';
+                                        font-size: 20px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .body{
+                            height: 90px;
+                            margin-bottom: 10px;
+                            .job-des{
+                                height: 45px;
+                                font-family: 'Poppin-Light';
+                                font-size: 8px;
+                                color: #B6B6BB;
+                                line-height: 12px;
+                                overflow: hidden;
+                                margin-bottom: 10px;
+                            }
+                            .tags{
+                                display: flex;
+                               
+                                span{
+                                    width: 70px;
+                                    background-color: #F6F7F8;
+                                    padding-top: 5px;
+                                    padding-bottom: 5px;
+                                    padding-left: 5px;
+                                    font-size: 7px;
+                                    font-family: 'Poppin-Medium';
+                                    color: #277F6A;
+                                    line-height: 10px;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                        .footer{
+                            display: flex;
+                            justify-content: space-between;
+                            .apply-button{
+                                button{
+                                    background: #277F6A 0% 0% no-repeat padding-box;
+                                    border-radius: 2px;
+                                    border: none;
+                                    padding-top: 4px;
+                                    padding-bottom: 4px;
+                                    font-family: 'Poppin-Medium';
+                                    font-size: 9px;
+                                    color: #FFFFFF;
+                                    line-height: 13px;
+                                    width: 100px;
+                                }
+                            }
+                            .love-icon{
+                                img{
+                                    width: 23px;
+                                    height: 23px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

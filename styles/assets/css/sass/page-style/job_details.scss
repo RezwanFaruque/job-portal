@@ -1,0 +1,182 @@
+#job-details{
+    margin-top: 100px;
+    width: 100%;
+    .job-details-main-section{
+        background-color: white;
+        width: 100%;
+        padding-bottom: 30px;
+        margin-bottom: 100px;
+
+        .main-images-section{
+            width: 100%;
+            position: relative;
+            img{
+                width: 100%;
+                height: 262px;
+                &.profile-picture-job-details{
+
+                }
+            }
+            .main-image-icon{
+                position: absolute;
+                bottom: -10%;
+                left: 5%;
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                display: flex;
+                box-shadow: 1px 1px 2px #00000029;
+
+              img{
+                width: 80px;
+                height: 80px;
+                margin: auto;
+              }   
+            }
+
+
+
+        }
+
+        .header{
+            margin-top: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left{
+                .title{
+                    font-size: 25px;
+                    font-family: 'Poppin-Medium';
+                    line-height: 38px;
+                    color: #000000;
+                }
+                .subtitle{
+                    font-family: 'Poppin-Regular';
+                    font-size: 14px;
+                    color: #012D3A;
+                    line-height: 21px;
+                }
+                .posting-date{
+                    padding-top: 30px;
+                    font-size: 14px;
+                    color: #76899C;
+                    font-family: 'Poppin-Light';
+
+                }
+            }
+
+            .right{
+                .details{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    .love-job{
+                        color: red;
+                        font-size: 15px;
+                        padding-right: 20px;
+                        
+                    }
+                    .dot-section{
+                        &::after{
+                            content: '\2807';
+                            font-size: 20px;
+                            cursor: pointer;
+
+                        }
+                    }
+                }
+                
+
+                .details-applicants{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .applicants{
+                        padding-right: 30px;
+                        color: #012D3A;
+                        font-size: 15px;
+                        font-family: 'Poppin-Regular';
+                        line-height: 23px;
+
+                    }
+                    .deadline{
+                        color: #012D3A;
+                        font-size: 15px;
+                        font-family: 'Poppin-Regular';
+                        line-height: 23px;
+                    }
+                }
+               
+
+            }
+
+        }
+
+        .other-detials{
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .section{
+                .title{
+                    
+                    font-size: 12px;
+                    color: #76899C;
+                    font-family: 'Poppin-Regular';
+
+                }
+                .info{
+                    font-size: 16px;
+                    color: #012D3A;
+                    font-family: 'Poppin-Medium';
+                }
+            }
+        }
+
+        .main-detials{
+            margin-top: 40px;
+            padding-left: 30px;
+            padding-right: 30px;
+            .section{
+                margin-bottom: 20px;
+                .title{
+                    font-size: 16px;
+                    font-family: 'Poppin-Medium';
+                    color :#2F3639;
+                    line-height: 25px;
+                }
+                .info{
+                    font-size: 14px;
+                    font-family: 'Poppin-Light';
+                    color: #2F3639;
+                    line-height: 21px;
+                    white-space: pre-line;
+                }
+
+                .apply-button{
+                    button{
+                        background-color: #012D3A;
+                        border: none;
+                        padding-left: 7px;
+                        padding-right: 7px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        width: 160px;
+                        color: #FFFFFF;
+                        font-family: 'Poppin-Medium';
+                        font-size: 18px;
+                        line-height: 21px;
+
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+// ==========================================================================
+// SCSS Mixins
+// ==========================================================================
+
+@use "../variables" as *;
+
+// Responsive breakpoints
+@mixin respond-above($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 576px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (min-width: 1400px) { @content; }
+  }
+}
+
+// Flexbox helpers
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Card style (SCSS demo)
+@mixin card-style {
+  background: $white;
+  border-radius: $radius-lg;
+  box-shadow: 0 1px 3px rgba($black, 0.1);
+  padding: $spacing-lg;
+  transition: box-shadow 0.2s ease;
+}

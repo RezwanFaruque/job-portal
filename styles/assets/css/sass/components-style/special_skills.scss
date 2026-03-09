@@ -1,0 +1,578 @@
+#special_skills {
+    
+    padding-bottom: 50px;
+  .accordion {
+    .tab-sections {
+        margin-top: 20px;
+      .title-with-toggle {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        .title {
+          font-size: 14px;
+          font-family: "Poppin-Bold";
+        }
+        .toggle-icon {
+          margin-left: 10px;
+          i {
+          }
+        }
+      }
+
+      // all collapse body in special skills inside collapse body
+      .collapse {
+        // specialization section
+        .specialization-info {
+          .title {
+            font-size: 12px;
+            font-family: "Roboto-Bold";
+            color: #2f3639;
+            line-height: 14px;
+          }
+          .title-with-button {
+            // margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .title {
+              font-size: 12px;
+              font-family: "Roboto-Medium";
+              color: #2f3639;
+              line-height: 14px;
+            }
+            .button {
+              .edit-button {
+                border: none;
+                width: 85px;
+                text-align: center;
+                background-color: #277f6a;
+                font-size: "Roboto-Medium";
+                line-height: 17px;
+                color: white;
+                margin-right: 30px;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-size: 14px;
+              }
+              .delete-button {
+                border: none;
+                width: 85px;
+                text-align: center;
+                background-color: #ff0000;
+                font-size: "Roboto-Medium";
+                line-height: 17px;
+                color: white;
+                margin-right: 30px;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-size: 14px;
+              }
+            }
+          }
+
+          // edit special skills section
+          .edit-special-skills-section {
+            form {
+              .row {
+                .col-sm-12 {
+                  .form-group {
+                    .col-form-label {
+                      font-size: 12px;
+                      font-family: "Roboto-Medium";
+                      line-height: 14px;
+                      color: #2f3639;
+                    }
+                    input {
+                      border: 1px solid #76899c;
+                      height: 25px;
+                    }
+                    textarea {
+                      border: 1px solid #76899c;
+                    }
+                  }
+
+                  .buttons {
+                    display: flex;
+                    .save {
+                      border: none;
+                      width: 85px;
+                      text-align: center;
+                      background-color: #277f6a;
+                      font-size: "Roboto-Medium";
+                      line-height: 17px;
+                      color: white;
+                      margin-right: 30px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      font-size: 14px;
+                    }
+                    .close {
+                      background-color: #deeaf5;
+                      border: 1px solid #deeaf5;
+                      font-size: 14px;
+                      width: 85px;
+                      line-height: 17px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      color: #2f3639;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .info-special-skills-section {
+            .skill-title {
+              background: #277f6a 0% 0% no-repeat padding-box;
+              border: 1px solid #277f6a;
+              border-radius: 2px;
+              width: 175px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              font-family: "Roboto-Medium";
+              font-size: 12px;
+              line-height: 14px;
+              color: #ffffff;
+              text-align: center;
+            }
+            .skill-description {
+              width: 100%;
+              height: 75px;
+              background: #f6f7f8;
+              border: 1px solid #f6f7f8;
+              margin-top: 15px;
+              p {
+                font-family: "Roboto-Medium";
+                font-size: 12px;
+                line-height: 14px;
+                color: #2f3639;
+                line-height: 14px;
+                padding: 14px;
+              }
+            }
+          }
+
+          .specialization-input {
+            margin-top: 30px;
+            form {
+              .row {
+                .col-sm-12 {
+                  .col-form-label {
+                    font-size: 12px;
+                    font-family: "Roboto-Medium";
+                    line-height: 14px;
+                    color: #2f3639;
+                  }
+                  input {
+                    border: 1px solid #76899c;
+                    height: 25px;
+                  }
+                  textarea {
+                    border: 1px solid #76899c;
+                  }
+                  .buttons {
+                    display: flex;
+                    .save {
+                      border: none;
+                      width: 85px;
+                      text-align: center;
+                      background-color: #277f6a;
+                      font-size: "Roboto-Medium";
+                      line-height: 17px;
+                      color: white;
+                      margin-right: 30px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      font-size: 14px;
+                    }
+                    .close {
+                      background-color: #deeaf5;
+                      border: 1px solid #deeaf5;
+                      font-size: 14px;
+                      width: 85px;
+                      line-height: 17px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      color: #2f3639;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // language skills section
+        .language-skills {
+           
+          .title-with-buttons {
+            // margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .title {
+              font-size: 12px;
+              font-family: "Roboto-Medium";
+              color: #2f3639;
+              line-height: 14px;
+            }
+            .button {
+              .edit-button {
+                border: none;
+                width: 85px;
+                text-align: center;
+                background-color: #277f6a;
+                font-size: "Roboto-Medium";
+                line-height: 17px;
+                color: white;
+                margin-right: 30px;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-size: 14px;
+              }
+              .delete-button {
+                border: none;
+                width: 85px;
+                text-align: center;
+                background-color: #ff0000;
+                font-size: "Roboto-Medium";
+                line-height: 17px;
+                color: white;
+                margin-right: 30px;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-size: 14px;
+              }
+            }
+          }
+
+          // language edit form
+          .language-info-edit-form {
+            form {
+              .row {
+                .col-sm-12 {
+                  .form-group {
+                    .col-form-label {
+                      font-size: 12px;
+                      font-family: "Roboto-Medium";
+                      line-height: 14px;
+                      color: #2f3639;
+                    }
+                    input {
+                      border: 1px solid #76899c;
+                      height: 25px;
+                    }
+                    .custom-select {
+                      border: 1px solid #76899c;
+                      height: 25px;
+                    }
+                  }
+
+                  .buttons {
+                    display: flex;
+                    .save {
+                      border: none;
+                      width: 85px;
+                      text-align: center;
+                      background-color: #277f6a;
+                      font-size: "Roboto-Medium";
+                      line-height: 17px;
+                      color: white;
+                      margin-right: 30px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      font-size: 14px;
+                    }
+                    .close {
+                      background-color: #deeaf5;
+                      border: 1px solid #deeaf5;
+                      font-size: 14px;
+                      width: 85px;
+                      line-height: 17px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      color: #2f3639;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          // language info section
+          .language-info-details {
+            .language-name {
+              width: 100px;
+              background: #277f6a;
+              border: 1px solid #277f6a;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              font-size: 12px;
+              font-family: "Roboto-Medium";
+              text-align: center;
+              line-height: 14px;
+              color: #ffffff;
+              margin-top: 10px;
+            }
+            .language-level-withname {
+              margin-top: 20px;
+
+              .l-name {
+                font-size: 12px;
+                font-family: "Roboto-Medium";
+                color: #2f3639;
+                line-height: 14px;
+              }
+              .l-level {
+                width: 100px;
+                background: #f6f7f8;
+                // border:  1px solid #277F6A;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 12px;
+                font-family: "Roboto-Medium";
+                text-align: center;
+                line-height: 14px;
+                color: #2f3639;
+                margin-top: 15px;
+              }
+            }
+          }
+
+          // language input form
+          .language-info-input-form {
+            margin-top: 20px;
+            form {
+              .row {
+                .col-sm-12 {
+                  .form-group {
+                    .col-form-label {
+                      font-size: 12px;
+                      font-family: "Roboto-Medium";
+                      line-height: 14px;
+                      color: #2f3639;
+                    }
+                    input {
+                      border: 1px solid #76899c;
+                      height: 25px;
+                    }
+                    .custom-select {
+                      border: 1px solid #76899c;
+                      height: 25px;
+                    }
+                  }
+
+                  .buttons {
+                    display: flex;
+                    .save {
+                      border: none;
+                      width: 85px;
+                      text-align: center;
+                      background-color: #277f6a;
+                      font-size: "Roboto-Medium";
+                      line-height: 17px;
+                      color: white;
+                      margin-right: 30px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      font-size: 14px;
+                    }
+                    .close {
+                      background-color: #deeaf5;
+                      border: 1px solid #deeaf5;
+                      font-size: 14px;
+                      width: 85px;
+                      line-height: 17px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      color: #2f3639;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // reference section
+        .reference-section {
+          // reference info with edit section
+          .reference-info {
+            .title-with-button {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            //   margin-bottom: 10px;
+              .title {
+              }
+              .button {
+                .edit-button {
+                  border: none;
+                  width: 85px;
+                  text-align: center;
+                  background-color: #277f6a;
+                  font-size: "Roboto-Medium";
+                  line-height: 17px;
+                  color: white;
+                  margin-right: 30px;
+                  padding-top: 7px;
+                  padding-bottom: 7px;
+                  font-size: 14px;
+                }
+                .delete-button {
+                  border: none;
+                  width: 85px;
+                  text-align: center;
+                  background-color: #ff0000;
+                  font-size: "Roboto-Medium";
+                  line-height: 17px;
+                  color: white;
+                  margin-right: 30px;
+                  padding-top: 7px;
+                  padding-bottom: 7px;
+                  font-size: 14px;
+                }
+              }
+            }
+
+            // reference edit section
+            .reference-edit {
+              form {
+                .row {
+                  .col-sm-12 {
+                    .form-group {
+                      .col-form-label {
+                        font-size: 12px;
+                        font-family: "Roboto-Medium";
+                        color: #2f3639;
+                        line-height: 14px;
+                      }
+                      input {
+                        border: 0.30000001192092896px solid #76899c;
+                        height: 25px;
+                        border-radius: 0rem;
+                      }
+                      .custom-select {
+                        border: 0.30000001192092896px solid #76899c;
+                        height: 25px;
+                        border-radius: 0rem;
+                      }
+                    }
+                    .buttons {
+                      display: flex;
+                      .save {
+                        border: none;
+                        width: 85px;
+                        text-align: center;
+                        background-color: #277f6a;
+                        font-size: "Roboto-Medium";
+                        line-height: 17px;
+                        color: white;
+                        margin-right: 30px;
+                        padding-top: 7px;
+                        padding-bottom: 7px;
+                        font-size: 14px;
+                      }
+                      .close {
+                        background-color: #deeaf5;
+                        border: 1px solid #deeaf5;
+                        font-size: 14px;
+                        width: 85px;
+                        line-height: 17px;
+                        padding-top: 7px;
+                        padding-bottom: 7px;
+                        color: #2f3639;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            // reference details section
+            .reference-details {
+              .row {
+                .col-sm-12 {
+                  .info {
+                    margin-bottom: 35px;
+                    .title {
+                      font-size: 12px;
+                      font-family: "Roboto-Medium";
+                      line-height: 14px;
+                      color: #2f3639;
+                    }
+                    .inf {
+                      font-size: 12px;
+                      font-family: "Roboto-Medium";
+                      line-height: 14px;
+                      color: #2f3639;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          //   new reference added section
+          .reference-input {
+            margin-top: 20px;
+            .title {
+            }
+
+            form {
+              .row {
+                .col-sm-12 {
+                  .form-group {
+                    .col-form-label {
+                      font-size: 12px;
+                      font-family: "Roboto-Medium";
+                      color: #2f3639;
+                      line-height: 14px;
+                    }
+                    input {
+                      border: 0.30000001192092896px solid #76899c;
+                      height: 25px;
+                      border-radius: 0rem;
+                    }
+                    .custom-select {
+                      border: 0.30000001192092896px solid #76899c;
+                      height: 25px;
+                      border-radius: 0rem;
+                    }
+                  }
+                  .buttons {
+                    display: flex;
+                    .save {
+                      border: none;
+                      width: 85px;
+                      text-align: center;
+                      background-color: #277f6a;
+                      font-size: "Roboto-Medium";
+                      line-height: 17px;
+                      color: white;
+                      margin-right: 30px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      font-size: 14px;
+                    }
+                    .close {
+                      background-color: #deeaf5;
+                      border: 1px solid #deeaf5;
+                      font-size: 14px;
+                      width: 85px;
+                      line-height: 17px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                      color: #2f3639;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

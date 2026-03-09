@@ -1,0 +1,268 @@
+@each $width in $resposive-width {
+  @media screen and (max-width: #{$width}px) {
+    #index-page {
+      margin-bottom: 100px;
+      section {
+        &.our-services {
+          @if ($width >= 769) {
+            margin-top: #{make_for_mobile($width, 120)}px;
+          }
+
+          .container {
+            .row {
+              .col-sm-12 {
+                &.start {
+                  @if ($width <= 450) {
+                    justify-content: center;
+                  }
+                }
+                &.middle {
+                  @if ($width <= 450) {
+                    justify-content: center;
+                  }
+                }
+
+                @if ($width <= 450) {
+                  justify-content: center;
+                  margin-bottom: 30px;
+                }
+                .service-card {
+                  background: #ffffff;
+                  box-shadow: 0px 1px 3px #00000029;
+                  border: 1px solid #f4f4f4;
+                  width: 300px;
+                  height: auto;
+                  padding-bottom: 39px;
+                  padding-left: 18px;
+                  padding-right: 17px;
+                  .header {
+                    height: 80px;
+                    position: relative;
+                    .icon-section {
+                      .icon {
+                        img {
+                          @if ($width >= 450 and $width <= 600) {
+                            width: #{make_for_mobile($width, 200)}px;
+                            height: #{make_for_mobile($width, 200)}px;
+                          }
+
+                          @if ($width <= 450) {
+                            top: -30%;
+                            right: 40%;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .title {
+                    font-size: 16px;
+                    font-family: "Poppin-Medium";
+                    color: #1c1c1c;
+                    text-align: center;
+                    line-height: 26px;
+                    margin-bottom: 12px;
+                  }
+                  .short-description {
+                    font-size: 8px;
+                    font-family: "Poppin-Light";
+                    color: #b6b6b6;
+                    line-height: 16px;
+                    text-align: center;
+                    margin-bottom: 12px;
+                  }
+
+                  .footer {
+                    text-align: center;
+                    a {
+                      font-size: 10px;
+                      font-family: "Poppin-Medium";
+                      text-decoration: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.cr-dev-and-learning {
+          @if ($width <= 500) {
+            padding-top: 30px;
+            padding-bottom: 40px;
+          }
+
+          @if ($width >= 769) {
+            margin-top: #{make_for_mobile($width, 100)}px;
+            margin-bottom: #{make_for_mobile($width, 100)}px;
+          }
+
+          .title {
+            @if ($width <= 500) {
+              font-size: 14px;
+              line-height: 30px;
+            }
+          }
+          .subtitle {
+            @if ($width <= 500) {
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+          .body {
+            .container {
+              .row {
+                .col-sm-12 {
+                  .cr-dev-card {
+                    background-color: #ffffff;
+                    border: 1px solid #f4f4f4;
+                    padding-top: 12px;
+                    padding-bottom: 15px;
+                    padding-left: 13px;
+                    padding-right: 13px;
+                    margin-top: 45px;
+                    .header {
+                      .image {
+                        height: 160px;
+                        .cr-dev-img {
+                          width: 350px;
+                          height: auto;
+                          object-fit: cover;
+                        }
+                      }
+
+                      .sub-header {
+                        height: 70px;
+                        .title {
+                          font-size: 16px;
+                          font-family: "Poppin-Medium";
+                          color: #2f3639;
+                          text-align: left;
+                          line-height: 26px;
+                          padding-top: 13px;
+                        }
+                        .date {
+                          font-size: 10px;
+                          font-family: "Poppin-Light";
+                          color: #b6b6b6;
+                          line-height: 16px;
+                        }
+                      }
+                    }
+
+                    .body {
+                      font-size: 8px;
+                      font-family: "Poppin-Light";
+                      color: #b6b6b6;
+                      line-height: 16px;
+                      margin-top: 25px;
+                      height: 55px;
+                    }
+
+                    .footer {
+                      padding-bottom: 15px;
+                      padding-top: 15px;
+                      a {
+                        font-family: "Poppin-Light";
+                        font-size: 8px;
+                        color: #0057ff;
+                        line-height: 12px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .footer {
+            .read-more {
+              text-align: center;
+              margin-top: 50px;
+
+              .view-all {
+                border: 1px solid #b5b5b5;
+                border-radius: 17px;
+                font-size: 14px;
+                font-family: "Poppin-Regular";
+                color: #2f3639;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 7px;
+                padding-bottom: 7px;
+              }
+            }
+          }
+        }
+
+        &.how-its-work {
+          margin-bottom: 50px;
+          .container {
+            .row {
+              .col-12 {
+                .title {
+                  @if ($width <= 500) {
+                    font-size: 18px;
+                    line-height: 30px;
+                    margin-bottom: 20px;
+                  }
+                }
+                .body {
+                }
+              }
+            }
+          }
+        }
+
+        &.subscribe {
+          .container {
+            .row {
+              .col-12 {
+                .main-section {
+                  @if ($width >= 500) {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                  }
+
+                  .title {
+                    @if ($width >= 500) {
+                      font-size: 18px;
+                      line-height: 30px;
+                    }
+
+                    div {
+                      @if ($width <= 500px) {
+                        font-size: 20px;
+                        line-height: 30px;
+                      }
+                    }
+                  }
+                  .body {
+                  }
+                  .search-section {
+                    @if ($width <= 500) {
+                      width: 300px;
+                    }
+
+                    margin: auto;
+                    .input-group {
+                      input {
+                      }
+                      .search-subscribe {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .after-how-work-hr {
+        @if ($width <= 500) {
+          margin-bottom: 40px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+#suggestedjob{
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    .title{
+        font-size: 16px;
+        font-family: 'Poppin-Medium';
+        color: #2F3639;
+        line-height: 25px;
+    }
+    hr{
+
+    }
+    .applied-job-card{
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 2px #00000029;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 30px;
+        .header{
+            .header-content{
+                display: flex;
+                justify-content: space-between;
+
+                .left-side{
+                    .image{
+                        width: 60px;
+                        height: 45px;
+                    }
+                    .title{
+                        font-size: 12px;
+                        font-family: 'Poppin-Medium';
+                        color: #000000;
+                        line-height: 18px;
+                    }
+                    .location{
+                        font-size: 6px;
+                        font-family: 'Poppin-Regular';
+                        color: #6B6B8C;
+                        line-height: 9px;
+                    }
+                }
+                .right-side{
+                    position: relative;
+                    .dot-text{
+                        &::after{
+                            content: '\2807';
+                            font-size: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                    .dot-click-open{
+                        position: absolute;
+                        right: 0;
+                        top: 30px;
+                        width: 155px;
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 0px 6px #00000029;
+                        z-index: 9;
+                        .share-content{
+                            display: flex;
+                            align-items: center;
+                            height: 27px;
+                            padding-left: 6px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: #F6F7F8;
+                            }
+
+                            .icon{
+                                img{
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                            .text{
+                                padding-left: 10px;
+                                font-family: 'Poppin-Regular';
+                                font-size: 9px;
+                                line-height: 13px;
+                                color: #2F3639;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .body{
+            padding-top: 15px;
+            font-size: 8px;
+            font-family: 'Poppin-Light';
+            color: #B6B6BB;
+            line-height: 12px;
+            height: 50px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .footer{
+            .tags{
+                display: flex;
+                align-items: center;
+                span{
+                    width: 75px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #277F6A;
+                    flex-direction: column;
+                    margin-right: 30px;
+                    font-size: 8px;
+                    font-family: 'Poppin-Medium';
+                    color: #FFFFFF;
+                }
+            }
+
+            .applied-duration{
+                margin-top: 30px;
+                font-size: 8px;
+                font-family: 'Poppin-Regular';
+                color: #277F6A;
+                line-height: 12px;
+            }
+        }
+    }
+}

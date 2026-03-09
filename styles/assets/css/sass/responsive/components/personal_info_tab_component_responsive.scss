@@ -1,0 +1,80 @@
+@each $width in $resposive-width{
+	@media screen and (max-width: #{$width}px){
+		#personal_info{
+
+            .accordion{
+                .tab-sections{
+                    
+                    .title-with-toggle{
+                       
+                        .title{
+                          
+                        }
+                        .toggle-icon{
+                           
+                            i{
+
+                            }
+                        }
+                    }
+                    .collapse{
+                        form{
+                            .row{
+                                .col-sm-12{
+                                    .side-form{
+                                        &.left{
+
+                                        }
+                                        &.right{
+
+                                        }
+                                        .form-group{
+                                            label{
+                                                
+                                            }
+                                            div{
+                                                input{
+                                                  
+                                                }
+                                                .form-control{
+                                                   
+
+                                                }
+                                                .custom-select{
+                                                  
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .title{
+                                       
+                                    }
+                                    .custom-select{
+                                       @if($width <= 500){
+                                        margin-bottom: 15px;
+                                       }
+                                    }
+
+
+                                }
+                                .buttons{
+                                    
+                                    &.second{
+                                       
+                                    }
+                                    .save{
+                                       
+                                    }
+                                    .close{
+                                       
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

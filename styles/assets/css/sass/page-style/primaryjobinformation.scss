@@ -1,0 +1,116 @@
+#primary-job-information {
+  margin-top: 50px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+
+  padding-top: 27px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 27px;
+  .title {
+    font-size: 18px;
+    font-family: "Poppin-Medium";
+    line-height: 27px;
+    color: #012d3a;
+  }
+  hr {
+  }
+  .form-section {
+    width: 100%;
+
+    span {
+      width: 100%;
+      form {
+        width: 100%;
+        .input-section {
+          width: 100%;
+          margin-bottom: 25px;
+          .email {
+            margin-top: 10px;
+          }
+          span {
+            width: 100%;
+            display: flex;
+            label {
+              width: 25%;
+              font-family: "Poppin-Regular";
+              font-size: 18px;
+              line-height: 27px;
+              color: #012d3a;
+            }
+            input {
+              width: 75%;
+              border: 0.5px solid #e1ebfb;
+              border-radius: 5px;
+            }
+
+            .upload-button {
+              width: 175px;
+              border: none;
+              background-color: #012d3a;
+              font-family: "Poppin-Regular";
+              font-size: 18px;
+              line-height: 21px;
+              color: #ffffff;
+              padding-top: 3px;
+              padding-bottom: 3px;
+            }
+            .no-image{
+                font-size: 16px;
+                color: #76899C;
+                font-family: 'Poppin-Medium';
+
+                line-height: 21px;
+                margin-left: 20px;
+            }
+            .image{
+                margin-left: 20px;
+                img{
+                    width: 100px;
+                    height: 70px;
+                    object-fit: cover;
+
+                }
+            }
+            textarea {
+              width: 75%;
+              border: 0.5px solid #e1ebfb;
+              border-radius: 5px;
+              height: 100px;
+            }
+            select {
+              width: 75%;
+              border: 0.5px solid #e1ebfb;
+              border-radius: 5px;
+            }
+            .b-form-datepicker {
+              width: 75%;
+              border: 0.5px solid #e1ebfb;
+              border-radius: 5px;
+            }
+          }
+          button {
+          }
+        }
+
+        .submit-section {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          .button-submit {
+            width: 175px;
+            height: 50px;
+            box-shadow: 0px 0px 1px #00000029;
+            border: 0.5px solid #e1ebfb;
+            border-radius: 5px;
+            background-color: #012D3A;
+            border: none;
+            font-size: 18px;
+            font-family: 'Poppin-Medium';
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+#paginations{
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    li{
+        margin-right: 20px;
+        background-color: white;
+        button{
+            border: 1px solid #277F6A;
+            background-color: white;
+            font-size: 14px;
+            font-family: 'Poppin-Medium';
+            color: #277F6A;
+
+            &.active{
+                background-color: #277F6A;
+                color: white;
+            }
+
+        }
+    }
+}

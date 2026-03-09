@@ -1,0 +1,78 @@
+@each $width in $resposive-width {
+  @media screen and (max-width: #{$width}px) {
+    #left-sidebar {
+        @if($width <= 800)
+        {
+            height: 885px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        
+
+        transition: height 0.7s;
+        &.decreaseheight{
+            height: 50px;
+            overflow: hidden;
+            
+        }
+      .left-sidebar {
+        .section {
+          .title {
+            .togglehideleftbar {
+              @if ($width <= 800) {
+                display: block;
+                width: 40px;
+                height: 24px;
+                border-radius: 12px;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                position: relative;
+                padding: 2px;
+                transition: border-color 0.25s;
+              }
+
+              &:before {
+                @if ($width <= 800) {
+                  content: "";
+                  width: 16px;
+                  height: 16px;
+                  border-radius: 50%;
+                  display: block;
+                  background: #ccc;
+                  transition: background-color 0.25s, transform 0.25s;
+                }
+              }
+              &.on{
+                @if ($width <= 800) {
+                    border-color: gr#2b9cfd;
+                }
+                
+                &:before{
+                    @if($width <= 800){
+                        background: #2b9cfd;
+                        transform: translateX(16px);
+                    }
+                 
+                }
+              }
+            }
+          }
+          .links {
+            .link-with-logo {
+              .logo {
+                .logo-img {
+                }
+              }
+              .links {
+                &.special {
+                  a {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6375 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Poppin-Regular";
+  src: url(../vendor/Fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppin-Light";
+  src: url(../vendor/Fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: "Poppin-Medium";
+  src: url(../vendor/Fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppin-SemiBold";
+  src: url(../vendor/Fonts/Poppins/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppin-Bold";
+  src: url(../vendor/Fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(../vendor/Fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../vendor/Fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../vendor/Fonts/Roboto/Roboto-Regular.ttf);
+}
+#section-navbar .navbar {
+  height: 100px;
+  padding: 0;
+}
+#section-navbar .navbar nav {
+  padding: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+#section-navbar .navbar nav a img {
+  width: 115px;
+  height: auto;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info {
+  display: flex;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .jobs a img {
+  width: 20px;
+  height: 15px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .jobs {
+  margin-right: 10px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .notification {
+  margin-right: 10px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile {
+  position: absolute;
+  background-color: white;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 20px;
+  right: 5%;
+  z-index: 99;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section {
+  display: flex;
+  margin-bottom: 20px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section .icon {
+  margin-right: 7px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section .icon img {
+  width: 15px;
+  height: 15px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section .link a {
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  color: #2F3639;
+  line-height: 21px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li.spec a {
+  color: #277F6A;
+}
+#section-navbar .navbar nav .navbar-collapse ul li a {
+  font-size: 14px;
+  color: #2F3639;
+  font-family: "Poppin-Regular";
+  text-decoration: none;
+}
+#section-navbar .navbar nav .navbar-collapse ul li button {
+  border: none;
+  font-family: "Poppin-Regular";
+  background-color: #FFFFFF;
+  color: #2F3639;
+}
+
+.modal.show .modal-dialog {
+  margin: 9rem auto !important;
+}
+
+#bannar-section {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  background: transparent linear-gradient(180deg, #2B9CFD 0%, #41EBFE 100%) 0% 0% no-repeat padding-box;
+}
+#bannar-section .container .row .col-sm-12 .left-side .title {
+  font-size: 40px;
+  color: #F6F7F8;
+  font-family: "Poppin-Light";
+  line-height: 60px;
+  margin-bottom: 18px;
+}
+#bannar-section .container .row .col-sm-12 .left-side .title span {
+  font-size: 40px;
+  font-family: "Poppin-Medium";
+}
+#bannar-section .container .row .col-sm-12 .left-side .subtitle {
+  font-size: 14px;
+  font-family: "Poppin-Light";
+  color: #F6F7F8;
+  margin-bottom: 30px;
+  line-height: 21px;
+}
+#bannar-section .container .row .col-sm-12 .left-side .search-section form .input-group {
+  height: 30px;
+}
+#bannar-section .container .row .col-sm-12 .left-side .search-section form .input-group button {
+  width: 100px;
+  height: auto;
+  background: #277F6A 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  font-family: "Poppin-Regular";
+  color: #FFFFFF;
+  font-size: 14px;
+  border: none;
+}
+#bannar-section .container .row .col-sm-12 .right-side {
+  width: 100%;
+  margin-left: 80px;
+}
+#bannar-section .container .row .col-sm-12 .right-side .bn-image {
+  width: 100%;
+}
+#bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+  width: 520px;
+  height: auto;
+}
+
+#footer {
+  padding-top: 70px;
+  border-top: 3px solid #DBDDDE;
+}
+#footer .container .row .footer-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#footer .container .row .footer-content .fo-content {
+  margin-right: 80px;
+}
+#footer .container .row .footer-content .fo-content .title {
+  font-size: 18px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  line-height: 27px;
+  margin-bottom: 30px;
+}
+#footer .container .row .footer-content .fo-content .links ul {
+  list-style: none;
+  padding-left: 0;
+}
+#footer .container .row .footer-content .fo-content .links ul li {
+  margin-bottom: 10px;
+}
+#footer .container .row .footer-content .fo-content .links ul li .footer-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Poppin-Light";
+  color: #2F3639;
+  line-height: 21px;
+}
+#footer .container .row .last-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+#footer .container .row .last-footer .title-text {
+  font-size: 18px;
+  font-family: "Poppin-Light";
+  color: #2F3639;
+  line-height: 27px;
+  margin-right: 40px;
+}
+#footer .container .row .last-footer .logo-with-phone {
+  display: flex;
+  align-items: center;
+}
+#footer .container .row .last-footer .logo-with-phone .logo .last-footer-logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+#footer .container .row .last-footer .logo-with-phone .caller-text {
+  font-size: 18px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  line-height: 27px;
+}
+
+.modal .modal-dialog .modal-content {
+  border: none;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  justify-content: center;
+  border-bottom: none;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-size: 20px;
+  font-family: "Poppin-SemiBold";
+  line-height: 20px;
+  color: #2F3639;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.modal .modal-dialog .modal-content .modal-header .social-media-signup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.modal .modal-dialog .modal-content .modal-header .social-media-signup .signup-button {
+  margin-bottom: 10px;
+}
+.modal .modal-dialog .modal-content .modal-header .social-media-signup .signup-button button {
+  width: 100%;
+  background: transparent linear-gradient(90deg, #2B9CFD 0%, #41EBFE 100%) 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 15px;
+  font-family: "Poppin-Regular";
+  line-height: 23px;
+  color: #FFFFFF !important;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  border-bottom: none;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.modal .modal-dialog .modal-content .modal-body .or {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Poppin-Light";
+  color: #3EE1FE;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .nav {
+  justify-content: center;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .nav .nav-item {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .nav .nav-item .nav-link {
+  font-size: 14px;
+  color: #76899C;
+  font-family: "Poppin-Light";
+  line-height: 21px;
+  border: 1px solid #DDDDDD;
+  width: 190px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .nav .nav-item .nav-link.active {
+  background: transparent linear-gradient(90deg, #2B9CFD 0%, #41EBFE 100%) 0% 0% no-repeat padding-box;
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  color: #FFFFFF !important;
+  line-height: 21px !important;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form {
+  margin-top: 25px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row.first-row {
+  width: 100%;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row.first-row span {
+  width: 50%;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row.first-row span .first-name {
+  width: 100%;
+  padding-right: 5px;
+  margin-right: 7px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row.first-row span .last-name {
+  width: 100%;
+  padding-left: 5px;
+  margin-left: 7px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row span {
+  width: 100%;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row span input {
+  border: 1px solid #DDDDDD;
+  height: 50px;
+  border-radius: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-family: "Poppin-Light";
+  color: #76899C;
+  padding-left: 15px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .form-row input:focus {
+  border: 1px solid #DDDDDD;
+  padding-left: 15px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .submit-button {
+  width: 100%;
+  margin-top: 10px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .job-seeker-form form .submit-button .signup {
+  background: transparent linear-gradient(90deg, #2B9CFD 0%, #41EBFE 100%) 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #FFFFFF !important;
+  font-size: 18px;
+  font-family: "Poppin-SemiBold" !important;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form {
+  margin-top: 25px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row span {
+  width: 100%;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row span select {
+  width: 100%;
+  border: 1px solid #DDDDDD;
+  height: 50px;
+  font-family: "Poppin-Light";
+  color: #76899C;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row span select option {
+  font-family: "Poppin-Light";
+  color: #76899C;
+  font-size: 14px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row span {
+  width: 100%;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row span input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #DDDDDD;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: "Poppin-Light";
+  color: #76899C;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row input::-moz-placeholder { /* Firefox 19+ */
+  font-family: "Poppin-Light";
+  color: #76899C;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row input:-ms-input-placeholder { /* IE 10+ */
+  font-family: "Poppin-Light";
+  color: #76899C;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .form-row input:-moz-placeholder { /* Firefox 18- */
+  font-family: "Poppin-Light";
+  color: #76899C;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .company-form-submit {
+  width: 100%;
+}
+.modal .modal-dialog .modal-content .modal-body .signup-form-with-tab div .tab-section .tab-content .tab-pane .card-text .company-form form .company-form-submit .button-submit {
+  background: transparent linear-gradient(90deg, #2B9CFD 0%, #41EBFE 100%) 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  font-family: "Poppin-SemiBold";
+  color: #FFFFFF !important;
+  font-size: 18px;
+}
+.modal .modal-dialog .modal-content .modal-footer {
+  border-top: none;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+.modal .modal-dialog .modal-content .modal-footer .footer-signup-modal {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.modal .modal-dialog .modal-content .modal-footer .footer-signup-modal .text {
+  color: #76899C !important;
+  font-family: "Poppin-Light";
+  font-size: 14px;
+  line-height: 21px;
+  padding-right: 7px;
+}
+.modal .modal-dialog .modal-content .modal-footer .footer-signup-modal .signinlink .open-login-button {
+  font-family: "Poppin-Light";
+  font-size: 14px;
+  line-height: 21px;
+  color: #3CD7FE !important;
+  border: none;
+  background: white;
+}
+
+#left-sidebar {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 2px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+#left-sidebar .left-sidebar .section {
+  margin-bottom: 30px;
+}
+#left-sidebar .left-sidebar .section .title {
+  font-size: 10px;
+  font-family: "Poppin-Medium";
+  color: #2f3639;
+  line-height: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dde6e9;
+  display: flex;
+  justify-content: space-between;
+}
+#left-sidebar .left-sidebar .section .title .togglehideleftbar {
+  display: none;
+}
+#left-sidebar .left-sidebar .section .links .link-with-logo {
+  display: flex;
+  align-items: center;
+}
+#left-sidebar .left-sidebar .section .links .link-with-logo .logo .logo-img {
+  width: 12px;
+  height: 12px;
+}
+#left-sidebar .left-sidebar .section .links .link-with-logo .links {
+  padding-left: 13px;
+}
+#left-sidebar .left-sidebar .section .links .link-with-logo .links.special {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#left-sidebar .left-sidebar .section .links .link-with-logo .links a {
+  font-family: "Poppin-Regular";
+  color: #2f3639;
+  font-size: 8px;
+  line-height: 12px;
+  text-decoration: none;
+}
+
+#personal_info {
+  margin-top: 35px;
+}
+#personal_info .accordion .tab-sections {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+#personal_info .accordion .tab-sections .title-with-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#personal_info .accordion .tab-sections .title-with-toggle .title {
+  font-size: 14px;
+  font-family: "Poppin-Bold";
+}
+#personal_info .accordion .tab-sections .title-with-toggle .toggle-icon {
+  margin-left: 10px;
+}
+#personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .side-form .form-group label {
+  color: #2F3639;
+  font-family: "Roboto-Medium";
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 0rem;
+  margin-bottom: 4px;
+}
+#personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .side-form .form-group div input {
+  background-color: #F6F7F8;
+  border-radius: 0rem;
+  height: 25px;
+}
+#personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .side-form .form-group div .form-control {
+  background-color: #F6F7F8;
+  border-radius: 0rem;
+  height: 25px;
+}
+#personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .side-form .form-group div .custom-select {
+  background-color: #F6F7F8;
+  border-radius: 0rem;
+  height: 25px;
+}
+#personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .title {
+  font-size: 14px;
+  font-family: "Roboto-Bold";
+  color: #2F3639;
+}
+#personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .custom-select {
+  border: 0.3000000119px solid #B5B5B5;
+  background-color: white;
+  height: auto;
+}
+#personal_info .accordion .tab-sections .collapse form .row .buttons {
+  display: flex;
+}
+#personal_info .accordion .tab-sections .collapse form .row .buttons.second {
+  margin-top: 20px;
+}
+#personal_info .accordion .tab-sections .collapse form .row .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277F6A;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#personal_info .accordion .tab-sections .collapse form .row .buttons .close {
+  background-color: #DEEAF5;
+  border: 1px solid #DEEAF5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2F3639;
+}
+
+#personal_info .accordion .tab-sections .collapse .academic-info .title-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#personal_info .accordion .tab-sections .collapse .academic-info .title-with-button .button .edit-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277F6A;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#personal_info .accordion .tab-sections .collapse .academic-info .title-with-button .button .delete-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #FF0000;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#personal_info .accordion .tab-sections .collapse .academic-info .form-academic-edit {
+  margin-bottom: 30px;
+}
+#personal_info .accordion .tab-sections .collapse .academic-info .form-academic-edit form .row .col-sm-12 .form-group label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2F3639;
+  line-height: 14px;
+}
+#personal_info .accordion .tab-sections .collapse .academic-info .form-academic-edit form .row .col-sm-12 .form-group .custom-select {
+  border: 0.3000000119px solid #76899C;
+  height: 25px;
+  border-radius: 0rem;
+}
+#personal_info .accordion .tab-sections .collapse .academic-info .academic-details .row .col-sm-12 .info {
+  margin-bottom: 35px;
+}
+#personal_info .accordion .tab-sections .collapse .academic-info .academic-details .row .col-sm-12 .info .title {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2F3639;
+}
+#personal_info .accordion .tab-sections .collapse .academic-info .academic-details .row .col-sm-12 .info .inf {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2F3639;
+}
+#personal_info .accordion .tab-sections .collapse .academic-input .title {
+  font-size: 15px;
+  font-family: "Roboto-Bold";
+  color: #2F3639;
+  margin-bottom: 10px;
+}
+#personal_info .accordion .tab-sections .collapse .academic-input form .row .col-sm-12 .form-group label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2F3639;
+  line-height: 14px;
+}
+#personal_info .accordion .tab-sections .collapse .academic-input form .row .col-sm-12 .form-group div .custom-select {
+  border: 0.3000000119px solid #76899C;
+  height: 25px;
+  border-radius: 0rem;
+}
+
+#work_experience {
+  margin-top: 35px;
+}
+#work_experience .accordion .tab-sections {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+#work_experience .accordion .tab-sections .title-with-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#work_experience .accordion .tab-sections .title-with-toggle .title {
+  font-size: 14px;
+  font-family: "Poppin-Bold";
+}
+#work_experience .accordion .tab-sections .title-with-toggle .toggle-icon {
+  margin-left: 10px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .title-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .title-with-button .button .edit-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277F6A;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .title-with-button .button .delete-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #FF0000;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit {
+  margin-bottom: 30px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .form-group .col-form-label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2F3639;
+  line-height: 14px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .form-group input {
+  border: 0.3000000119px solid #76899C;
+  height: 25px;
+  border-radius: 0rem;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .form-group .b-form-datepicker {
+  border: 0.3000000119px solid #76899C;
+  height: 35px;
+  border-radius: 0rem;
+  margin-right: 10px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .form-group .b-form-tags {
+  border: 0.3000000119px solid #76899C;
+  height: 35px;
+  border-radius: 0rem;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .form-group .b-form-tags .b-form-tags-list {
+  background-color: white !important;
+  box-shadow: none !important;
+  display: block !important;
+  height: auto !important;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .form-group .period {
+  display: flex;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .buttons {
+  display: flex;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277F6A;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .form-workexp-edit form .row .col-sm-12 .buttons .close {
+  background-color: #DEEAF5;
+  border: 1px solid #DEEAF5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2F3639;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .workexp-details .row .col-sm-12 .info {
+  margin-bottom: 35px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .workexp-details .row .col-sm-12 .info .title {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2F3639;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-info .workexp-details .row .col-sm-12 .info .inf {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2F3639;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .form-group .col-form-label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2F3639;
+  line-height: 14px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .form-group input {
+  border: 0.3000000119px solid #76899C;
+  height: 25px;
+  border-radius: 0rem;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .form-group .b-form-datepicker {
+  border: 0.3000000119px solid #76899C;
+  height: 35px;
+  border-radius: 0rem;
+  margin-right: 10px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .form-group .b-form-tags {
+  border: 0.3000000119px solid #76899C;
+  height: 35px;
+  border-radius: 0rem;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .form-group .b-form-tags .b-form-tags-list {
+  background-color: white !important;
+  box-shadow: none !important;
+  display: block !important;
+  height: auto !important;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .form-group .period {
+  display: flex;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .buttons {
+  display: flex;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277F6A;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#work_experience .accordion .tab-sections .collapse .workexp-input form .row .col-sm-12 .buttons .close {
+  background-color: #DEEAF5;
+  border: 1px solid #DEEAF5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2F3639;
+}
+
+#special_skills {
+  padding-bottom: 50px;
+}
+#special_skills .accordion .tab-sections {
+  margin-top: 20px;
+}
+#special_skills .accordion .tab-sections .title-with-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#special_skills .accordion .tab-sections .title-with-toggle .title {
+  font-size: 14px;
+  font-family: "Poppin-Bold";
+}
+#special_skills .accordion .tab-sections .title-with-toggle .toggle-icon {
+  margin-left: 10px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .title {
+  font-size: 12px;
+  font-family: "Roboto-Bold";
+  color: #2f3639;
+  line-height: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .title-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .title-with-button .title {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2f3639;
+  line-height: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .title-with-button .button .edit-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .title-with-button .button .delete-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #ff0000;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .edit-special-skills-section form .row .col-sm-12 .form-group .col-form-label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .edit-special-skills-section form .row .col-sm-12 .form-group input {
+  border: 1px solid #76899c;
+  height: 25px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .edit-special-skills-section form .row .col-sm-12 .form-group textarea {
+  border: 1px solid #76899c;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .edit-special-skills-section form .row .col-sm-12 .buttons {
+  display: flex;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .edit-special-skills-section form .row .col-sm-12 .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .edit-special-skills-section form .row .col-sm-12 .buttons .close {
+  background-color: #deeaf5;
+  border: 1px solid #deeaf5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .info-special-skills-section .skill-title {
+  background: #277f6a 0% 0% no-repeat padding-box;
+  border: 1px solid #277f6a;
+  border-radius: 2px;
+  width: 175px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "Roboto-Medium";
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-align: center;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .info-special-skills-section .skill-description {
+  width: 100%;
+  height: 75px;
+  background: #f6f7f8;
+  border: 1px solid #f6f7f8;
+  margin-top: 15px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .info-special-skills-section .skill-description p {
+  font-family: "Roboto-Medium";
+  font-size: 12px;
+  line-height: 14px;
+  color: #2f3639;
+  line-height: 14px;
+  padding: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .specialization-input {
+  margin-top: 30px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .specialization-input form .row .col-sm-12 .col-form-label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .specialization-input form .row .col-sm-12 input {
+  border: 1px solid #76899c;
+  height: 25px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .specialization-input form .row .col-sm-12 textarea {
+  border: 1px solid #76899c;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .specialization-input form .row .col-sm-12 .buttons {
+  display: flex;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .specialization-input form .row .col-sm-12 .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .specialization-info .specialization-input form .row .col-sm-12 .buttons .close {
+  background-color: #deeaf5;
+  border: 1px solid #deeaf5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .title-with-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .title-with-buttons .title {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2f3639;
+  line-height: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .title-with-buttons .button .edit-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .title-with-buttons .button .delete-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #ff0000;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-edit-form form .row .col-sm-12 .form-group .col-form-label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-edit-form form .row .col-sm-12 .form-group input {
+  border: 1px solid #76899c;
+  height: 25px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-edit-form form .row .col-sm-12 .form-group .custom-select {
+  border: 1px solid #76899c;
+  height: 25px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-edit-form form .row .col-sm-12 .buttons {
+  display: flex;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-edit-form form .row .col-sm-12 .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-edit-form form .row .col-sm-12 .buttons .close {
+  background-color: #deeaf5;
+  border: 1px solid #deeaf5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-details .language-name {
+  width: 100px;
+  background: #277f6a;
+  border: 1px solid #277f6a;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  text-align: center;
+  line-height: 14px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-details .language-level-withname {
+  margin-top: 20px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-details .language-level-withname .l-name {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2f3639;
+  line-height: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-details .language-level-withname .l-level {
+  width: 100px;
+  background: #f6f7f8;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  text-align: center;
+  line-height: 14px;
+  color: #2f3639;
+  margin-top: 15px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-input-form {
+  margin-top: 20px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-input-form form .row .col-sm-12 .form-group .col-form-label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-input-form form .row .col-sm-12 .form-group input {
+  border: 1px solid #76899c;
+  height: 25px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-input-form form .row .col-sm-12 .form-group .custom-select {
+  border: 1px solid #76899c;
+  height: 25px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-input-form form .row .col-sm-12 .buttons {
+  display: flex;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-input-form form .row .col-sm-12 .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .language-skills .language-info-input-form form .row .col-sm-12 .buttons .close {
+  background-color: #deeaf5;
+  border: 1px solid #deeaf5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .title-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .title-with-button .button .edit-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .title-with-button .button .delete-button {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #ff0000;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-edit form .row .col-sm-12 .form-group .col-form-label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2f3639;
+  line-height: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-edit form .row .col-sm-12 .form-group input {
+  border: 0.3000000119px solid #76899c;
+  height: 25px;
+  border-radius: 0rem;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-edit form .row .col-sm-12 .form-group .custom-select {
+  border: 0.3000000119px solid #76899c;
+  height: 25px;
+  border-radius: 0rem;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-edit form .row .col-sm-12 .buttons {
+  display: flex;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-edit form .row .col-sm-12 .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-edit form .row .col-sm-12 .buttons .close {
+  background-color: #deeaf5;
+  border: 1px solid #deeaf5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-details .row .col-sm-12 .info {
+  margin-bottom: 35px;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-details .row .col-sm-12 .info .title {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-info .reference-details .row .col-sm-12 .info .inf {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  line-height: 14px;
+  color: #2f3639;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-input {
+  margin-top: 20px;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-input form .row .col-sm-12 .form-group .col-form-label {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  color: #2f3639;
+  line-height: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-input form .row .col-sm-12 .form-group input {
+  border: 0.3000000119px solid #76899c;
+  height: 25px;
+  border-radius: 0rem;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-input form .row .col-sm-12 .form-group .custom-select {
+  border: 0.3000000119px solid #76899c;
+  height: 25px;
+  border-radius: 0rem;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-input form .row .col-sm-12 .buttons {
+  display: flex;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-input form .row .col-sm-12 .buttons .save {
+  border: none;
+  width: 85px;
+  text-align: center;
+  background-color: #277f6a;
+  font-size: "Roboto-Medium";
+  line-height: 17px;
+  color: white;
+  margin-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+#special_skills .accordion .tab-sections .collapse .reference-section .reference-input form .row .col-sm-12 .buttons .close {
+  background-color: #deeaf5;
+  border: 1px solid #deeaf5;
+  font-size: 14px;
+  width: 85px;
+  line-height: 17px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #2f3639;
+}
+
+#jobfilter_sidebar {
+  margin-top: 100px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 2px;
+  height: auto;
+  padding: 14px;
+}
+#jobfilter_sidebar .section {
+  margin-bottom: 35px;
+}
+#jobfilter_sidebar .section .section-title {
+  font-size: 14px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  line-height: 21px;
+}
+#jobfilter_sidebar .section .section-body {
+  margin-top: 30px;
+}
+#jobfilter_sidebar .section .section-body form .check-boxes-with-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#jobfilter_sidebar .section .section-body form .check-boxes-with-number .check-box .custom-checkbox label {
+  font-size: 12px;
+  font-family: "Roboto-Regular";
+  color: #76899C;
+  line-height: 14px;
+}
+#jobfilter_sidebar .section .section-body form .check-boxes-with-number .check-box .custom-checkbox label::before {
+  width: 14px;
+  height: 14px;
+  border-radius: 0;
+  top: 0;
+}
+#jobfilter_sidebar .section .section-body form .check-boxes-with-number .number {
+  width: 15px;
+  height: 15px;
+  background-color: #F6F7F8;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Poppin-Regular";
+  line-height: 12px;
+  color: #2B9CFD;
+}
+
+#job_search_bannar {
+  width: 100%;
+  height: 40vh;
+  background-image: url(../vendor/Images/job-search-layer.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#job_search_bannar .bannar-layer {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#job_search_bannar .bannar-layer .title {
+  font-size: 50px;
+  line-height: 76px;
+  font-family: "Poppin-SemiBold";
+  color: #ffffff;
+}
+#job_search_bannar .bannar-layer .subtitle {
+  font-size: 25px;
+  line-height: 38px;
+  font-family: "Poppin-Light";
+  color: #00ffdd;
+}
+#job_search_bannar .search-bar-section {
+  width: 1000px;
+  height: 50px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 2px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#job_search_bannar .search-bar-section form {
+  height: 100%;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by {
+  border-right: 1px solid rgba(0, 0, 0, 0.1607843137);
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by.keyword {
+  display: flex;
+  align-items: center;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by.keyword .search-icon i {
+  color: #0057ff;
+  font-size: 18px;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by.postal-code {
+  display: flex;
+  align-items: center;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .form-control {
+  border: 0;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .form-control:focus {
+  box-shadow: none;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Poppin-Regular";
+  color: #000000;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Poppin-Regular";
+  color: #000000;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Poppin-Regular";
+  color: #000000;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Poppin-Regular";
+  color: #000000;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+  box-shadow: none;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .custom-select {
+  border: 0;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .search-by .custom-select:focus {
+  box-shadow: none;
+  outline: 0;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .submit-button .find-job {
+  width: 130px;
+  height: 100%;
+  background-color: #0057ff;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "Poppin-Regular";
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+}
+#job_search_bannar .search-bar-section form .search-bar-bannar .submit-button .find-job:focus {
+  border: none;
+}
+#loginmodal .modal-dialog .modal-content .modal-body {
+  padding-top: 45px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 45px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .header {
+  font-size: 20px;
+  line-height: 30px;
+  color: #2F3639;
+  text-align: center;
+  font-family: "Poppin-SemiBold";
+  padding-bottom: 20px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .email span .email {
+  border: none;
+  border: 1px solid #DDDDDD;
+  width: 100%;
+  height: 50px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .email span input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-family: "Poppin-Light";
+  color: #76899C;
+  padding-left: 15px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .email span input:focus {
+  border: 1px solid #DDDDDD;
+  padding-left: 15px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .email {
+  margin-bottom: 10px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .password span .password {
+  border: none;
+  border: 1px solid #DDDDDD;
+  width: 100%;
+  height: 50px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .password span input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-family: "Poppin-Light";
+  color: #76899C;
+  padding-left: 15px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .password span input:focus {
+  border: 1px solid #DDDDDD;
+  padding-left: 15px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .password span .forget-password {
+  display: flex;
+  justify-content: flex-end;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .password {
+  margin-bottom: 10px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .body .main-login-form span form .login-submit button {
+  width: 100%;
+  height: 50px;
+  background: transparent linear-gradient(90deg, #2B9CFD 0%, #41EBFE 100%) 0% 0% no-repeat padding-box;
+  font-family: "Poppin-SemiBold";
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .footer {
+  margin-top: 45px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .footer .footer-content .footer-content-text {
+  font-family: "Poppin-Light";
+  font-size: 17px;
+  color: #76899C;
+  line-height: 26px;
+}
+#loginmodal .modal-dialog .modal-content .modal-body .footer .footer-content .create-account-button {
+  border: none;
+  background: white;
+  font-family: "Poppin-Light";
+  color: #3CD7FE;
+  font-size: 17px;
+}
+
+#paginations {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+}
+#paginations li {
+  margin-right: 20px;
+  background-color: white;
+}
+#paginations li button {
+  border: 1px solid #277F6A;
+  background-color: white;
+  font-size: 14px;
+  font-family: "Poppin-Medium";
+  color: #277F6A;
+}
+#paginations li button.active {
+  background-color: #277F6A;
+  color: white;
+}
+
+#applyforjobmodal .modal-dialog {
+  max-width: 70%;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .header {
+  font-size: 20px;
+  font-family: "Poppin-Regular";
+  line-height: 30px;
+  color: #2f3639;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body {
+  padding-left: 5%;
+  padding-right: 7%;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .header .title {
+  font-size: 18px;
+  font-family: "Poppin-Regular";
+  line-height: 27px;
+  color: #2f3639;
+  margin-bottom: 15px;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .header .profile-info {
+  display: flex;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .header .profile-info .profile-image img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .header .profile-info .other-info {
+  margin-left: 15px;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .header .profile-info .other-info .name {
+  font-size: 18px;
+  font-family: "Poppin-Regular";
+  line-height: 21px;
+  color: #2f3639;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .header .profile-info .other-info .designation {
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  line-height: 21px;
+  color: #2f3639;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form {
+  width: 100%;
+  margin-top: 50px;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span {
+  width: 100%;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form {
+  width: 100%;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section.accept-term {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section.accept-term span .d-flex {
+  align-items: center;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section.accept-term span .d-flex input {
+  width: auto;
+  margin-right: 10px;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span {
+  width: 100%;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span label {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Poppin-Light";
+  color: #76899c;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span .resume {
+  height: 170px;
+  border: 0.5px solid #2f3639;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span .resume .upload-section .pdf-thumb-border {
+  border: 1px dashed #277F6A;
+  width: 105px;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span .resume .upload-section .pdf-thumb-border img {
+  padding: 15px;
+  width: 65px;
+  height: 80px;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span .resume .upload-section .pdf-thumb-border .filename {
+  font-size: 8px;
+  font-family: "Poppin-Medium";
+  color: #012D3A;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span .resume .upload-section button {
+  margin-top: 10px;
+  border: none;
+  background-color: #012D3A;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 102px;
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height: 21px;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span input {
+  width: 100%;
+  border: 0.5px solid #2f3639;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span .agreed-term {
+  font-size: 14px;
+  line-height: 27px;
+  font-family: "Poppin-Light";
+  color: #76899c;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form .input-section span select {
+  width: 100%;
+  border: 0.5px solid #2f3639;
+}
+#applyforjobmodal .modal-dialog .modal-content .modal-body .body .form span form button {
+  width: 245px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: none;
+  background-color: #012D3A;
+  font-size: 20px;
+  font-family: "Roboto-Regular";
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+#index-page {
+  margin-bottom: 100px;
+}
+#index-page section.our-services {
+  margin-top: 120px;
+}
+#index-page section.our-services .container .row .col-sm-12.start {
+  display: flex;
+  justify-content: flex-start;
+}
+#index-page section.our-services .container .row .col-sm-12.middle {
+  display: flex;
+  justify-content: center;
+}
+#index-page section.our-services .container .row .col-sm-12 {
+  display: flex;
+  justify-content: flex-end;
+}
+#index-page section.our-services .container .row .col-sm-12 .service-card {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+  border: 1px solid #F4F4F4;
+  width: 300px;
+  height: auto;
+  padding-bottom: 39px;
+  padding-left: 18px;
+  padding-right: 17px;
+}
+#index-page section.our-services .container .row .col-sm-12 .service-card .header {
+  height: 80px;
+  position: relative;
+}
+#index-page section.our-services .container .row .col-sm-12 .service-card .header .icon-section .icon img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -65%;
+  right: 30%;
+}
+#index-page section.our-services .container .row .col-sm-12 .service-card .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  color: #1C1C1C;
+  text-align: center;
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+#index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+  font-size: 8px;
+  font-family: "Poppin-Light";
+  color: #B6B6B6;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+#index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+  text-align: center;
+}
+#index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+  font-size: 10px;
+  font-family: "Poppin-Medium";
+  text-decoration: none;
+}
+#index-page section.cr-dev-and-learning {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #F6F7F8;
+}
+#index-page section.cr-dev-and-learning .title {
+  font-size: 20px;
+  color: #B5B5B5;
+  font-family: "Poppin-Light";
+  line-height: 30px;
+  text-align: center;
+}
+#index-page section.cr-dev-and-learning .subtitle {
+  font-size: 30px;
+  font-family: "Poppin-SemiBold";
+  color: #2F3639;
+  text-align: center;
+  line-height: 46px;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+  background-color: #FFFFFF;
+  border: 1px solid #F4F4F4;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-top: 45px;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+  height: 160px;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+  height: 70px;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  text-align: left;
+  line-height: 26px;
+  padding-top: 13px;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+  font-size: 10px;
+  font-family: "Poppin-Light";
+  color: #B6B6B6;
+  line-height: 16px;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+  font-size: 8px;
+  font-family: "Poppin-Light";
+  color: #B6B6B6;
+  line-height: 16px;
+  margin-top: 25px;
+  height: 55px;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+#index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+  font-family: "Poppin-Light";
+  font-size: 8px;
+  color: #0057FF;
+  line-height: 12px;
+}
+#index-page section.cr-dev-and-learning .footer .read-more {
+  text-align: center;
+  margin-top: 50px;
+}
+#index-page section.cr-dev-and-learning .footer .read-more .view-all {
+  border: 1px solid #B5B5B5;
+  border-radius: 17px;
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  color: #2F3639;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+#index-page section.how-its-work {
+  margin-bottom: 50px;
+}
+#index-page section.how-its-work .container .row .col-12 .title {
+  font-size: 40px;
+  line-height: 55px;
+  font-family: "Poppin-SemiBold";
+  color: #2F3639;
+  text-align: center;
+  margin-bottom: 35px;
+}
+#index-page section.how-its-work .container .row .col-12 .body {
+  font-size: 12px;
+  font-family: "Poppin-Light";
+  color: #B5B5B5;
+  line-height: 24px;
+  text-align: center;
+}
+#index-page section.subscribe .container .row .col-12 .main-section {
+  background-color: #FAFAFA;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+#index-page section.subscribe .container .row .col-12 .main-section .title {
+  font-size: 20px;
+  font-family: "Poppin-Light";
+  color: #616161;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#index-page section.subscribe .container .row .col-12 .main-section .title div {
+  font-family: "Poppin-Regular";
+  font-size: 25px;
+  color: #616161;
+  line-height: 30px;
+  text-align: center;
+}
+#index-page section.subscribe .container .row .col-12 .main-section .body {
+  font-size: 10px;
+  font-family: "Poppin-Light";
+  color: #C2C2C2;
+  line-height: 16px;
+  text-align: center;
+  width: 365px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+#index-page section.subscribe .container .row .col-12 .main-section .search-section {
+  width: 400px;
+  margin: auto;
+}
+#index-page section.subscribe .container .row .col-12 .main-section .search-section .input-group .search-subscribe {
+  background-color: #277F6A;
+  color: #FFFFFF;
+  line-height: 23px;
+  font-size: 15px;
+  font-family: "Poppin-Regular";
+  border: none;
+}
+#index-page .after-how-work-hr {
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+#personal-info {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#personal-info .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  line-height: 25px;
+  color: #2f3639;
+}
+#personal-info .personal-info-sections .title {
+  font-family: "Poppin-Medium";
+  font-size: 12.5px;
+  line-height: 18px;
+  color: #2f3639;
+  margin-bottom: 8px;
+}
+#personal-info .personal-info-sections .section-body {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 8px;
+  padding-top: 9px;
+  padding-right: 17px;
+  padding-left: 17px;
+  margin-bottom: 15px;
+}
+#personal-info .personal-info-sections .section-body.contact-information {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+#personal-info .personal-info-sections .section-body.skills {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#personal-info .personal-info-sections .section-body.without-header {
+  display: flex;
+  justify-content: space-between;
+}
+#personal-info .personal-info-sections .section-body.without-header .left {
+  width: 100%;
+}
+#personal-info .personal-info-sections .section-body.without-header .left hr {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+#personal-info .personal-info-sections .section-body.without-header .left .info {
+  display: flex;
+  align-items: center;
+}
+#personal-info .personal-info-sections .section-body.without-header .left .info .icon {
+  margin-right: 15px;
+}
+#personal-info .personal-info-sections .section-body.without-header .left .info .text {
+  font-size: 12px;
+  font-family: "Roboto-Regular";
+  line-height: 14px;
+  color: #2f3639;
+}
+#personal-info .personal-info-sections .section-body.without-header .right button {
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-family: "Roboto-Regular";
+  line-height: 18px;
+  color: #2b9cfd;
+}
+#personal-info .personal-info-sections .section-body .header {
+  display: flex;
+  align-items: center;
+}
+#personal-info .personal-info-sections .section-body .header .plus-button {
+  margin-right: 10px;
+}
+#personal-info .personal-info-sections .section-body .header .plus-button i {
+  color: #2b9cfd;
+}
+#personal-info .personal-info-sections .section-body .header .text {
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+  line-height: 14px;
+  color: #2b9cfd;
+}
+#personal-info .personal-info-sections .section-body .body {
+  display: flex;
+  justify-content: space-between;
+}
+#personal-info .personal-info-sections .section-body .body .left .skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+#personal-info .personal-info-sections .section-body .body .left .skills .skill-name {
+  height: 20px;
+  width: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #277F6A;
+  border: 1px solid #277F6A;
+  margin-right: 10px;
+  font-family: "Roboto-Regular";
+  font-size: 10px;
+  line-height: 13px;
+  color: #FFFFFF;
+}
+#personal-info .personal-info-sections .section-body .body .left .title {
+  font-family: "Roboto-Medium";
+  font-size: 15px;
+  line-height: 14px;
+  color: #2f3639;
+}
+#personal-info .personal-info-sections .section-body .body .left .sub-title {
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+  line-height: 14px;
+  color: #2f3639;
+}
+#personal-info .personal-info-sections .section-body .body .left .description {
+  padding-top: 20px;
+  font-family: "Roboto-Medium";
+  font-size: 10px;
+  line-height: 13px;
+  color: #2f3639;
+  padding-bottom: 20px;
+  width: 50%;
+}
+#personal-info .personal-info-sections .section-body .body .right button {
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-family: "Roboto-Regular";
+  line-height: 18px;
+  color: #2b9cfd;
+}
+#personal-info .personal-info-sections .section-body.about-me {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#personal-info .personal-info-sections .section-body.about-me .left {
+  display: flex;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .image-section {
+  position: relative;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .image-section .image-upload-button {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2f3639;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+  background-color: #ffffff;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .image-section .image-upload-button i {
+  color: #2f3639;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .image-section .profile-picture {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid #2f3639;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .info-section .name {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Roboto-Medium";
+  color: #2f3639;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .info-section .name input {
+  margin-bottom: 2px;
+  width: 200px;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .info-section .designation {
+  font-size: 13px;
+  line-height: 15px;
+  font-family: "Roboto-Medium";
+  color: #2f3639;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .info-section .designation input {
+  margin-bottom: 2px;
+  width: 200px;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .info-section .loacation {
+  font-size: 10px;
+  line-height: 13px;
+  font-family: "Roboto-Regular";
+  color: #2f3639;
+}
+#personal-info .personal-info-sections .section-body.about-me .left .info-section .loacation input {
+  margin-bottom: 2px;
+  width: 200px;
+}
+
+#appliedjob {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+#appliedjob .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  line-height: 25px;
+}
+#appliedjob .applied-job-card {
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 30px;
+}
+#appliedjob .applied-job-card .header .header-content {
+  display: flex;
+  justify-content: space-between;
+}
+#appliedjob .applied-job-card .header .header-content .left-side .image {
+  width: 60px;
+  height: 45px;
+}
+#appliedjob .applied-job-card .header .header-content .left-side .title {
+  font-size: 12px;
+  font-family: "Poppin-Medium";
+  color: #000000;
+  line-height: 18px;
+}
+#appliedjob .applied-job-card .header .header-content .left-side .location {
+  font-size: 6px;
+  font-family: "Poppin-Regular";
+  color: #6B6B8C;
+  line-height: 9px;
+}
+#appliedjob .applied-job-card .header .header-content .right-side {
+  position: relative;
+}
+#appliedjob .applied-job-card .header .header-content .right-side .dot-text::after {
+  content: "⠇";
+  font-size: 20px;
+  cursor: pointer;
+}
+#appliedjob .applied-job-card .header .header-content .right-side .dot-click-open {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 155px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
+  z-index: 9;
+}
+#appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content {
+  display: flex;
+  align-items: center;
+  height: 27px;
+  padding-left: 6px;
+  cursor: pointer;
+}
+#appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content:hover {
+  background-color: #F6F7F8;
+}
+#appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content .icon img {
+  width: 10px;
+  height: 10px;
+}
+#appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content .text {
+  padding-left: 10px;
+  font-family: "Poppin-Regular";
+  font-size: 9px;
+  line-height: 13px;
+  color: #2F3639;
+}
+#appliedjob .applied-job-card .body {
+  padding-top: 15px;
+  font-size: 8px;
+  font-family: "Poppin-Light";
+  color: #B6B6BB;
+  line-height: 12px;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+#appliedjob .applied-job-card .footer .tags {
+  display: flex;
+  align-items: center;
+}
+#appliedjob .applied-job-card .footer .tags span {
+  width: 75px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #277F6A;
+  flex-direction: column;
+  margin-right: 30px;
+  font-size: 8px;
+  font-family: "Poppin-Medium";
+  color: #FFFFFF;
+}
+#appliedjob .applied-job-card .footer .applied-duration {
+  margin-top: 30px;
+  font-size: 8px;
+  font-family: "Poppin-Regular";
+  color: #277F6A;
+  line-height: 12px;
+}
+
+#our_blog {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#our_blog .container .row .col-sm-12 .blog-body-section {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+  border: 1px solid #F4F4F4;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 25px;
+}
+#our_blog .container .row .col-sm-12 .blog-body-section .blog-card .title-date {
+  height: 60px;
+}
+#our_blog .container .row .col-sm-12 .blog-body-section .blog-card .title-date .title {
+  font-size: 10px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  line-height: 16px;
+  margin-top: 10px;
+}
+#our_blog .container .row .col-sm-12 .blog-body-section .blog-card .title-date .date {
+  font-size: 6px;
+  line-height: 9px;
+  font-family: "Poppin-Light";
+  color: #B6B6B6;
+  margin-top: 5px;
+}
+#our_blog .container .row .col-sm-12 .blog-body-section .blog-card .body {
+  font-size: 8px;
+  color: #B6B6B6;
+  font-family: "Poppin-Light";
+  line-height: 12px;
+  height: 36px;
+  overflow: hidden;
+}
+#our_blog .container .row .col-sm-12 .blog-body-section .blog-card .footer a {
+  font-size: 5px;
+  font-family: "Poppin-Light";
+  color: #0057FF;
+  line-height: 8px;
+}
+
+#save_for_later {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#save_for_later .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  line-height: 25px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  padding: 18px;
+  margin-bottom: 35px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .header .left .image img {
+  width: 57px;
+  height: 43px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .header .left .job-title {
+  font-size: 11px;
+  line-height: 17px;
+  font-family: "Poppin-Medium";
+  color: #000000;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .header .left .job-location {
+  font-size: 5px;
+  font-family: "Poppin-Regular";
+  color: #6B6B8C;
+  line-height: 8px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .header .right .dot-button::after {
+  content: "⠇";
+  font-size: 20px;
+  cursor: pointer;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .body {
+  height: 90px;
+  margin-bottom: 10px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .body .job-des {
+  height: 45px;
+  font-family: "Poppin-Light";
+  font-size: 8px;
+  color: #B6B6BB;
+  line-height: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .body .tags {
+  display: flex;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .body .tags span {
+  width: 70px;
+  background-color: #F6F7F8;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-size: 7px;
+  font-family: "Poppin-Medium";
+  color: #277F6A;
+  line-height: 10px;
+  margin-right: 10px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .footer {
+  display: flex;
+  justify-content: space-between;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .footer .apply-button button {
+  background: #277F6A 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  border: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-family: "Poppin-Medium";
+  font-size: 9px;
+  color: #FFFFFF;
+  line-height: 13px;
+  width: 100px;
+}
+#save_for_later .save-for-later-body .container .row .col-sm-12 .save-for-later-card .footer .love-icon img {
+  width: 23px;
+  height: 23px;
+}
+
+#our_blog_details {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#our_blog_details .title {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+}
+#our_blog_details .container .row .col-12 .blog-details-card {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+  border: 1px solid #F4F4F4;
+  border-radius: 4px;
+  padding: 7px;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .header {
+  position: relative;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .header img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .header .image-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent linear-gradient(269deg, #277F6A 0%, rgba(8, 129, 189, 0.5607843137) 100%) 0% 0% no-repeat padding-box;
+  opacity: 0.57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .header .image-layer .job-title {
+  font-size: 35px;
+  font-family: "Poppin-Medium";
+  color: #FFFFFF;
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .header .image-layer .job-date {
+  font-size: 15px;
+  font-family: "Poppin-Light";
+  line-height: 23px;
+  color: #2F3639;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .body {
+  padding: 15px;
+  margin-top: 30px;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .body .des {
+  font-size: 14px;
+  font-family: "Poppin-Light";
+  line-height: 21px;
+  color: #012D3A;
+  width: 100%;
+  margin-bottom: 17px;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .body .des.first-des {
+  height: 300px;
+  overflow: hidden;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .body .title {
+  font-size: 16px;
+  font-family: "Poppin-SemiBold";
+  color: #012D3A;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer {
+  padding: 15px;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .row .col-sm-12 .our-blog-card {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+  border: 1px solid #F4F4F4;
+  border-radius: 4px;
+  padding: 7px;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .row .col-sm-12 .our-blog-card .header img {
+  height: 100%;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .row .col-sm-12 .our-blog-card .body {
+  margin-top: 8px;
+  padding: 0;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .row .col-sm-12 .our-blog-card .body .title {
+  font-size: 8px;
+  line-height: 12px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .row .col-sm-12 .our-blog-card .body .date {
+  font-size: 5px;
+  font-family: "Poppin-Light";
+  line-height: 8px;
+  color: #B6B6B6;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .row .col-sm-12 .our-blog-card .body .job-des {
+  font-size: 8px;
+  font-family: "Poppin-Light";
+  line-height: 12px;
+  color: #B6B6B6;
+  height: 35px;
+  overflow: hidden;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .row .col-sm-12 .our-blog-card .footer {
+  padding: 0;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .row .col-sm-12 .our-blog-card .footer a {
+  font-size: 4px;
+  font-family: "Poppin-Light";
+  line-height: 5px;
+  color: #0057FF;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .view-all-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+#our_blog_details .container .row .col-12 .blog-details-card .footer .container .view-all-button a {
+  border: 1px solid #277F6A;
+  border-radius: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 8px;
+  font-family: "Poppin-Light";
+  color: #277F6A;
+  text-decoration: none;
+}
+
+#change_password {
+  margin-top: 50px;
+}
+#change_password .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  line-height: 25px;
+  color: #2F3639;
+}
+#change_password .change-password-card {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+  border: 1px solid #F4F4F4;
+  border-radius: 4px;
+  padding-top: 43px;
+  padding-left: 33px;
+}
+#change_password form .row label {
+  font-size: 11px;
+  font-family: "Poppin-Regular";
+  color: #272727;
+  line-height: 17px;
+}
+#change_password form .row .col-sm-8 input {
+  width: 288px;
+  border: none;
+  border: 0.3px solid #76899C;
+  border-radius: 0rem;
+  height: 30px;
+}
+#change_password form .row .col-sm-8 input::-webkit-input-placeholder { /* Edge */
+  color: #76899C;
+  font-size: 10px;
+  font-family: "Poppin-Regular";
+}
+#change_password form .row .col-sm-8 input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #76899C;
+  font-size: 10px;
+  font-family: "Poppin-Regular";
+}
+#change_password form .row .col-sm-8 input::placeholder {
+  color: #76899C;
+  font-size: 10px;
+  font-family: "Poppin-Regular";
+}
+#change_password form .row .col-sm-8 .submit-change-password {
+  width: 83px;
+  background-color: #277F6A;
+  font-family: "Poppin-Medium";
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  border: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#suggestedjob {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+#suggestedjob .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  line-height: 25px;
+}
+#suggestedjob .applied-job-card {
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 30px;
+}
+#suggestedjob .applied-job-card .header .header-content {
+  display: flex;
+  justify-content: space-between;
+}
+#suggestedjob .applied-job-card .header .header-content .left-side .image {
+  width: 60px;
+  height: 45px;
+}
+#suggestedjob .applied-job-card .header .header-content .left-side .title {
+  font-size: 12px;
+  font-family: "Poppin-Medium";
+  color: #000000;
+  line-height: 18px;
+}
+#suggestedjob .applied-job-card .header .header-content .left-side .location {
+  font-size: 6px;
+  font-family: "Poppin-Regular";
+  color: #6B6B8C;
+  line-height: 9px;
+}
+#suggestedjob .applied-job-card .header .header-content .right-side {
+  position: relative;
+}
+#suggestedjob .applied-job-card .header .header-content .right-side .dot-text::after {
+  content: "⠇";
+  font-size: 20px;
+  cursor: pointer;
+}
+#suggestedjob .applied-job-card .header .header-content .right-side .dot-click-open {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 155px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
+  z-index: 9;
+}
+#suggestedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content {
+  display: flex;
+  align-items: center;
+  height: 27px;
+  padding-left: 6px;
+  cursor: pointer;
+}
+#suggestedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content:hover {
+  background-color: #F6F7F8;
+}
+#suggestedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content .icon img {
+  width: 10px;
+  height: 10px;
+}
+#suggestedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content .text {
+  padding-left: 10px;
+  font-family: "Poppin-Regular";
+  font-size: 9px;
+  line-height: 13px;
+  color: #2F3639;
+}
+#suggestedjob .applied-job-card .body {
+  padding-top: 15px;
+  font-size: 8px;
+  font-family: "Poppin-Light";
+  color: #B6B6BB;
+  line-height: 12px;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+#suggestedjob .applied-job-card .footer .tags {
+  display: flex;
+  align-items: center;
+}
+#suggestedjob .applied-job-card .footer .tags span {
+  width: 75px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #277F6A;
+  flex-direction: column;
+  margin-right: 30px;
+  font-size: 8px;
+  font-family: "Poppin-Medium";
+  color: #FFFFFF;
+}
+#suggestedjob .applied-job-card .footer .applied-duration {
+  margin-top: 30px;
+  font-size: 8px;
+  font-family: "Poppin-Regular";
+  color: #277F6A;
+  line-height: 12px;
+}
+
+#edit_resume {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+#edit_resume .edit-resume-card {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  padding: 10px;
+}
+#edit_resume .edit-resume-card .title {
+  color: #2F3639;
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  line-height: 25px;
+}
+#edit_resume .edit-resume-card .image-upload {
+  display: flex;
+  align-items: center;
+}
+#edit_resume .edit-resume-card .image-upload .image-section {
+  margin-right: 17px;
+}
+#edit_resume .edit-resume-card .image-upload .image-section .personal-info-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#edit_resume .edit-resume-card .image-upload .submit-button .upload-image {
+  background-color: #277F6A;
+  border: none;
+  font-size: 12px;
+  font-family: "Poppin-Medium";
+  color: #FFFFFF;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100px;
+}
+#edit_resume .edit-resume-card .edit-resume-tab-options {
+  margin-top: 20px;
+}
+#edit_resume .edit-resume-card .edit-resume-tab-options .resume-tabs .tabs div ul {
+  background: #F6F7F8 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1607843137);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+#edit_resume .edit-resume-card .edit-resume-tab-options .resume-tabs .tabs div ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#edit_resume .edit-resume-card .edit-resume-tab-options .resume-tabs .tabs div ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppin-Medium";
+  font-size: 10px;
+  line-height: 11px;
+  color: #76899C;
+}
+#edit_resume .edit-resume-card .edit-resume-tab-options .resume-tabs .tabs div ul li a.active {
+  background-color: #76899C;
+  height: 100%;
+  border-radius: 0rem;
+  color: #FFFFFF;
+}
+#edit_resume .edit-resume-card .edit-resume-tab-options .resume-tabs .tabs div ul li a i {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+#upload_resume {
+  margin-top: 50px;
+}
+#upload_resume .upload-resume-card {
+  background: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 5px;
+  width: 100%;
+  height: 745px;
+}
+#upload_resume .upload-resume-card .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  color: #2f3639;
+  line-height: 25px;
+  padding-left: 11px;
+  padding-top: 11px;
+}
+#upload_resume .upload-resume-card .upload-resume-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#upload_resume .upload-resume-card .upload-resume-body .title {
+  font-size: 14px;
+  font-family: "Roboto-Medium";
+  line-height: 17px;
+  color: #2f3639;
+  width: 400px;
+  text-align: center;
+  margin-top: 50px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section form .image-section {
+  width: 95px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #277f6a;
+  margin: auto;
+  margin-top: 40px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section form .image-section .empty {
+  color: #b5b5b5;
+  font-family: "Roboto-Regular";
+  font-size: 8px;
+  line-height: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section form .buttons-upload {
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section form .buttons-upload .browse {
+  width: 45px;
+  border: none;
+  background: #2f3639;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-family: "Roboto-Regular";
+  font-size: 8px;
+  color: #ffffff;
+  margin-right: 5px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section form .buttons-upload .upload {
+  width: 45px;
+  border: none;
+  background: #008020;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-family: "Roboto-Regular";
+  font-size: 8px;
+  color: #ffffff;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-rulls .rulls-title {
+  font-size: 12px;
+  font-family: "Roboto-Bold";
+  color: #2f3639;
+  line-height: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-rulls .rulls {
+  font-size: 12px;
+  font-family: "Roboto-Regular";
+  color: #2f3639;
+  line-height: 14px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-resume-footer {
+  width: 515px;
+  height: 65px;
+  background: #277f6a 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  margin: auto;
+  margin-top: 45px;
+  font-size: 12px;
+  font-family: "Roboto-Bold";
+  line-height: 14px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 68px;
+  padding-right: 68px;
+  text-align: center;
+}
+
+#browse_job {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#browse_job .title-with-filter {
+  display: flex;
+  justify-content: space-between;
+}
+#browse_job .title-with-filter .title {
+  color: #191919;
+  font-size: 20px;
+  font-family: "Poppin-Regular";
+}
+#browse_job .title-with-filter .title span {
+  font-size: 20px;
+  font-family: "Poppin-SemiBold";
+  line-height: 30px;
+}
+#browse_job .title-with-filter .filter form .custom-select {
+  font-family: "Poppin-Medium";
+  font-size: 16px;
+  color: #000000;
+  border: none;
+}
+#browse_job .title-with-filter .filter form .custom-select:focus {
+  border: none;
+}
+#browse_job .title-with-filter .filter form .custom-select option {
+  font-family: "Poppin-Medium";
+  font-size: 16px;
+  color: #000000;
+}
+#browse_job .job-results {
+  margin-top: 25px;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  padding: 18px;
+  margin-bottom: 25px;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .header .images {
+  width: 37px;
+  height: 35px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .header .images img {
+  width: 20px;
+  height: 20px;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .header .dot-text::after {
+  content: "⠇";
+  font-size: 20px;
+  cursor: pointer;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .body .job-title {
+  font-family: "Poppin-Medium";
+  font-size: 11px;
+  line-height: 17px;
+  color: #000000;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .body .job-location {
+  font-size: 7px;
+  font-family: "Poppin-Regular";
+  line-height: 10px;
+  color: #6b6b8c;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .body .job-description {
+  font-family: "Poppin-Light";
+  font-size: 10px;
+  line-height: 12px;
+  color: #b6b6bb;
+  height: 45px;
+  overflow: hidden;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .body .job-tags {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .body .job-tags .tags {
+  width: 70px;
+  height: auto;
+  background: #f6f7f8 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  margin-right: 5px;
+  font-size: 7px;
+  font-family: "Poppin-Medium";
+  line-height: 10px;
+  color: #277f6a;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .footer {
+  margin-top: 15px;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .footer .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .footer .buttons .apply-now-button {
+  width: 110px;
+  background: #277f6a 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  border: none;
+  font-family: "Poppin-Medium";
+  font-size: 9px;
+  line-height: 13px;
+  color: #ffffff;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .footer .buttons .love-jobs-button {
+  border: none;
+  background-color: none;
+  border: 0.5px solid #dfdfdf;
+  border-radius: 4px;
+}
+#browse_job .job-results .container .row .col-sm-12 .browse-job-card .footer .buttons .love-jobs-button i {
+  color: red;
+  font-size: 12px;
+}
+
+:focus {
+  outline: 0;
+}
+
+#help {
+  margin-top: 50px;
+}
+#help .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  line-height: 25px;
+  color: #2f3639;
+}
+#help .faq-card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+#help .faq-card .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  line-height: 25px;
+  color: #2f3639;
+  text-align: center;
+}
+#help .faq-card .faq-questions {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+  padding-left: 17px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 17px;
+  margin-bottom: 15px;
+}
+#help .faq-card .faq-questions .faq-title-with-toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#help .faq-card .faq-questions .faq-title-with-toggle-icon .title {
+  font-family: "Roboto-Medium";
+  font-size: 14px;
+  line-height: 30px;
+  color: #012d3a;
+}
+#help .faq-card .faq-questions .faq-title-with-toggle-icon .title.not-collapsed {
+  color: #378e3c;
+}
+#help .faq-card .faq-questions .faq-title-with-toggle-icon .title:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+#help .faq-card .faq-questions .faq-title-with-toggle-icon .toggle-icon.collapsed .when-open {
+  display: none;
+}
+#help .faq-card .faq-questions .faq-title-with-toggle-icon .toggle-icon.not-collapsed .when-close {
+  display: none;
+}
+#help .faq-card .faq-questions .collapse .faq-body {
+  font-family: "Roboto-Regular";
+  font-size: 10px;
+  line-height: 18px;
+  color: #012d3a;
+  margin-top: 11px;
+}
+
+#job-details {
+  margin-top: 100px;
+  width: 100%;
+}
+#job-details .job-details-main-section {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 100px;
+}
+#job-details .job-details-main-section .main-images-section {
+  width: 100%;
+  position: relative;
+}
+#job-details .job-details-main-section .main-images-section img {
+  width: 100%;
+  height: 262px;
+}
+#job-details .job-details-main-section .main-images-section .main-image-icon {
+  position: absolute;
+  bottom: -10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1607843137);
+}
+#job-details .job-details-main-section .main-images-section .main-image-icon img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+#job-details .job-details-main-section .header {
+  margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#job-details .job-details-main-section .header .left .title {
+  font-size: 25px;
+  font-family: "Poppin-Medium";
+  line-height: 38px;
+  color: #000000;
+}
+#job-details .job-details-main-section .header .left .subtitle {
+  font-family: "Poppin-Regular";
+  font-size: 14px;
+  color: #012D3A;
+  line-height: 21px;
+}
+#job-details .job-details-main-section .header .left .posting-date {
+  padding-top: 30px;
+  font-size: 14px;
+  color: #76899C;
+  font-family: "Poppin-Light";
+}
+#job-details .job-details-main-section .header .right .details {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#job-details .job-details-main-section .header .right .details .love-job {
+  color: red;
+  font-size: 15px;
+  padding-right: 20px;
+}
+#job-details .job-details-main-section .header .right .details .dot-section::after {
+  content: "⠇";
+  font-size: 20px;
+  cursor: pointer;
+}
+#job-details .job-details-main-section .header .right .details-applicants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#job-details .job-details-main-section .header .right .details-applicants .applicants {
+  padding-right: 30px;
+  color: #012D3A;
+  font-size: 15px;
+  font-family: "Poppin-Regular";
+  line-height: 23px;
+}
+#job-details .job-details-main-section .header .right .details-applicants .deadline {
+  color: #012D3A;
+  font-size: 15px;
+  font-family: "Poppin-Regular";
+  line-height: 23px;
+}
+#job-details .job-details-main-section .other-detials {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#job-details .job-details-main-section .other-detials .section .title {
+  font-size: 12px;
+  color: #76899C;
+  font-family: "Poppin-Regular";
+}
+#job-details .job-details-main-section .other-detials .section .info {
+  font-size: 16px;
+  color: #012D3A;
+  font-family: "Poppin-Medium";
+}
+#job-details .job-details-main-section .main-detials {
+  margin-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#job-details .job-details-main-section .main-detials .section {
+  margin-bottom: 20px;
+}
+#job-details .job-details-main-section .main-detials .section .title {
+  font-size: 16px;
+  font-family: "Poppin-Medium";
+  color: #2F3639;
+  line-height: 25px;
+}
+#job-details .job-details-main-section .main-detials .section .info {
+  font-size: 14px;
+  font-family: "Poppin-Light";
+  color: #2F3639;
+  line-height: 21px;
+  white-space: pre-line;
+}
+#job-details .job-details-main-section .main-detials .section .apply-button button {
+  background-color: #012D3A;
+  border: none;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 160px;
+  color: #FFFFFF;
+  font-family: "Poppin-Medium";
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#primary-job-information {
+  margin-top: 50px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+  padding-top: 27px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 27px;
+}
+#primary-job-information .title {
+  font-size: 18px;
+  font-family: "Poppin-Medium";
+  line-height: 27px;
+  color: #012d3a;
+}
+#primary-job-information .form-section {
+  width: 100%;
+}
+#primary-job-information .form-section span {
+  width: 100%;
+}
+#primary-job-information .form-section span form {
+  width: 100%;
+}
+#primary-job-information .form-section span form .input-section {
+  width: 100%;
+  margin-bottom: 25px;
+}
+#primary-job-information .form-section span form .input-section .email {
+  margin-top: 10px;
+}
+#primary-job-information .form-section span form .input-section span {
+  width: 100%;
+  display: flex;
+}
+#primary-job-information .form-section span form .input-section span label {
+  width: 25%;
+  font-family: "Poppin-Regular";
+  font-size: 18px;
+  line-height: 27px;
+  color: #012d3a;
+}
+#primary-job-information .form-section span form .input-section span input {
+  width: 75%;
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+}
+#primary-job-information .form-section span form .input-section span .upload-button {
+  width: 175px;
+  border: none;
+  background-color: #012d3a;
+  font-family: "Poppin-Regular";
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+#primary-job-information .form-section span form .input-section span .no-image {
+  font-size: 16px;
+  color: #76899C;
+  font-family: "Poppin-Medium";
+  line-height: 21px;
+  margin-left: 20px;
+}
+#primary-job-information .form-section span form .input-section span .image {
+  margin-left: 20px;
+}
+#primary-job-information .form-section span form .input-section span .image img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+}
+#primary-job-information .form-section span form .input-section span textarea {
+  width: 75%;
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+  height: 100px;
+}
+#primary-job-information .form-section span form .input-section span select {
+  width: 75%;
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+}
+#primary-job-information .form-section span form .input-section span .b-form-datepicker {
+  width: 75%;
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+}
+#primary-job-information .form-section span form .submit-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#primary-job-information .form-section span form .submit-section .button-submit {
+  width: 175px;
+  height: 50px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1607843137);
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+  background-color: #012D3A;
+  border: none;
+  font-size: 18px;
+  font-family: "Poppin-Medium";
+  color: #ffffff;
+}
+
+#more-job-information {
+  margin-top: 50px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+  padding-top: 27px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 27px;
+}
+#more-job-information .title {
+  font-size: 18px;
+  font-family: "Poppin-Medium";
+  line-height: 27px;
+  color: #012d3a;
+}
+#more-job-information .form-section {
+  width: 100%;
+}
+#more-job-information .form-section span {
+  width: 100%;
+}
+#more-job-information .form-section span form {
+  width: 100%;
+}
+#more-job-information .form-section span form .input-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#more-job-information .form-section span form .input-section.salary-range input {
+  width: auto;
+}
+#more-job-information .form-section span form .input-section.salary-range .to {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "Poppin-Medium";
+  font-size: 14px;
+  color: #012d3a;
+  line-height: 21px;
+}
+#more-job-information .form-section span form .input-section span {
+  width: 100%;
+  display: flex;
+}
+#more-job-information .form-section span form .input-section span label {
+  width: 25%;
+  font-family: "Poppin-Regular";
+  font-size: 18px;
+  line-height: 27px;
+  color: #012d3a;
+}
+#more-job-information .form-section span form .input-section span .input button {
+  background: #ffffff 0% 0% no-repeat;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1607843137);
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Poppin-Regular";
+  color: #76899c;
+  line-height: 25px;
+  margin-right: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+#more-job-information .form-section span form .input-section span input {
+  width: 75%;
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+}
+#more-job-information .form-section span form .input-section span textarea {
+  width: 75%;
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+  height: 100px;
+}
+#more-job-information .form-section span form .submit-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#more-job-information .form-section span form .submit-section .button-submit {
+  width: 175px;
+  height: 50px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1607843137);
+  border: 0.5px solid #e1ebfb;
+  border-radius: 5px;
+  background-color: #012d3a;
+  border: none;
+  font-size: 18px;
+  font-family: "Poppin-Medium";
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1400px) {
+  #bannar-section {
+    height: 90vh;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side {
+    margin-left: 0;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image {
+    display: flex;
+    margin-top: 15px;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1370px) {
+  #bannar-section {
+    height: 90vh;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side {
+    margin-left: 0;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image {
+    display: flex;
+    margin-top: 15px;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #bannar-section {
+    height: 90vh;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side {
+    margin-left: 0;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image {
+    display: flex;
+    margin-top: 15px;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #bannar-section {
+    height: 90vh;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side {
+    margin-left: 0;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image {
+    display: flex;
+    margin-top: 15px;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #bannar-section {
+    height: 90vh;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side {
+    margin-left: 0;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image {
+    display: flex;
+    margin-top: 15px;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #bannar-section {
+    height: 90vh;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side {
+    margin-left: 0;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image {
+    display: flex;
+    margin-top: 15px;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  #bannar-section {
+    height: 90vh;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side {
+    margin-left: 0;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image {
+    display: flex;
+    margin-top: 15px;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  #bannar-section {
+    height: 90vh;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side {
+    margin-left: 0;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image {
+    display: flex;
+    margin-top: 15px;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  #bannar-section .container .row .col-sm-12 .left-side .title {
+    font-size: 22px;
+    text-align: center;
+    line-height: 30px;
+  }
+  #bannar-section .container .row .col-sm-12 .left-side .title span {
+    font-size: 22px;
+    text-align: center;
+  }
+  #bannar-section .container .row .col-sm-12 .left-side .subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 414px) {
+  #bannar-section .container .row .col-sm-12 .left-side .title {
+    font-size: 22px;
+    text-align: center;
+    line-height: 30px;
+  }
+  #bannar-section .container .row .col-sm-12 .left-side .title span {
+    font-size: 22px;
+    text-align: center;
+  }
+  #bannar-section .container .row .col-sm-12 .left-side .subtitle {
+    text-align: center;
+  }
+  #bannar-section .container .row .col-sm-12 .right-side .bn-image .bannar-vector {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #bannar-section .container .row .col-sm-12 .left-side .title {
+    font-size: 22px;
+    text-align: center;
+    line-height: 30px;
+  }
+  #bannar-section .container .row .col-sm-12 .left-side .title span {
+    font-size: 22px;
+    text-align: center;
+  }
+  #bannar-section .container .row .col-sm-12 .left-side .subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  #bannar-section .container .row .col-sm-12 .left-side .title {
+    font-size: 22px;
+    text-align: center;
+    line-height: 30px;
+  }
+  #bannar-section .container .row .col-sm-12 .left-side .title span {
+    font-size: 22px;
+    text-align: center;
+  }
+  #bannar-section .container .row .col-sm-12 .left-side .subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #footer .container .row .footer-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 1370px) {
+  #footer .container .row .footer-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #footer .container .row .footer-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #footer .container .row .footer-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #footer .container .row .footer-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #footer .container .row .footer-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 991px) {
+  #footer .container .row .footer-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 800px) {
+  #footer .container .row .footer-content {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 500px) {
+  #footer .container .row .footer-content .fo-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  #footer .container .row .footer-content .fo-content .title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #footer .container .row .footer-content .fo-content .links {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 414px) {
+  #footer .container .row .footer-content {
+    flex-direction: column;
+  }
+  #footer .container .row .footer-content .fo-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  #footer .container .row .footer-content .fo-content .title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #footer .container .row .footer-content .fo-content .links {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  #footer .container .row .footer-content .fo-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  #footer .container .row .footer-content .fo-content .title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #footer .container .row .footer-content .fo-content .links {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  #footer .container .row .footer-content .fo-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  #footer .container .row .footer-content .fo-content .title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #footer .container .row .footer-content .fo-content .links {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #left-sidebar {
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1370px) {
+  #left-sidebar {
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #left-sidebar {
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #left-sidebar {
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #left-sidebar {
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #left-sidebar {
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 991px) {
+  #left-sidebar {
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 800px) {
+  #left-sidebar {
+    height: 885px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar {
+    display: block;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 2px;
+    transition: border-color 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background: #ccc;
+    transition: background-color 0.25s, transform 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on {
+    border-color: gr #2b9cfd;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on:before {
+    background: #2b9cfd;
+    transform: translateX(16px);
+  }
+}
+@media screen and (max-width: 767px) {
+  #left-sidebar {
+    height: 885px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar {
+    display: block;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 2px;
+    transition: border-color 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background: #ccc;
+    transition: background-color 0.25s, transform 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on {
+    border-color: gr #2b9cfd;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on:before {
+    background: #2b9cfd;
+    transform: translateX(16px);
+  }
+}
+@media screen and (max-width: 575px) {
+  #left-sidebar {
+    height: 885px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar {
+    display: block;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 2px;
+    transition: border-color 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background: #ccc;
+    transition: background-color 0.25s, transform 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on {
+    border-color: gr #2b9cfd;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on:before {
+    background: #2b9cfd;
+    transform: translateX(16px);
+  }
+}
+@media screen and (max-width: 500px) {
+  #left-sidebar {
+    height: 885px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar {
+    display: block;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 2px;
+    transition: border-color 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background: #ccc;
+    transition: background-color 0.25s, transform 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on {
+    border-color: gr #2b9cfd;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on:before {
+    background: #2b9cfd;
+    transform: translateX(16px);
+  }
+}
+@media screen and (max-width: 414px) {
+  #left-sidebar {
+    height: 885px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar {
+    display: block;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 2px;
+    transition: border-color 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background: #ccc;
+    transition: background-color 0.25s, transform 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on {
+    border-color: gr #2b9cfd;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on:before {
+    background: #2b9cfd;
+    transform: translateX(16px);
+  }
+}
+@media screen and (max-width: 375px) {
+  #left-sidebar {
+    height: 885px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar {
+    display: block;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 2px;
+    transition: border-color 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background: #ccc;
+    transition: background-color 0.25s, transform 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on {
+    border-color: gr #2b9cfd;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on:before {
+    background: #2b9cfd;
+    transform: translateX(16px);
+  }
+}
+@media screen and (max-width: 320px) {
+  #left-sidebar {
+    height: 885px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: height 0.7s;
+  }
+  #left-sidebar.decreaseheight {
+    height: 50px;
+    overflow: hidden;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar {
+    display: block;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 2px;
+    transition: border-color 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background: #ccc;
+    transition: background-color 0.25s, transform 0.25s;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on {
+    border-color: gr #2b9cfd;
+  }
+  #left-sidebar .left-sidebar .section .title .togglehideleftbar.on:before {
+    background: #2b9cfd;
+    transform: translateX(16px);
+  }
+}
+@media screen and (max-width: 1400px) {
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 1370px) {
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  #job_search_bannar .search-bar-section {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #job_search_bannar .search-bar-section {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  #job_search_bannar .search-bar-section {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  #job_search_bannar {
+    height: 80vh;
+  }
+  #job_search_bannar .bannar-layer .title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  #job_search_bannar .bannar-layer .subtitle {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #job_search_bannar .search-bar-section {
+    width: 100%;
+    height: 280px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: -56%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar {
+    flex-direction: column;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by {
+    border: 1px solid #76899C;
+    margin-bottom: 5px;
+    padding-left: 5px;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.keyword {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.category {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.job-type {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.postal-code {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .submit-button .find-job {
+    width: 100px;
+    height: 45px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 414px) {
+  #job_search_bannar {
+    height: 80vh;
+  }
+  #job_search_bannar .bannar-layer .title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  #job_search_bannar .bannar-layer .subtitle {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #job_search_bannar .search-bar-section {
+    width: 100%;
+    height: 280px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: -56%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar {
+    flex-direction: column;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by {
+    border: 1px solid #76899C;
+    margin-bottom: 5px;
+    padding-left: 5px;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.keyword {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.category {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.job-type {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.postal-code {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .submit-button .find-job {
+    width: 100px;
+    height: 45px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #job_search_bannar {
+    height: 80vh;
+  }
+  #job_search_bannar .bannar-layer .title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  #job_search_bannar .bannar-layer .subtitle {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #job_search_bannar .search-bar-section {
+    width: 100%;
+    height: 280px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: -56%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar {
+    flex-direction: column;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by {
+    border: 1px solid #76899C;
+    margin-bottom: 5px;
+    padding-left: 5px;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.keyword {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.category {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.job-type {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.postal-code {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .submit-button .find-job {
+    width: 100px;
+    height: 45px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #job_search_bannar {
+    height: 80vh;
+  }
+  #job_search_bannar .bannar-layer .title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  #job_search_bannar .bannar-layer .subtitle {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #job_search_bannar .search-bar-section {
+    width: 100%;
+    height: 280px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: -56%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar {
+    flex-direction: column;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by {
+    border: 1px solid #76899C;
+    margin-bottom: 5px;
+    padding-left: 5px;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.keyword {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.category {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.job-type {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by.postal-code {
+    width: 100%;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .search-by .input .custom-select:focus {
+    box-shadow: none;
+  }
+  #job_search_bannar .search-bar-section form .search-bar-bannar .submit-button .find-job {
+    width: 100px;
+    height: 45px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .custom-select {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 414px) {
+  #personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .custom-select {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .custom-select {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #personal_info .accordion .tab-sections .collapse form .row .col-sm-12 .custom-select {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services {
+    margin-top: 88px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    margin-top: 73px;
+    margin-bottom: 73px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1370px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services {
+    margin-top: 86px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    margin-top: 72px;
+    margin-bottom: 72px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services {
+    margin-top: 80px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    margin-top: 67px;
+    margin-bottom: 67px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services {
+    margin-top: 75px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    margin-top: 63px;
+    margin-bottom: 63px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services {
+    margin-top: 68px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    margin-top: 57px;
+    margin-bottom: 57px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services {
+    margin-top: 64px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    margin-top: 54px;
+    margin-bottom: 54px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services {
+    margin-top: 62px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    margin-top: 52px;
+    margin-bottom: 52px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services {
+    margin-top: 50px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    margin-top: 42px;
+    margin-bottom: 42px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 575px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header .icon-section .icon img {
+    width: 60px;
+    height: 60px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header .icon-section .icon img {
+    width: 53px;
+    height: 53px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  #index-page section.cr-dev-and-learning .title {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  #index-page section.cr-dev-and-learning .subtitle {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.how-its-work .container .row .col-12 .title {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title div {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    width: 300px;
+    margin: auto;
+  }
+  #index-page .after-how-work-hr {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 414px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services .container .row .col-sm-12.start {
+    justify-content: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12.middle {
+    justify-content: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header .icon-section .icon img {
+    top: -30%;
+    right: 40%;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  #index-page section.cr-dev-and-learning .title {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  #index-page section.cr-dev-and-learning .subtitle {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.how-its-work .container .row .col-12 .title {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title div {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    width: 300px;
+    margin: auto;
+  }
+  #index-page .after-how-work-hr {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services .container .row .col-sm-12.start {
+    justify-content: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12.middle {
+    justify-content: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header .icon-section .icon img {
+    top: -30%;
+    right: 40%;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  #index-page section.cr-dev-and-learning .title {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  #index-page section.cr-dev-and-learning .subtitle {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.how-its-work .container .row .col-12 .title {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title div {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    width: 300px;
+    margin: auto;
+  }
+  #index-page .after-how-work-hr {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #index-page {
+    margin-bottom: 100px;
+  }
+  #index-page section.our-services .container .row .col-sm-12.start {
+    justify-content: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12.middle {
+    justify-content: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1607843137);
+    border: 1px solid #f4f4f4;
+    width: 300px;
+    height: auto;
+    padding-bottom: 39px;
+    padding-left: 18px;
+    padding-right: 17px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header {
+    height: 80px;
+    position: relative;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .header .icon-section .icon img {
+    top: -30%;
+    right: 40%;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #1c1c1c;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .short-description {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer {
+    text-align: center;
+  }
+  #index-page section.our-services .container .row .col-sm-12 .service-card .footer a {
+    font-size: 10px;
+    font-family: "Poppin-Medium";
+    text-decoration: none;
+  }
+  #index-page section.cr-dev-and-learning {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  #index-page section.cr-dev-and-learning .title {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  #index-page section.cr-dev-and-learning .subtitle {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card {
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 45px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image {
+    height: 160px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .image .cr-dev-img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header {
+    height: 70px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .title {
+    font-size: 16px;
+    font-family: "Poppin-Medium";
+    color: #2f3639;
+    text-align: left;
+    line-height: 26px;
+    padding-top: 13px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .header .sub-header .date {
+    font-size: 10px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .body {
+    font-size: 8px;
+    font-family: "Poppin-Light";
+    color: #b6b6b6;
+    line-height: 16px;
+    margin-top: 25px;
+    height: 55px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  #index-page section.cr-dev-and-learning .body .container .row .col-sm-12 .cr-dev-card .footer a {
+    font-family: "Poppin-Light";
+    font-size: 8px;
+    color: #0057ff;
+    line-height: 12px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #index-page section.cr-dev-and-learning .footer .read-more .view-all {
+    border: 1px solid #b5b5b5;
+    border-radius: 17px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #2f3639;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  #index-page section.how-its-work {
+    margin-bottom: 50px;
+  }
+  #index-page section.how-its-work .container .row .col-12 .title {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .title div {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #index-page section.subscribe .container .row .col-12 .main-section .search-section {
+    width: 300px;
+    margin: auto;
+  }
+  #index-page .after-how-work-hr {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #personal-info .personal-info-sections .section-body .body .left .skills .skill-name {
+    margin-bottom: 10px;
+  }
+  #personal-info .personal-info-sections .section-body .body .left .description {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 414px) {
+  #personal-info .personal-info-sections .section-body .body .left .skills .skill-name {
+    margin-bottom: 10px;
+  }
+  #personal-info .personal-info-sections .section-body .body .left .description {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #personal-info .personal-info-sections .section-body .body .left .skills .skill-name {
+    margin-bottom: 10px;
+  }
+  #personal-info .personal-info-sections .section-body .body .left .description {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #personal-info .personal-info-sections .section-body .body .left .skills .skill-name {
+    margin-bottom: 10px;
+  }
+  #personal-info .personal-info-sections .section-body .body .left .description {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #browse_job {
+    margin-top: 73px;
+  }
+}
+@media screen and (max-width: 1370px) {
+  #browse_job {
+    margin-top: 72px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #browse_job {
+    margin-top: 67px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #browse_job {
+    margin-top: 63px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #browse_job {
+    margin-top: 57px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #browse_job {
+    margin-top: 54px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #browse_job {
+    margin-top: 52px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #browse_job {
+    margin-top: 42px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #browse_job .title-with-filter {
+    flex-direction: column;
+  }
+  #browse_job .title-with-filter .title {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 414px) {
+  #browse_job .title-with-filter {
+    flex-direction: column;
+  }
+  #browse_job .title-with-filter .title {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #browse_job .title-with-filter {
+    flex-direction: column;
+  }
+  #browse_job .title-with-filter .title {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #browse_job .title-with-filter {
+    flex-direction: column;
+  }
+  #browse_job .title-with-filter .title {
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

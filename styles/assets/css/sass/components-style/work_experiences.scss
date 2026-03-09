@@ -1,0 +1,230 @@
+#work_experience{
+    margin-top: 35px;
+    .accordion{
+        .tab-sections{
+            margin-bottom: 20px;
+            margin-top: 30px;
+            .title-with-toggle{
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                .title{
+                    font-size: 14px;
+                    font-family: 'Poppin-Bold';
+                }
+                .toggle-icon{
+                    margin-left: 10px;
+                    i{
+
+                    }
+                }
+            }
+            .collapse{
+                .workexp-info{
+                    .title-with-button{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        .title{
+
+                        }
+                        .button{
+                            .edit-button{
+                                border: none;
+                                width: 85px;
+                                text-align: center;
+                                background-color: #277F6A;
+                                font-size: "Roboto-Medium";
+                                line-height: 17px;
+                                color: white;
+                                margin-right: 30px;
+                                padding-top: 7px;
+                                padding-bottom: 7px;
+                                font-size: 14px;
+
+                            }
+                            .delete-button{
+
+                                border: none;
+                                width: 85px;
+                                text-align: center;
+                                background-color: #FF0000;
+                                font-size: "Roboto-Medium";
+                                line-height: 17px;
+                                color: white;
+                                margin-right: 30px;
+                                padding-top: 7px;
+                                padding-bottom: 7px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .form-workexp-edit{
+                        margin-bottom: 30px;
+                        form{
+                            .row{
+                                .col-sm-12{
+                                    .form-group{
+                                        .col-form-label{
+                                            font-size: 12px;
+                                            font-family: 'Roboto-Medium';
+                                            color: #2F3639;
+                                            line-height: 14px;
+                                        }
+                                        input{
+                                            border: 0.30000001192092896px solid #76899C;
+                                            height: 25px;
+                                            border-radius: 0rem;
+
+                                        }
+                                        .b-form-datepicker{
+                                            border: 0.30000001192092896px solid #76899C;
+                                            height: 35px;
+                                            border-radius: 0rem;
+                                            margin-right: 10px;
+                                        }
+
+                                        .b-form-tags{
+                                            border: 0.30000001192092896px solid #76899C;
+                                            height: 35px;
+                                            border-radius: 0rem;
+                                            .b-form-tags-list {
+                                                background-color: white!important;
+                                                box-shadow:  none!important;
+                                                display: block!important;
+                                                height: auto!important;
+                                            }
+                                        }
+                                        .period{
+                                            display: flex;
+                                        }
+                                    }
+                                    .buttons{
+                                        display: flex;
+                                        .save{
+                                            border: none;
+                                            width: 85px;
+                                            text-align: center;
+                                            background-color: #277F6A;
+                                            font-size: 'Roboto-Medium';
+                                            line-height: 17px;
+                                            color: white;
+                                            margin-right: 30px;
+                                            padding-top: 7px;
+                                            padding-bottom: 7px;
+                                            font-size: 14px;
+                                        }
+                                        .close{
+                                            background-color: #DEEAF5;
+                                            border: 1px solid #DEEAF5;
+                                            font-size: 14px;
+                                            width: 85px;
+                                            line-height: 17px;
+                                            padding-top: 7px;
+                                            padding-bottom: 7px;
+                                            color: #2F3639;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .workexp-details{
+                        .row{
+                            .col-sm-12{
+                                .info{
+                                    margin-bottom: 35px;
+                                    .title{
+                                        font-size: 12px;
+                                        font-family: 'Roboto-Medium';
+                                        line-height: 14px;
+                                        color: #2F3639;
+                                    }
+                                    .inf{
+                                        font-size: 12px;
+                                        font-family: 'Roboto-Medium';
+                                        line-height: 14px;
+                                        color: #2F3639;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .workexp-input{
+                    .title{
+
+                    }
+                    form{
+                        .row{
+                            .col-sm-12{
+                                .form-group{
+                                    .col-form-label{
+                                        font-size: 12px;
+                                        font-family: 'Roboto-Medium';
+                                        color: #2F3639;
+                                        line-height: 14px;
+                                    }
+                                    input{
+                                        border: 0.30000001192092896px solid #76899C;
+                                        height: 25px;
+                                        border-radius: 0rem;
+
+                                    }
+                                    .b-form-datepicker{
+                                        border: 0.30000001192092896px solid #76899C;
+                                        height: 35px;
+                                        border-radius: 0rem;
+                                        margin-right: 10px;
+                                    }
+
+                                    .b-form-tags{
+                                        border: 0.30000001192092896px solid #76899C;
+                                        height: 35px;
+                                        border-radius: 0rem;
+                                        .b-form-tags-list {
+                                            background-color: white!important;
+                                            box-shadow:  none!important;
+                                            display: block!important;
+                                            height: auto!important;
+                                        }
+                                    }
+                                    .period{
+                                        display: flex;
+                                    }
+                                }
+                                .buttons{
+                                    display: flex;
+                                    .save{
+                                        border: none;
+                                        width: 85px;
+                                        text-align: center;
+                                        background-color: #277F6A;
+                                        font-size: 'Roboto-Medium';
+                                        line-height: 17px;
+                                        color: white;
+                                        margin-right: 30px;
+                                        padding-top: 7px;
+                                        padding-bottom: 7px;
+                                        font-size: 14px;
+                                    }
+                                    .close{
+                                        background-color: #DEEAF5;
+                                        border: 1px solid #DEEAF5;
+                                        font-size: 14px;
+                                        width: 85px;
+                                        line-height: 17px;
+                                        padding-top: 7px;
+                                        padding-bottom: 7px;
+                                        color: #2F3639;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

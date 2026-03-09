@@ -1,0 +1,59 @@
+#jobfilter_sidebar{
+    margin-top: 100px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 2px;
+    height: auto;
+    
+    padding: 14px;
+    .section{
+        margin-bottom: 35px;
+        .section-title{
+            font-size: 14px;
+            font-family: 'Poppin-Medium';
+            color: #2F3639;
+            line-height: 21px;
+        }
+        .section-body{
+            margin-top: 30px;
+            form{
+                .check-boxes-with-number{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    .check-box{
+                        .custom-checkbox{
+                            input{
+
+                            }
+                            label{
+                                font-size: 12px;
+                                font-family: 'Roboto-Regular';
+                                color: #76899C;
+                                line-height: 14px;
+                                &::before{
+                                    width: 14px;
+                                    height: 14px;
+                                    border-radius: 0;
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
+                    .number{
+                        width: 15px;
+                        height: 15px;
+                        background-color: #F6F7F8;
+                        text-align: center;
+                        font-size: 12px;
+                        font-family: 'Poppin-Regular';
+                        line-height: 12px;
+                        color: #2B9CFD;
+                    }
+
+                }
+            }
+        }
+    }
+}

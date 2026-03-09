@@ -1,0 +1,103 @@
+@each $width in $resposive-width{
+	@media screen and (max-width: #{$width}px){
+		#browse_job {
+			@if($width >= 780px){
+				margin-top: #{make_for_mobile($width,100)}px;
+			}
+			.title-with-filter {
+				@if($width <= 500){
+					flex-direction: column;
+
+				}
+				
+				.title {
+					@if($width <= 500){
+						margin-bottom: 10px;
+					}
+					c
+					span {
+					
+					}
+				}
+				.filter {
+					form {
+						.custom-select {
+							
+							&:focus {
+								
+							}
+							option {
+								
+							}
+						}
+					}
+				}
+			}
+
+			.job-results {
+				
+				.container {
+					.row {
+						.col-sm-12 {
+							.browse-job-card {
+							
+								.header {
+								
+
+									.images {
+										
+										img {
+										
+										}
+									}
+									.dot-text {
+										&::after {
+											
+										}
+									}
+								}
+								.body {
+									.job-title {
+										
+									}
+									.job-location {
+										
+									}
+									.job-description {
+									
+									}
+
+									.job-tags {
+									
+
+										.tags {
+											
+										}
+									}
+								}
+
+								.footer {
+									
+									.buttons {
+										
+										.apply-now-button {
+											
+										}
+										.love-jobs-button {
+										
+
+											i{
+												
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

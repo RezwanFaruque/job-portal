@@ -1,0 +1,147 @@
+#personal_info{
+    .accordion{
+        .tab-sections{
+            .title-with-toggle{
+                .title{
+
+                }
+                .toggle-icon{
+                    i{
+
+                    }
+                }
+            }
+            .collapse{
+                .academic-info{
+                    .title-with-button{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        .title{
+
+                        }
+                        .button{
+                            .edit-button{
+                                border: none;
+                                width: 85px;
+                                text-align: center;
+                                background-color: #277F6A;
+                                font-size: "Roboto-Medium";
+                                line-height: 17px;
+                                color: white;
+                                margin-right: 30px;
+                                padding-top: 7px;
+                                padding-bottom: 7px;
+                                font-size: 14px;
+
+                            }
+                            .delete-button{
+                                border: none;
+                                width: 85px;
+                                text-align: center;
+                                background-color: #FF0000;
+                                font-size: "Roboto-Medium";
+                                line-height: 17px;
+                                color: white;
+                                margin-right: 30px;
+                                padding-top: 7px;
+                                padding-bottom: 7px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .form-academic-edit{
+                        margin-bottom: 30px;
+                        form{
+                            .row{
+                                .col-sm-12{
+                                    .form-group{
+                                        label{
+                                            font-size: 12px;
+                                            font-family: 'Roboto-Medium';
+                                            color: #2F3639;
+                                            line-height: 14px;
+                                        }
+                                        .custom-select{
+                                            border: 0.30000001192092896px solid #76899C;
+                                            height: 25px;
+                                            border-radius: 0rem;
+                                        }
+                                    }
+                                    .buttons{
+                                        
+                                        .save{
+
+                                        }
+                                        .close{
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .academic-details{
+                        .row{
+                            .col-sm-12{
+                                .info{
+                                    margin-bottom: 35px;
+                                    
+                                    .title{
+                                        font-size: 12px;
+                                        font-family: 'Roboto-Medium';
+                                        line-height: 14px;
+                                        color: #2F3639;
+                                    }
+                                    .inf{
+                                        font-size: 12px;
+                                        font-family: 'Roboto-Medium';
+                                        line-height: 14px;
+                                        color: #2F3639;
+
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+                    
+                }
+                .academic-input{
+                    .title{
+                        font-size: 15px;
+                        font-family: 'Roboto-Bold';
+                        color: #2F3639;
+                        margin-bottom: 10px;
+                    }
+
+                    form{
+                        .row{
+                            .col-sm-12{
+                                .form-group{
+                                    label{
+                                        font-size: 12px;
+                                        font-family: 'Roboto-Medium';
+                                        color: #2F3639;
+                                        line-height: 14px;
+                                    }
+                                    div{
+                                        .custom-select{
+                                            border: 0.30000001192092896px solid #76899C;
+                                            height: 25px;
+                                            border-radius: 0rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+}

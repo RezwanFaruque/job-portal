@@ -1,0 +1,67 @@
+@each $width in $resposive-width{
+	@media screen and (max-width: #{$width}px){
+		#edit_resume{
+            @if($width >= 800){
+             margin-top: #{make_for_mobile($width,100)}px;
+             margin-bottom: #{make_for_mobile($width,100)}px;   
+                
+            }
+          
+            .edit-resume-card{
+               
+                .title{
+                 
+                }
+                hr{
+
+                }
+                .image-upload{
+                   
+                    .image-section{
+                      
+                        .personal-info-image{
+                          
+                        }
+                    }
+                    .submit-button{
+                        .upload-image{
+                          
+                        }
+                    }
+                }
+
+                .edit-resume-tab-options{
+                   
+                    .resume-tabs{
+                        .tabs{
+                            div{
+                                ul{
+                                    @if($width <= 500){
+                                        height: 100%;
+                                    }
+                                 
+                                    li{
+                                      
+                                        a{
+                                         
+
+                                            &.active{
+                                              
+
+
+                                            }
+                                            i{
+                                               
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

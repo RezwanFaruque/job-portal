@@ -1,0 +1,110 @@
+#personal_info{
+    margin-top: 35px;
+    .accordion{
+        .tab-sections{
+            margin-bottom: 20px;
+            margin-top: 30px;
+            .title-with-toggle{
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                .title{
+                    font-size: 14px;
+                    font-family: 'Poppin-Bold';
+                }
+                .toggle-icon{
+                    margin-left: 10px;
+                    i{
+
+                    }
+                }
+            }
+            .collapse{
+                form{
+                    .row{
+                        .col-sm-12{
+                            .side-form{
+                                &.left{
+
+                                }
+                                &.right{
+
+                                }
+                                .form-group{
+                                    label{
+                                        color: #2F3639;
+                                        font-family: 'Roboto-Medium';
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                        margin-bottom: 0rem;
+                                        margin-bottom: 4px;
+                                    }
+                                    div{
+                                        input{
+                                            background-color: #F6F7F8;
+                                            border-radius: 0rem;
+                                            height: 25px;
+                                        }
+                                        .form-control{
+                                            background-color: #F6F7F8;
+                                            border-radius: 0rem;
+                                            height: 25px;
+
+                                        }
+                                        .custom-select{
+                                            background-color: #F6F7F8;
+                                            border-radius: 0rem;
+                                            height: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                            .title{
+                                font-size: 14px;
+                                font-family: 'Roboto-Bold';
+                                color: #2F3639;
+                            }
+                            .custom-select{
+                                border: 0.30000001192092896px solid #B5B5B5;
+                                background-color: #ffff;
+                                height: auto;
+                            }
+
+                  
+                        }
+                        .buttons{
+                            display: flex;
+                            &.second{
+                                margin-top: 20px;
+                            }
+                            .save{
+                                border: none;
+                                width: 85px;
+                                text-align: center;
+                                background-color: #277F6A;
+                                font-size: 'Roboto-Medium';
+                                line-height: 17px;
+                                color: white;
+                                margin-right: 30px;
+                                padding-top: 7px;
+                                padding-bottom: 7px;
+                                font-size: 14px;
+                            }
+                            .close{
+                                background-color: #DEEAF5;
+                                border: 1px solid #DEEAF5;
+                                font-size: 14px;
+                                width: 85px;
+                                line-height: 17px;
+                                padding-top: 7px;
+                                padding-bottom: 7px;
+                                color: #2F3639;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,123 @@
+#section-navbar{
+    .navbar{
+        height: 100px;
+        padding: 0;
+        nav{
+            padding: 0;
+            width: 100%;
+            background-color: #FFFFFF;
+
+            a{
+              img{
+                  width: 115px;
+                  height: auto;
+              }
+            }
+            button{
+                span{
+
+                }
+            }
+            .navbar-collapse{
+                ul{
+                    li{
+                        .loggedin-profile-info{
+                            display: flex;
+
+                            .jobs{
+                                a{
+                                    img{
+                                        width: 20px;
+                                        height: 15px;
+                                    }
+                                }
+                                margin-right: 10px;
+                            }
+
+                            .notification{
+                                margin-right: 10px;
+                            }
+
+                            .profile{
+                                display: flex;
+                                align-items: center;
+                                margin-right: 10px;
+                                .button{
+                                    button{
+
+                                    }
+
+                                    .button-open-section-profile{
+                                        position: absolute;
+                                        background-color: white;
+                                        padding-top: 25px;
+                                        padding-left: 25px;
+                                        padding-bottom: 25px;
+                                        padding-right: 20px;
+                                        right: 5%;
+                                        z-index: 99;
+                                        .section{
+                                            display: flex;
+                                            margin-bottom: 20px;
+
+
+                                            .icon{
+                                                margin-right: 7px;
+                                                img{
+                                                    width: 15px;
+                                                    height: 15px;
+                                                }
+                                            }
+
+                                            .link{
+                                                a{
+                                                    font-size: 14px;
+                                                    font-family: 'Poppin-Regular';
+                                                    color: #2F3639;
+                                                    line-height: 21px;
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                }
+                            }
+                        }
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        &.spec{
+                            a{
+                                color: #277F6A;
+                            }
+                        }
+                        a{
+                            font-size: 14px;
+                            color: #2F3639;
+                            font-family: 'Poppin-Regular';
+                            text-decoration: none;
+
+                        }
+                        button{
+                            border:  none;
+                            font-family: 'Poppin-Regular';
+                            background-color: #FFFFFF;
+                            color: #2F3639;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// modal open margin and padding
+.modal{
+    &.show{
+        .modal-dialog{
+            margin: 9rem auto!important;
+        }
+    }
+}

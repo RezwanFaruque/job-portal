@@ -1,0 +1,54 @@
+// ==========================================================================
+// Base Styles (SCSS)
+// ==========================================================================
+
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// Demo: Custom SCSS-styled elements
+// Use .scss-* prefix to clearly identify SCSS-styled components
+.scss-hero {
+  background: linear-gradient(135deg, $primary 0%, $accent 100%);
+  color: $white;
+  padding: $spacing-2xl;
+  border-radius: $radius-lg;
+  text-align: center;
+
+  @include respond-above(md) {
+    padding: $spacing-2xl 4rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+
+    @include respond-above(md) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__subtitle {
+    opacity: 0.95;
+    font-size: $font-size-base * 1.125;
+  }
+}
+
+.scss-card {
+  @include card-style;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba($black, 0.15);
+  }
+
+  &__badge {
+    display: inline-block;
+    background: $primary;
+    color: $white;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    font-size: 0.75rem;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-sm;
+  }
+}

@@ -1,0 +1,99 @@
+#footer{
+    
+    padding-top: 70px;
+    border-top: 3px solid #DBDDDE;
+    .container{
+        .row{
+            .footer-content{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                .fo-content{
+                    margin-right: 80px;
+                    .title{
+                        font-size: 18px;
+                        font-family: 'Poppin-Medium';
+                        color: #2F3639;
+                        line-height: 27px;
+                        margin-bottom: 30px;
+                    }
+                    .links{
+                        ul{
+                            list-style: none;
+                            padding-left: 0;
+
+                            li{
+                                margin-bottom: 10px;
+                                .footer-link{
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    font-family: 'Poppin-Light';
+                                    color: #2F3639;
+                                    line-height: 21px;
+                                }
+                            }
+                        }
+                    }
+                    &.about-us{
+                       
+                    }
+                    &.career-res{
+                       
+                    }
+                    &.job-sec{
+                        
+                    }
+
+                    &.employee{
+                        
+                    }
+
+                    &.so-section{
+                        
+                    }
+                    .title{
+                       
+                    }
+                    .links{
+                       
+                    }
+                }
+            }
+            .last-footer{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-top: 100px;
+                margin-bottom: 20px;
+                .title-text{
+                    font-size: 18px;
+                    font-family: 'Poppin-Light';
+                    color: #2F3639;
+                    line-height: 27px;
+                    margin-right: 40px;
+                }
+                .logo-with-phone{
+                    display: flex;
+                    align-items: center;
+                    
+                    .logo{
+                        .last-footer-logo{
+                            width: 25px;
+                            height: 25px;
+                            margin-right: 10px;
+
+                        }
+                    }
+                    .caller-text{
+                        font-size: 18px;
+                        font-family: 'Poppin-Medium';
+                        color: #2F3639;
+                        line-height: 27px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+#applyforjobmodal {
+  .modal-dialog {
+    max-width: 70%;
+   
+    .modal-content {
+      .modal-body {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        .header {
+          font-size: 20px;
+          font-family: "Poppin-Regular";
+          line-height: 30px;
+          color: #2f3639;
+        }
+        hr {
+        }
+        .body {
+          padding-left: 5%;
+          padding-right: 7%;
+          .header {
+            .title {
+              font-size: 18px;
+              font-family: "Poppin-Regular";
+              line-height: 27px;
+              color: #2f3639;
+              margin-bottom: 15px;
+            }
+            .profile-info {
+              display: flex;
+              .profile-image {
+                img {
+                  width: 70px;
+                  height: 70px;
+                  border-radius: 50%;
+                }
+              }
+              .other-info {
+                margin-left: 15px;
+                .name {
+                  font-size: 18px;
+                  font-family: "Poppin-Regular";
+                  line-height: 21px;
+                  color: #2f3639;
+                }
+                .designation {
+                  font-size: 14px;
+                  font-family: "Poppin-Regular";
+                  line-height: 21px;
+                  color: #2f3639;
+                }
+              }
+            }
+          }
+
+          .form {
+            width: 100%;
+            margin-top: 50px;
+            span {
+              width: 100%;
+
+              form {
+                width: 100%;
+
+                .input-section {
+                  width: 100%;
+                  margin-bottom: 10px;
+
+                  &.accept-term{
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      span{
+                          .d-flex{
+                              align-items: center;
+
+                              input{
+                                  width: auto;
+                                  margin-right: 10px;
+                              }
+                          }
+                      }
+                  }
+
+                  span {
+                    width: 100%;
+                    label {
+                      font-size: 18px;
+                      line-height: 27px;
+                      font-family: "Poppin-Light";
+                      color: #76899c;
+                    }
+
+                    .resume {
+                      height: 170px;
+                      border: 0.5px solid #2f3639;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      .upload-section{
+                          .pdf-thumb-border{
+                            border: 1px dashed #277F6A;
+                            width: 105px;
+                            height: 105px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img{
+                                padding: 15px;
+                                width: 65px;
+                                height: 80px;
+                              
+                            }
+                            .filename{
+                                font-size: 8px;
+                                font-family: 'Poppin-Medium';
+                                color: #012D3A;
+                                
+                            }
+                          }
+                        
+                          button{
+                            margin-top: 10px;
+                            border: none;
+                            background-color: #012D3A;
+                            padding-top: 3px;
+                            padding-bottom: 3px;
+                            width: 102px;
+                            font-family: 'Roboto-Regular';
+                            font-size: 14px;
+                            color: #FFFFFF;
+                            line-height: 21px;
+                          }
+                      }
+                    }
+                    input {
+                      width: 100%;
+                      border: 0.5px solid #2f3639;
+                    }
+                    .agreed-term{
+                        font-size: 14px;
+                        line-height: 27px;
+                        font-family: "Poppin-Light";
+                        color: #76899c;
+                    }
+                    select {
+                      width: 100%;
+                      border: 0.5px solid #2f3639;
+                    }
+                  }
+                }
+                button{
+                    width: 245px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                    border: none;
+                    background-color: #012D3A;
+                    font-size: 20px;
+                    font-family: 'Roboto-Regular';
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
