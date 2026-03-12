@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useStore, RootState } from "../../store/useStore";
 
 export default function LoginModal() {
-  const toggleLogin = useStore((s: RootState) => s.toggleLoginModal);
-  const toggleSignup = useStore((s: RootState) => s.toggleSignupModal);
+  const toggleLogin = useStore((state: RootState) => state.toggleLoginModal);
+  const toggleSignup = useStore((state: RootState) => state.toggleSignupModal);
 
   return (
     <div className="modal-overlay">

@@ -4,8 +4,8 @@ import React from "react";
 import { useStore, RootState } from "../../store/useStore";
 
 const SingupModal: React.FC = () => {
-  const toggleSignup = useStore((s: RootState) => s.toggleSignupModal);
-  const toggleLogin = useStore((s: RootState) => s.toggleLoginModal);
+  const toggleSignup = useStore((state: RootState) => state.toggleSignupModal);
+  const toggleLogin = useStore((state: RootState) => state.toggleLoginModal);
 
   return (
     <div className="modal-overlay">

@@ -7,9 +7,9 @@ import { RootState, useStore } from "@/store/useStore";
 
 const Navbar: React.FC = () => {
   // selecting each value separately to avoid recreating object every render
-  const toggleLoginModal = useStore((s: RootState) => s.toggleLoginModal);
-  const toggleSignupModal = useStore((s: RootState) => s.toggleSignupModal);
-  const showSignupModal = useStore((s: RootState) => s.showSignupModal);
+  const toggleLoginModal = useStore((state: RootState) => state.toggleLoginModal);
+  const toggleSignupModal = useStore((state: RootState) => state.toggleSignupModal);
+  const showSignupModal = useStore((state: RootState) => state.showSignupModal);
 
   return (
     <div id="section-navbar">

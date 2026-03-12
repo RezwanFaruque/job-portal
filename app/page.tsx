@@ -1,10 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import OurService from "@/components/features/OurService";
+import CareerDevelopmentSection from "@/components/features/CareerDevelopment";
+import HowItWorksSection from "@/components/features/HowItWork";
+import SubscribeSection from "@/components/features/Subscription";
 
 export default function Home() {
   return (
-    <div>
+    <div id="index-page">
         <section id="bannar-section">
           <div className="container">
             <div className="row">
@@ -45,6 +49,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <OurService />
+        <CareerDevelopmentSection />
+        <HowItWorksSection />
+        <SubscribeSection />
     </div>
   );
 }
