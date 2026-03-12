@@ -1,121 +1,139 @@
-#loginmodal{
+/* Modal overlay – dark background behind modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* slightly darker for Bootstrap feel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050; /* Bootstrap modal z-index */
+  padding: 1rem; /* small padding on mobile */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
-	.modal-dialog{
-		.modal-content{
-			.modal-body{
-				padding-top: 45px;
-				padding-left: 45px;
-				padding-right: 45px;
-				padding-bottom: 45px;
-				.header{
-					font-size: 20px;
-					line-height: 30px;
-					color: #2F3639;
-					text-align: center;
-					font-family: 'Poppin-SemiBold';
-					padding-bottom: 20px;
-				}
+/* Modal box */
+.login-modal-placeholder {
+  position: relative;
+  background: #fff;
+  border-radius: 0.3rem; /* Bootstrap default */
+  width: 100%;
+  max-width: 500px; /* responsive width */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Bootstrap modal shadow */
+  padding: 2.5rem 2rem; /* Bootstrap modal padding */
+  outline: 0;
+  display: flex;
+  flex-direction: column;
 
-				.body{
-					.main-login-form{
-						span{
-							form{
-								.email{
-									span{
-										.email{
-											border: none;
-											border: 1px solid #DDDDDD;
-											width: 100%;
-											height: 50px;
-										}
+  @media (max-width: 576px) {
+    padding: 1.5rem 1rem;
+  }
 
-										input::-webkit-input-placeholder{
-											font-size: 14px;
-											font-family: 'Poppin-Light';
-											color: #76899C;
-											padding-left: 15px;
-										}
+  /* Header */
+  .header {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    line-height: 1.5;
+    color: #2f3639;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
 
-										input:focus{
-											border: 1px solid #DDDDDD;
-											padding-left: 15px;
-										}
-									}
-									margin-bottom: 10px;
-								}
-								.password{
+  /* Body */
+  .body {
+    flex: 1 1 auto;
 
-									span{
-										.password{
-											border: none;
-											border: 1px solid #DDDDDD;
-											width: 100%;
-											height: 50px;
-										}
+    .main-login-form {
+      form {
+        .email,
+        .password {
+          margin-bottom: 1rem;
 
-										input::-webkit-input-placeholder{
-											font-size: 14px;
-											font-family: 'Poppin-Light';
-											color: #76899C;
-											padding-left: 15px;
-										}
+          input {
+            width: 100%;
+            height: 50px;
+            padding: 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem; /* Bootstrap input radius */
+            font-family: 'Poppin-Light', sans-serif;
+            font-size: 0.875rem; /* 14px */
+            color: #495057;
 
-										input:focus{
-											border: 1px solid #DDDDDD;
-											padding-left: 15px;
-										}
+            &:focus {
+              border-color: #80bdff;
+              outline: 0;
+              box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Bootstrap input focus */
+            }
 
-										.forget-password{
-											display: flex;
-											justify-content: flex-end;
-										}
-									}
+            &::placeholder {
+              color: #76899c;
+            }
+          }
 
-									margin-bottom: 10px;
+          .forget-password {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 0.8125rem; /* 13px */
+            margin-top: 0.25rem;
+            color: #0d6efd;
+            cursor: pointer;
+          }
+        }
 
-								}
+        .login-submit {
+          margin-top: 1rem;
 
-								.login-submit{
-									button{
-										width: 100%;
-										height: 50px;
-										background: transparent linear-gradient(90deg, #2B9CFD 0%, #41EBFE 100%) 0% 0% no-repeat padding-box;
-										font-family: 'Poppin-SemiBold';
-										font-size: 18px;
-										line-height: 27px;
-										color: #FFFFFF;
-										border: none;
-										border-radius: 3px;
-									}
-								}
-							}
-						}
-					}
-				}
+          .button-submit {
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(90deg, #2b9cfd 0%, #41ebfe 100%);
+            font-family: 'Poppin-SemiBold', sans-serif;
+            font-size: 1.125rem; /* 18px */
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: all 0.2s;
 
-				.footer{
-					margin-top: 45px;
-					.footer-content{
-						display: flex;
-						justify-content: space-between;
-						.footer-content-text{
-							font-family: 'Poppin-Light';
-							font-size: 17px;
-							color: #76899C;
-							line-height: 26px;
-						}
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+    }
+  }
 
-						.create-account-button{
-							border: none;
-							background: white;
-							font-family: 'Poppin-Light';
-							color: #3CD7FE;
-							font-size: 17px;
+  /* Footer */
+  .footer {
+    margin-top: 2.5rem;
 
-						}
-					}
-				}
-			}
-		}
-	}
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-content-text {
+        font-family: 'Poppin-Light', sans-serif;
+        font-size: 1rem; /* 16px */
+        color: #76899c;
+      }
+
+      .create-account-button {
+        border: none;
+        background: transparent;
+        font-family: 'Poppin-Light', sans-serif;
+        font-size: 1rem;
+        color: #0d6efd;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

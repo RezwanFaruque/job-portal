@@ -5,8 +5,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-        
-        {/* Hero banner styled by assets CSS (#bannar-section / bannar.scss) */}
         <section id="bannar-section">
           <div className="container">
             <div className="row">

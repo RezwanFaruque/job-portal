@@ -1,8 +1,11 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header} from "@/components/layout";
 import  Footer  from "@/components/features/Footer";
+import ModalContainer from "../components/ModalContainer";
 import { Providers } from "./providers";
+
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/assets/css/style.css";
@@ -28,6 +31,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
@@ -35,7 +39,10 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-            {children}
+
+          {children}
+          <ModalContainer />
+
           <Footer />
         </Providers>
       </body>
