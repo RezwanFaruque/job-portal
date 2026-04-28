@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useStore, RootState } from "../../store/useStore";
+import { useStore, RootState } from "../../store/modalStore";
 
 const SingupModal: React.FC = () => {
   const toggleSignup = useStore((state: RootState) => state.toggleSignupModal);
@@ -15,6 +15,28 @@ const SingupModal: React.FC = () => {
             <div className="modal-title" id="SignUpModalLabel">
               Sign Up
             </div>
+            <button
+              type="button"
+              className="modal-close"
+              aria-label="Close signup modal"
+              onClick={() => toggleSignup?.()}
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 2L14 14M14 2L2 14"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
           </div>
           <div className="signup-form-with-tab">
             <div className="tab-section">

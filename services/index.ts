@@ -1,1 +1,1 @@
-export { fetcher } from "./api";
+export { jobApi, userApi } from "./api";

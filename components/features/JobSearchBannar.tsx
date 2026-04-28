@@ -1,8 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import { useCategoryStore } from "@/store/categoryStore";
 
-const JobSearchBannar: React.FC = () => (
+const JobSearchBannar: React.FC = () =>{ 
+  const  { categories , getCategories } = useCategoryStore();
+  useEffect(() => {
+    getCategories()
+  },[getCategories])
+ return (
   <div id="job_search_bannar">
     <div className="bannar-layer">
       <div className="title">10,000 Job Listed Here!!!</div>
@@ -26,7 +32,10 @@ const JobSearchBannar: React.FC = () => (
 
           <div className="search-by category">
             <select className="form-select">
-              <option>Categories</option>
+              <option>Select category</option>
+              {categories.map((category) => (
+                <option key={category._id} value={category._id} >{category.name}</option>
+              )) }
             </select>
           </div>
 
@@ -58,7 +67,8 @@ const JobSearchBannar: React.FC = () => (
       </form>
     </div>
   </div>
-);
+)}
+;
 
 export default JobSearchBannar;
 

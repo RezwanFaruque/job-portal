@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { RootState, useStore } from "@/store/useStore";
+import { RootState, useStore } from "@/store/modalStore";
 
 const Navbar: React.FC = () => {
   // selecting each value separately to avoid recreating object every render
