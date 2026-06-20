@@ -5,8 +5,11 @@ import { devtools } from "zustand/middleware";
 export interface RootState {
   showLoginModal?: boolean;
   showSignupModal?: boolean;
+  showCompanySignup?: boolean;
   toggleLoginModal?: () => void;
   toggleSignupModal?: () => void;
+  toggleCompanySignup?: () => void;
+  setCompanySignup?: (isCompany: boolean) => void;
 }
 
 // basic store with working toggles
@@ -16,12 +19,16 @@ export const useStore = create<RootState>()(
       // default state placeholders
       showLoginModal: false,
       showSignupModal: false,
+      showCompanySignup: false,
 
       // toggle functions flip the corresponding flag
-      toggleLoginModal: () =>
-        set((state) => ({ showLoginModal: !state.showLoginModal })),
-      toggleSignupModal: () =>
-        set((state) => ({ showSignupModal: !state.showSignupModal })),
+      toggleLoginModal: () => set((state) => ({ showLoginModal: !state.showLoginModal })),
+      toggleSignupModal: () => set((state) => ({ showSignupModal: !state.showSignupModal })),
+
+      toggleCompanySignup: () =>
+        set((state) => ({ showCompanySignup: !state.showCompanySignup })),
+
+      setCompanySignup: (isCompany: boolean) => set({ showCompanySignup: isCompany }),
     })
   )
 );

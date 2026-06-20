@@ -42,45 +42,65 @@
                                 display: flex;
                                 align-items: center;
                                 margin-right: 10px;
-                                .button{
-                                    button{
+                                position: relative;
 
+                                .profile-trigger {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    border: none;
+                                    background: transparent;
+                                    cursor: pointer;
+                                    padding: 0;
+
+                                    .profile-avatar {
+                                        width: 36px;
+                                        height: 36px;
+                                        border-radius: 50%;
+                                        object-fit: cover;
                                     }
+
+                                    .profile-username {
+                                        font-size: 14px;
+                                        font-family: 'Poppin-Regular';
+                                        color: #2F3639;
+                                        max-width: 120px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                }
+
+                                .button{
+                                    position: relative;
 
                                     .button-open-section-profile{
                                         position: absolute;
+                                        top: calc(100% + 12px);
+                                        right: 0;
                                         background-color: white;
-                                        padding-top: 25px;
-                                        padding-left: 25px;
-                                        padding-bottom: 25px;
-                                        padding-right: 20px;
-                                        right: 5%;
+                                        padding: 20px 24px;
+                                        min-width: 180px;
+                                        border: 1px solid #EEEEEE;
+                                        border-radius: 4px;
+                                        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
                                         z-index: 99;
-                                        .section{
-                                            display: flex;
-                                            margin-bottom: 20px;
 
-
-                                            .icon{
-                                                margin-right: 7px;
-                                                img{
-                                                    width: 15px;
-                                                    height: 15px;
-                                                }
-                                            }
-
-                                            .link{
-                                                a{
-                                                    font-size: 14px;
-                                                    font-family: 'Poppin-Regular';
-                                                    color: #2F3639;
-                                                    line-height: 21px;
-                                                }
-                                            }
+                                        .section:last-child {
+                                            margin-bottom: 0;
                                         }
 
+                                        .logout-button {
+                                            border: none;
+                                            background: transparent;
+                                            padding: 0;
+                                            font-size: 14px;
+                                            font-family: 'Poppin-Regular';
+                                            color: #2F3639;
+                                            line-height: 21px;
+                                            cursor: pointer;
+                                        }
                                     }
-
                                 }
                             }
                         }

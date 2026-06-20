@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header} from "@/components/layout";
 import  Footer  from "@/components/features/Footer";
 import ModalContainer from "../components/ModalContainer";
+import ToastContainer from "../components/ToastContainer";
 import { Providers } from "./providers";
 
 import "./globals.css";
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}`}
       >
         <Providers>
+          <ToastContainer />
           <Header />
 
           {children}

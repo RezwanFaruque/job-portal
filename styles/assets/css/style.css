@@ -61,20 +61,53 @@
   display: flex;
   align-items: center;
   margin-right: 10px;
+  position: relative;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .profile-trigger .profile-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .profile-trigger .profile-username {
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  color: #2F3639;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button {
+  position: relative;
 }
 #section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile {
   position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
   background-color: white;
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-bottom: 25px;
-  padding-right: 20px;
-  right: 5%;
+  padding: 20px 24px;
+  min-width: 180px;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   z-index: 99;
 }
 #section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section {
   display: flex;
   margin-bottom: 20px;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section:last-child {
+  margin-bottom: 0;
 }
 #section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section .icon {
   margin-right: 7px;
@@ -83,11 +116,19 @@
   width: 15px;
   height: 15px;
 }
-#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section .link a {
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section .link a,
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section .link .logout-button {
   font-size: 14px;
   font-family: "Poppin-Regular";
   color: #2F3639;
   line-height: 21px;
+  text-decoration: none;
+}
+#section-navbar .navbar nav .navbar-collapse ul li .loggedin-profile-info .profile .button .button-open-section-profile .section .link .logout-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
 }
 #section-navbar .navbar nav .navbar-collapse ul li {
   padding-left: 20px;
@@ -246,6 +287,48 @@
   text-align: center;
   width: 100%;
 }
+.signup-modal-placeholder .modal-content .signup-form-with-tab .signup-success {
+  margin: 16px 10px 0;
+  padding: 10px 12px;
+  font-family: "Poppin-Light";
+  font-size: 13px;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 3px;
+}
+.signup-modal-placeholder .modal-content .signup-form-with-tab .signup-error {
+  margin: 16px 10px 0;
+  padding: 10px 12px;
+  font-family: "Poppin-Light";
+  font-size: 13px;
+  color: #d9534f;
+  background: #fdf2f2;
+  border: 1px solid #f5c6cb;
+  border-radius: 3px;
+}
+.signup-modal-placeholder .modal-content .signup-form-with-tab .signup-tabs {
+  display: flex;
+  margin: 0 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+.signup-modal-placeholder .modal-content .signup-form-with-tab .signup-tabs .signup-tab {
+  flex: 1;
+  padding: 12px 0;
+  text-align: center;
+  font-family: "Poppin-SemiBold";
+  font-size: 14px;
+  color: #76899C;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.signup-modal-placeholder .modal-content .signup-form-with-tab .signup-tabs .signup-tab.active {
+  color: #2B9CFD;
+  border-bottom-color: #2B9CFD;
+}
 .signup-modal-placeholder .modal-content .signup-form-with-tab .tab-section .job-seeker-form {
   margin-top: 25px;
 }
@@ -262,6 +345,16 @@
 .signup-modal-placeholder .modal-content .signup-form-with-tab .tab-section .job-seeker-form form .form-row.first-row .first-name,
 .signup-modal-placeholder .modal-content .signup-form-with-tab .tab-section .job-seeker-form form .form-row.first-row .last-name {
   width: 50%;
+}
+.signup-modal-placeholder .modal-content .signup-form-with-tab .tab-section .job-seeker-form form .form-row select {
+  border: 1px solid #DDDDDD;
+  height: 50px;
+  width: 100%;
+  padding-left: 15px;
+  font-family: "Poppin-Light";
+  font-size: 14px;
+  color: #76899C;
+  background: white;
 }
 .signup-modal-placeholder .modal-content .signup-form-with-tab .tab-section .job-seeker-form form .form-row input {
   border: 1px solid #DDDDDD;
@@ -1457,6 +1550,16 @@
 }
 .login-modal-placeholder .body {
   flex: 1 1 auto;
+}
+.login-modal-placeholder .body .main-login-form .login-error {
+  margin-bottom: 1rem;
+  padding: 10px 12px;
+  font-family: "Poppin-Light";
+  font-size: 13px;
+  color: #d9534f;
+  background: #fdf2f2;
+  border: 1px solid #f5c6cb;
+  border-radius: 3px;
 }
 .login-modal-placeholder .body .main-login-form form .email,
 .login-modal-placeholder .body .main-login-form form .password {
@@ -6325,6 +6428,74 @@
   }
   #browse_job .title-with-filter .title {
     margin-bottom: 10px;
+  }
+}
+
+.toast-container {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 360px;
+  pointer-events: none;
+}
+
+.toast-container .toast {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  pointer-events: auto;
+  animation: toast-slide-in 0.25s ease-out;
+}
+
+.toast-container .toast-success {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+
+.toast-container .toast-error {
+  background: #fdf2f2;
+  border: 1px solid #f5c6cb;
+  color: #d9534f;
+}
+
+.toast-container .toast-message {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.toast-container .toast-close {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.7;
+}
+
+.toast-container .toast-close:hover {
+  opacity: 1;
+}
+
+@keyframes toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

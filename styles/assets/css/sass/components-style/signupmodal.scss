@@ -24,6 +24,53 @@
 
     .signup-form-with-tab {
 
+      .signup-success {
+        margin: 16px 10px 0;
+        padding: 10px 12px;
+        font-family: 'Poppin-Light';
+        font-size: 13px;
+        color: #166534;
+        background: #f0fdf4;
+        border: 1px solid #86efac;
+        border-radius: 3px;
+      }
+
+      .signup-error {
+        margin: 16px 10px 0;
+        padding: 10px 12px;
+        font-family: 'Poppin-Light';
+        font-size: 13px;
+        color: #d9534f;
+        background: #fdf2f2;
+        border: 1px solid #f5c6cb;
+        border-radius: 3px;
+      }
+
+      .signup-tabs {
+        display: flex;
+        margin: 0 10px;
+        border-bottom: 1px solid #DDDDDD;
+
+        .signup-tab {
+          flex: 1;
+          padding: 12px 0;
+          text-align: center;
+          font-family: 'Poppin-SemiBold';
+          font-size: 14px;
+          color: #76899C;
+          background: none;
+          border: none;
+          border-bottom: 2px solid transparent;
+          cursor: pointer;
+          transition: color 0.2s, border-color 0.2s;
+
+          &.active {
+            color: #2B9CFD;
+            border-bottom-color: #2B9CFD;
+          }
+        }
+      }
+
       .tab-section {
 
         .job-seeker-form {
@@ -53,6 +100,17 @@
                 width: 100%;
                 padding-left: 15px;
                 font-family: 'Poppin-Light';
+              }
+
+              select {
+                border: 1px solid #DDDDDD;
+                height: 50px;
+                width: 100%;
+                padding-left: 15px;
+                font-family: 'Poppin-Light';
+                font-size: 14px;
+                color: #76899C;
+                background: white;
               }
 
               input::placeholder {
