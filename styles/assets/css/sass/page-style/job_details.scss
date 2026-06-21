@@ -1,11 +1,29 @@
 #job-details{
     margin-top: 100px;
     width: 100%;
+
+    .job-details-loading,
+    .job-details-error {
+        padding: 40px 0;
+        text-align: center;
+        font-family: 'Poppin-Regular';
+        font-size: 16px;
+        color: #76899c;
+    }
+
+    .job-details-error a {
+        color: #277f6a;
+        text-decoration: none;
+    }
+
     .job-details-main-section{
         background-color: white;
         width: 100%;
         padding-bottom: 30px;
         margin-bottom: 100px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        overflow: hidden;
 
         .main-images-section{
             width: 100%;
@@ -13,8 +31,10 @@
             img{
                 width: 100%;
                 height: 262px;
-                &.profile-picture-job-details{
+                object-fit: cover;
 
+                &.job-details-banner {
+                    display: block;
                 }
             }
             .main-image-icon{
@@ -74,10 +94,19 @@
                     align-items: center;
 
                     .love-job{
-                        color: red;
-                        font-size: 15px;
+                        border: none;
+                        background: transparent;
+                        padding: 0;
                         padding-right: 20px;
-                        
+                        cursor: pointer;
+                        display: inline-flex;
+                        align-items: center;
+
+                        svg {
+                            width: 18px;
+                            height: 18px;
+                            color: #277f6a;
+                        }
                     }
                     .dot-section{
                         &::after{
@@ -119,9 +148,9 @@
             padding-left: 30px;
             padding-right: 30px;
             margin-top: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
 
             .section{
                 .title{
@@ -161,21 +190,38 @@
 
                 .apply-button{
                     button{
-                        background-color: #012D3A;
+                        background-color: #277f6a;
                         border: none;
-                        padding-left: 7px;
-                        padding-right: 7px;
-                        padding-top: 5px;
-                        padding-bottom: 5px;
+                        padding: 12px 24px;
                         width: 160px;
+                        border-radius: 4px;
                         color: #FFFFFF;
                         font-family: 'Poppin-Medium';
-                        font-size: 18px;
+                        font-size: 16px;
                         line-height: 21px;
+                        cursor: pointer;
 
-
+                        &:hover {
+                            background-color: #1f6657;
+                        }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #job-details {
+        .job-details-main-section {
+            .other-detials {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
             }
         }
     }

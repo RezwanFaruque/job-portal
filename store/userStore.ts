@@ -18,18 +18,36 @@ export interface User {
   userName: string;
   email: string;
   userType: string;
+  createdAt?: string;
+  profilePicture?: string;
+  company?: Company;
+}
+
+interface ApiUser {
+  _id?: string;
+  userId?: string;
+  userName: string;
+  email: string;
+  userType: string;
+  createdAt?: string;
+  profilePicture?: string;
   company?: Company;
 }
 
 interface UserApiResponse {
   message: string;
   token: string;
-  user?: User;
+  user?: ApiUser;
 }
 
 interface UserRegisterAPiResponse {
   message: string;
   data: User;
+}
+
+interface UserDetailsResponse {
+  message: string;
+  user: ApiUser;
 }
 
 interface loginInfo {
@@ -44,14 +62,37 @@ interface RegisterInfo {
   userType: string;
 }
 
+export interface UpdateProfileInfo {
+  userName: string;
+  email: string;
+  userType: string;
+  profilePicture?: string;
+}
+
 export interface UserState {
   user: User | null;
   token: string | null;
+  userDetails: User | null;
+  isLoadingDetails: boolean;
   setUser: (user: User | null) => void;
   authenticate: (formData: loginInfo) => Promise<UserApiResponse>;
   register: (formData: RegisterInfo) => Promise<UserRegisterAPiResponse>;
+  fetchUserDetails: () => Promise<UserDetailsResponse>;
+  updateUserProfile: (formData: UpdateProfileInfo) => Promise<UserDetailsResponse>;
   logout: () => void;
   hydrateAuth: () => void;
+}
+
+function normalizeUser(raw: ApiUser, existing?: User | null): User {
+  return {
+    userId: raw._id ?? raw.userId ?? "",
+    userName: raw.userName,
+    email: raw.email,
+    userType: raw.userType,
+    createdAt: raw.createdAt,
+    profilePicture: raw.profilePicture ?? existing?.profilePicture,
+    company: raw.company,
+  };
 }
 
 function saveAuth(token: string, user: User) {
@@ -67,9 +108,11 @@ function clearAuth() {
 }
 
 export const userStore = create<UserState>()(
-  devtools((set) => ({
+  devtools((set, get) => ({
     user: null,
     token: null,
+    userDetails: null,
+    isLoadingDetails: false,
 
     setUser: (user) => set({ user }),
 
@@ -92,8 +135,17 @@ export const userStore = create<UserState>()(
       const response = await userApi.post<UserApiResponse, loginInfo>("/login", formData);
 
       if (response.token && response.user) {
-        saveAuth(response.token, response.user);
-        set({ token: response.token, user: response.user });
+        let existing: User | null = null;
+        try {
+          const stored = localStorage.getItem(AUTH_USER_KEY);
+          if (stored) existing = JSON.parse(stored) as User;
+        } catch {
+          existing = null;
+        }
+
+        const user = normalizeUser(response.user, existing);
+        saveAuth(response.token, user);
+        set({ token: response.token, user, userDetails: user });
       }
 
       return response;
@@ -107,9 +159,48 @@ export const userStore = create<UserState>()(
       return response;
     },
 
+    fetchUserDetails: async () => {
+      set({ isLoadingDetails: true });
+      try {
+        const response = await userApi.get<UserDetailsResponse>("/user-details");
+        const existing = get().userDetails ?? get().user;
+        const user = normalizeUser(response.user, existing);
+        set({ userDetails: user, user: user });
+
+        const token = get().token ?? localStorage.getItem(AUTH_TOKEN_KEY);
+        if (token) {
+          saveAuth(token, user);
+        }
+
+        return response;
+      } finally {
+        set({ isLoadingDetails: false });
+      }
+    },
+
+    updateUserProfile: async (formData: UpdateProfileInfo) => {
+      const response = await userApi.put<UserDetailsResponse, UpdateProfileInfo>(
+        "/user-details",
+        formData
+      );
+      const existing = get().userDetails ?? get().user;
+      const user = {
+        ...normalizeUser(response.user, existing),
+        profilePicture: formData.profilePicture ?? existing?.profilePicture,
+      };
+      set({ userDetails: user, user });
+
+      const token = get().token ?? localStorage.getItem(AUTH_TOKEN_KEY);
+      if (token) {
+        saveAuth(token, user);
+      }
+
+      return response;
+    },
+
     logout: () => {
       clearAuth();
-      set({ user: null, token: null });
+      set({ user: null, token: null, userDetails: null });
     },
   }))
 );

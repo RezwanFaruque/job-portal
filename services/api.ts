@@ -29,33 +29,49 @@ async function handleResponse<T>(res: Response): Promise<T> {
   throw new Error(`Expected JSON response but received: ${text.slice(0, 120)}`);
 }
 
+const AUTH_TOKEN_KEY = "auth_token";
+
+function getAuthHeaders(): Record<string, string> {
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+  };
+
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem(AUTH_TOKEN_KEY);
+    if (token) {
+      headers.Authorization = `Bearer ${token}`;
+    }
+  }
+
+  return headers;
+}
+
 async function request<T, B = unknown>(
   baseUrl: string,
   endpoint: string,
   method: HttpMethod,
-  body?: B
+  body?: B,
+  withAuth = false
 ): Promise<T> {
   const res = await fetch(`${baseUrl}${endpoint}`, {
     method,
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: withAuth ? getAuthHeaders() : { "Content-Type": "application/json" },
     ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
   });
 
   return handleResponse<T>(res);
 }
 
-function createApiClient(baseUrl: string) {
+function createApiClient(baseUrl: string, withAuth = false) {
   return {
-    get: <T>(endpoint: string) => request<T>(baseUrl, endpoint, "GET"),
+    get: <T>(endpoint: string) => request<T>(baseUrl, endpoint, "GET", undefined, withAuth),
     post: <T, B = unknown>(endpoint: string, body: B) =>
-      request<T, B>(baseUrl, endpoint, "POST", body),
+      request<T, B>(baseUrl, endpoint, "POST", body, withAuth),
     put: <T, B = unknown>(endpoint: string, body: B) =>
-      request<T, B>(baseUrl, endpoint, "PUT", body),
-    del: <T>(endpoint: string) => request<T>(baseUrl, endpoint, "DELETE"),
+      request<T, B>(baseUrl, endpoint, "PUT", body, withAuth),
+    del: <T>(endpoint: string) => request<T>(baseUrl, endpoint, "DELETE", undefined, withAuth),
   };
 }
 
 export const jobApi = createApiClient(JOB_BASE_URL);
-export const userApi = createApiClient(USER_BASE_URL);
+export const userApi = createApiClient(USER_BASE_URL, true);

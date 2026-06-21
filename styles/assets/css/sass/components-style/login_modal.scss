@@ -1,18 +1,18 @@
 /* Modal overlay – dark background behind modal */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* slightly darker for Bootstrap feel */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  z-index: 1050; /* Bootstrap modal z-index */
-  padding: 1rem; /* small padding on mobile */
+  z-index: 1050;
+  padding: 48px 16px;
   overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 /* Modal box */

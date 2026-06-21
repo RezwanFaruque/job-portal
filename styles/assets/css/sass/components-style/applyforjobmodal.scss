@@ -1,171 +1,273 @@
 #applyforjobmodal {
+  &.applyforjobmodal-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  .apply-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    line-height: 1;
+    color: #76899c;
+    cursor: pointer;
+    z-index: 2;
+  }
+
   .modal-dialog {
-    max-width: 70%;
-   
-    .modal-content {
-      .modal-body {
-        padding-top: 20px;
-        padding-bottom: 30px;
-        .header {
-          font-size: 20px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .modal-content {
+    background: #ffffff;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    max-height: calc(100vh - 96px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    padding: 24px 28px 32px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    flex: 1;
+    min-height: 0;
+
+    > .header {
+      font-size: 20px;
+      font-family: "Poppin-Regular";
+      line-height: 30px;
+      color: #2f3639;
+      padding-right: 32px;
+    }
+
+    hr {
+      margin: 16px 0 24px;
+      border-color: #eeeeee;
+    }
+
+    .body {
+      padding: 0;
+
+      .header {
+        .title {
+          font-size: 18px;
           font-family: "Poppin-Regular";
-          line-height: 30px;
+          line-height: 27px;
           color: #2f3639;
+          margin-bottom: 15px;
         }
-        hr {
-        }
-        .body {
-          padding-left: 5%;
-          padding-right: 7%;
-          .header {
-            .title {
-              font-size: 18px;
-              font-family: "Poppin-Regular";
-              line-height: 27px;
-              color: #2f3639;
-              margin-bottom: 15px;
-            }
-            .profile-info {
-              display: flex;
-              .profile-image {
-                img {
-                  width: 70px;
-                  height: 70px;
-                  border-radius: 50%;
-                }
-              }
-              .other-info {
-                margin-left: 15px;
-                .name {
-                  font-size: 18px;
-                  font-family: "Poppin-Regular";
-                  line-height: 21px;
-                  color: #2f3639;
-                }
-                .designation {
-                  font-size: 14px;
-                  font-family: "Poppin-Regular";
-                  line-height: 21px;
-                  color: #2f3639;
-                }
-              }
-            }
+
+        .profile-info {
+          display: flex;
+          align-items: center;
+
+          .profile-image img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
           }
 
-          .form {
-            width: 100%;
-            margin-top: 50px;
-            span {
-              width: 100%;
+          .other-info {
+            margin-left: 15px;
 
-              form {
-                width: 100%;
+            .name {
+              font-size: 18px;
+              font-family: "Poppin-Regular";
+              line-height: 21px;
+              color: #2f3639;
+            }
 
-                .input-section {
-                  width: 100%;
-                  margin-bottom: 10px;
-
-                  &.accept-term{
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      span{
-                          .d-flex{
-                              align-items: center;
-
-                              input{
-                                  width: auto;
-                                  margin-right: 10px;
-                              }
-                          }
-                      }
-                  }
-
-                  span {
-                    width: 100%;
-                    label {
-                      font-size: 18px;
-                      line-height: 27px;
-                      font-family: "Poppin-Light";
-                      color: #76899c;
-                    }
-
-                    .resume {
-                      height: 170px;
-                      border: 0.5px solid #2f3639;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: center;
-                      justify-content: center;
-                      .upload-section{
-                          .pdf-thumb-border{
-                            border: 1px dashed #277F6A;
-                            width: 105px;
-                            height: 105px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            img{
-                                padding: 15px;
-                                width: 65px;
-                                height: 80px;
-                              
-                            }
-                            .filename{
-                                font-size: 8px;
-                                font-family: 'Poppin-Medium';
-                                color: #012D3A;
-                                
-                            }
-                          }
-                        
-                          button{
-                            margin-top: 10px;
-                            border: none;
-                            background-color: #012D3A;
-                            padding-top: 3px;
-                            padding-bottom: 3px;
-                            width: 102px;
-                            font-family: 'Roboto-Regular';
-                            font-size: 14px;
-                            color: #FFFFFF;
-                            line-height: 21px;
-                          }
-                      }
-                    }
-                    input {
-                      width: 100%;
-                      border: 0.5px solid #2f3639;
-                    }
-                    .agreed-term{
-                        font-size: 14px;
-                        line-height: 27px;
-                        font-family: "Poppin-Light";
-                        color: #76899c;
-                    }
-                    select {
-                      width: 100%;
-                      border: 0.5px solid #2f3639;
-                    }
-                  }
-                }
-                button{
-                    width: 245px;
-                    padding-top: 4px;
-                    padding-bottom: 4px;
-                    border: none;
-                    background-color: #012D3A;
-                    font-size: 20px;
-                    font-family: 'Roboto-Regular';
-                    line-height: 24px;
-                    color: #FFFFFF;
-                    
-                }
-              }
+            .designation {
+              font-size: 14px;
+              font-family: "Poppin-Regular";
+              line-height: 21px;
+              color: #2f3639;
+              text-transform: capitalize;
             }
           }
         }
       }
+
+      .form {
+        width: 100%;
+        margin-top: 28px;
+
+        .apply-form-error {
+          margin-bottom: 16px;
+          padding: 10px 12px;
+          font-family: "Poppin-Light";
+          font-size: 13px;
+          color: #d9534f;
+          background: #fdf2f2;
+          border: 1px solid #f5c6cb;
+          border-radius: 3px;
+        }
+
+        form {
+          width: 100%;
+
+          .input-section {
+            width: 100%;
+            margin-bottom: 16px;
+
+            &.form-row {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 16px;
+            }
+
+            label {
+              display: block;
+              font-size: 14px;
+              line-height: 21px;
+              font-family: "Poppin-Light";
+              color: #76899c;
+              margin-bottom: 6px;
+            }
+
+            input,
+            select,
+            textarea {
+              width: 100%;
+              border: 0.5px solid #2f3639;
+              border-radius: 3px;
+              padding: 10px 12px;
+              font-family: "Poppin-Light";
+              font-size: 14px;
+              color: #2f3639;
+              background: #ffffff;
+            }
+
+            textarea {
+              resize: vertical;
+              min-height: 100px;
+            }
+
+            &.accept-term {
+              .d-flex {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                input {
+                  width: auto;
+                  margin: 0;
+                }
+
+                .agreed-term {
+                  margin: 0;
+                  font-size: 14px;
+                  line-height: 21px;
+                  font-family: "Poppin-Light";
+                  color: #76899c;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .resume {
+              min-height: 170px;
+              border: 0.5px solid #2f3639;
+              border-radius: 3px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              padding: 16px;
+
+              .upload-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .pdf-thumb-border {
+                  border: 1px dashed #277f6a;
+                  width: 105px;
+                  min-height: 105px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 10px;
+
+                  img {
+                    width: 40px;
+                    height: auto;
+                  }
+
+                  .filename {
+                    margin-top: 8px;
+                    font-size: 10px;
+                    font-family: "Poppin-Medium";
+                    color: #012d3a;
+                    text-align: center;
+                    word-break: break-word;
+                  }
+                }
+
+                button {
+                  margin-top: 10px;
+                  border: none;
+                  background-color: #012d3a;
+                  padding: 6px 16px;
+                  min-width: 102px;
+                  font-family: "Roboto-Regular";
+                  font-size: 14px;
+                  color: #ffffff;
+                  line-height: 21px;
+                  cursor: pointer;
+                  border-radius: 2px;
+                }
+              }
+            }
+          }
+
+          .button-submit {
+            width: 100%;
+            max-width: 245px;
+            display: block;
+            margin: 8px auto 0;
+            padding: 10px 16px;
+            border: none;
+            background-color: #012d3a;
+            font-size: 18px;
+            font-family: "Roboto-Regular";
+            line-height: 24px;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 2px;
+
+            &:disabled {
+              opacity: 0.7;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #applyforjobmodal {
+    .modal-body {
+      padding: 20px 16px 24px;
+    }
+
+    .body .form form .input-section.form-row {
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -6,8 +6,7 @@ import Image from "next/image";
 import { RootState, useStore } from "@/store/modalStore";
 import { userStore } from "@/store/userStore";
 import { useToastStore } from "@/store/toastStore";
-
-const DEMO_AVATAR = "/assets/Images/personal-info-profile.png";
+import ProfileAvatar from "@/components/features/ProfileAvatar";
 
 const Navbar: React.FC = () => {
   const toggleLoginModal = useStore((state: RootState) => state.toggleLoginModal);
@@ -112,8 +111,8 @@ const Navbar: React.FC = () => {
                             aria-haspopup="true"
                             onClick={() => setProfileOpen((open) => !open)}
                           >
-                            <Image
-                              src={DEMO_AVATAR}
+                            <ProfileAvatar
+                              src={user.profilePicture}
                               alt={`${user.userName} avatar`}
                               width={36}
                               height={36}
@@ -134,7 +133,7 @@ const Navbar: React.FC = () => {
                                   />
                                 </div>
                                 <div className="link">
-                                  <Link href="/" onClick={() => setProfileOpen(false)}>
+                                  <Link href="/profile" onClick={() => setProfileOpen(false)}>
                                     User Profile
                                   </Link>
                                 </div>

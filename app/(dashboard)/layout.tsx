@@ -1,10 +1,9 @@
-/**
- * Layout for dashboard/protected pages. Add sidebar, header, auth guard.
- */
+import DashboardAuthGuard from "@/components/layout/DashboardAuthGuard";
+
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <DashboardAuthGuard>{children}</DashboardAuthGuard>;
 }

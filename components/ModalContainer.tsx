@@ -4,6 +4,7 @@ import React from "react";
 import { useStore } from "../store/modalStore";
 import LoginModal from "./features/LoginModal";
 import SingupModal from "./features/SingupModal";
+import ApplyForJobModal from "./features/AppyForJobModal";
 
 // simple client component that watches the zustand store and renders
 // whichever modals are active.  Keeping it separate lets layout remain a
@@ -11,11 +12,13 @@ import SingupModal from "./features/SingupModal";
 export default function ModalContainer() {
   const showLogin = useStore((s) => s.showLoginModal);
   const showSignup = useStore((s) => s.showSignupModal);
+  const showApplyJob = useStore((s) => s.showApplyJobModal);
 
   return (
     <>
       {showLogin && <LoginModal />}
       {showSignup && <SingupModal />}
+      {showApplyJob && <ApplyForJobModal />}
     </>
   );
 }
