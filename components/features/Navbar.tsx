@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/" className="nav-link">
+                  <Link href="/upload-resume" className="nav-link">
                     Build/Upload Resume
                   </Link>
                 </li>

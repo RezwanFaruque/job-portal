@@ -24,8 +24,8 @@ export default function AppliedJobComponent() {
                 <Image
                   src={job.image}
                   alt={job.title}
-                  width={60}
-                  height={45}
+                  width={52}
+                  height={52}
                   className="image"
                 />
                 <div className="job-meta">
@@ -45,19 +45,19 @@ export default function AppliedJobComponent() {
                   <div className="dot-click-open">
                     <div className="share-content">
                       <div className="icon">
-                        <Image src="/assets/Images/copy-link.png" alt="" width={10} height={10} />
+                        <Image src="/assets/Images/copy-link.png" alt="" width={14} height={14} />
                       </div>
                       <div className="text">Copy Link</div>
                     </div>
                     <div className="share-content">
                       <div className="icon">
-                        <Image src="/assets/Images/add-website.png" alt="" width={10} height={10} />
+                        <Image src="/assets/Images/add-website.png" alt="" width={14} height={14} />
                       </div>
                       <div className="text">Share Job</div>
                     </div>
                     <div className="share-content">
                       <div className="icon">
-                        <Image src="/assets/Images/view-resume.png" alt="" width={10} height={10} />
+                        <Image src="/assets/Images/view-resume.png" alt="" width={14} height={14} />
                       </div>
                       <div className="text">View Details</div>
                     </div>

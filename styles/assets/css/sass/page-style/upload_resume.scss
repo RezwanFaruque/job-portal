@@ -1,141 +1,396 @@
 #upload_resume {
   margin-top: 50px;
+  margin-bottom: 50px;
+
   .upload-resume-card {
     background: #ffffff;
     box-shadow: 0px 3px 6px #00000029;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
-    height: 745px;
+    overflow: hidden;
 
-    .title {
-      font-size: 16px;
-      font-family: "Poppin-Medium";
-      color: #2f3639;
-      line-height: 25px;
-      padding-left: 11px;
-      padding-top: 11px;
+    .card-header {
+      padding: 18px 24px;
+
+      .title {
+        font-size: 18px;
+        font-family: "Poppin-SemiBold";
+        color: #2f3639;
+        line-height: 27px;
+      }
     }
+
     hr {
+      margin: 0;
+      border: none;
+      border-top: 1px solid #eeeeee;
     }
+
     .upload-resume-body {
+      padding: 30px 24px 36px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
 
-      .title {
+      .intro {
         font-size: 14px;
-        font-family: "Roboto-Medium";
-        line-height: 17px;
-        color: #2f3639;
-        width: 400px;
+        font-family: "Poppin-Regular";
+        line-height: 22px;
+        color: #76899c;
+        max-width: 520px;
         text-align: center;
-        margin-top: 50px;
+        margin-bottom: 28px;
       }
 
       .upload-section {
-        form {
-          text-align: center;
+        width: 100%;
+        max-width: 520px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-          .buttons-upload {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
+        .dropzone {
+          width: 100%;
+          min-height: 180px;
+          padding: 28px 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 14px;
+          border: 2px dashed #c9d4d0;
+          border-radius: 8px;
+          background: #f8fbfa;
+          cursor: pointer;
+          transition: border-color 0.2s ease, background-color 0.2s ease;
+
+          &:hover,
+          &.dragging {
+            border-color: #277f6a;
+            background: #eef6f3;
           }
 
-          .image-section {
-            width: 140px;
-            min-height: 120px;
-            padding: 16px 12px;
+          &.has-file {
+            border-style: solid;
+            border-color: #277f6a;
+            background: #eef6f3;
+          }
+
+          .upload-image-icon {
+            width: 40px;
+            height: auto;
+          }
+
+          .empty {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            border: 1px dashed #277f6a;
-            margin: auto;
-            margin-top: 40px;
+            gap: 4px;
+            text-align: center;
 
-            .upload-image-icon {
-              width: 32px;
-              height: auto;
+            .primary {
+              color: #2f3639;
+              font-family: "Poppin-Medium";
+              font-size: 14px;
+              line-height: 21px;
             }
-            .empty {
-              color: #b5b5b5;
-              font-family: "Roboto-Regular";
-              font-size: 9px;
-              line-height: 12px;
-              text-align: center;
-              margin-top: 10px;
-              word-break: break-word;
+
+            .secondary {
+              color: #76899c;
+              font-family: "Poppin-Regular";
+              font-size: 13px;
+              line-height: 19px;
             }
           }
-          .buttons-upload {
-            margin-bottom: 40px;
-            margin-top: 10px;
-            .browse {
-              width: auto;
-              min-width: 70px;
-              border: none;
-              background: #2f3639;
-              padding: 6px 14px;
-              font-family: "Roboto-Regular";
-              font-size: 10px;
-              color: #ffffff;
-              margin-right: 5px;
-              cursor: pointer;
+
+          .file-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            text-align: center;
+
+            .file-name {
+              color: #2f3639;
+              font-family: "Poppin-Medium";
+              font-size: 14px;
+              line-height: 21px;
+              word-break: break-word;
             }
-            .upload {
-              width: auto;
-              min-width: 70px;
-              border: none;
-              background: #008020;
-              padding: 6px 14px;
-              font-family: "Roboto-Regular";
-              font-size: 10px;
-              color: #ffffff;
-              cursor: pointer;
+
+            .file-size {
+              color: #76899c;
+              font-family: "Poppin-Regular";
+              font-size: 12px;
+              line-height: 18px;
+            }
+          }
+        }
+
+        .upload-error {
+          width: 100%;
+          margin-top: 12px;
+          color: #d23c3c;
+          font-family: "Poppin-Regular";
+          font-size: 13px;
+          line-height: 19px;
+          text-align: center;
+        }
+
+        .buttons-upload {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 20px;
+          flex-wrap: wrap;
+
+          button {
+            border: none;
+            border-radius: 4px;
+            padding: 10px 22px;
+            font-family: "Poppin-Medium";
+            font-size: 14px;
+            line-height: 21px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, opacity 0.2s ease;
+          }
+
+          .browse {
+            background: #2f3639;
+            color: #ffffff;
+
+            &:hover {
+              background: #1f2426;
+            }
+          }
+
+          .remove {
+            background: #f1f3f4;
+            color: #2f3639;
+
+            &:hover {
+              background: #e4e7e8;
+            }
+          }
+
+          .upload {
+            background: #277f6a;
+            color: #ffffff;
+
+            &:hover {
+              background: #1f6657;
+            }
+
+            &:disabled {
+              opacity: 0.5;
+              cursor: not-allowed;
             }
           }
         }
       }
 
       .upload-rulls {
+        width: 100%;
+        max-width: 520px;
+        margin-top: 36px;
+        text-align: center;
+
         .rulls-title {
-          font-size: 12px;
-          font-family: "Roboto-Bold";
+          font-size: 14px;
+          font-family: "Poppin-SemiBold";
           color: #2f3639;
-          line-height: 14px;
-          text-align: center;
-          margin-bottom: 15px;
+          line-height: 21px;
+          margin-bottom: 12px;
         }
+
         .rulls {
-          font-size: 12px;
-          font-family: "Roboto-Regular";
-          color: #2f3639;
-          line-height: 14px;
-          text-align: center;
-          margin-bottom: 5px;
+          font-size: 13px;
+          font-family: "Poppin-Regular";
+          color: #76899c;
+          line-height: 20px;
+          margin-bottom: 6px;
         }
       }
 
       .upload-resume-footer {
-        width: 515px;
-        height: 65px;
-        background: #277f6a 0% 0% no-repeat padding-box;
-        border-radius: 2px;
-        margin: auto;
-        margin-top: 45px;
-        font-size: 12px;
-        font-family: 'Roboto-Bold';
-        line-height: 14px;
-        color: #FFFFFF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 68px;
-        padding-right: 68px;
+        width: 100%;
+        max-width: 520px;
+        background: #277f6a;
+        border-radius: 4px;
+        margin-top: 32px;
+        padding: 18px 24px;
+        font-size: 13px;
+        font-family: "Poppin-Regular";
+        line-height: 20px;
+        color: #ffffff;
         text-align: center;
       }
+    }
+  }
+
+  .resume-review-card {
+    .resume-review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 24px;
+      flex-wrap: wrap;
+
+      .title {
+        padding: 0;
+      }
+
+      .resume-review-subtitle {
+        margin: 6px 0 0;
+        font-size: 13px;
+        font-family: "Poppin-Regular";
+        color: #76899c;
+        line-height: 20px;
+      }
+    }
+
+    .resume-review-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      button {
+        border: none;
+        border-radius: 4px;
+        padding: 10px 18px;
+        font-family: "Poppin-Medium";
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .secondary {
+        background: #f1f3f4;
+        color: #2f3639;
+      }
+
+      .primary {
+        background: #277f6a;
+        color: #ffffff;
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .resume-review-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .resume-fields-panel,
+    .resume-preview-panel {
+      width: 100%;
+    }
+
+    .panel-title {
+      font-size: 15px;
+      font-family: "Poppin-SemiBold";
+      color: #2f3639;
+      margin-bottom: 8px;
+    }
+
+    .panel-file-name {
+      font-size: 12px;
+      font-family: "Poppin-Regular";
+      color: #76899c;
+      margin-bottom: 16px;
+      word-break: break-word;
+    }
+
+    .resume-parsing-status {
+      font-size: 14px;
+      font-family: "Poppin-Regular";
+      color: #76899c;
+      margin-bottom: 16px;
+    }
+
+    .resume-parse-error {
+      color: #d23c3c;
+      font-family: "Poppin-Regular";
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .resume-fields-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .resume-field-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      label {
+        font-size: 13px;
+        font-family: "Poppin-Medium";
+        color: #2f3639;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid #e4e7e8;
+        border-radius: 4px;
+        padding: 10px 12px;
+        font-size: 14px;
+        font-family: "Poppin-Regular";
+        color: #2f3639;
+        background: #ffffff;
+        resize: vertical;
+
+        &:focus {
+          outline: none;
+          border-color: #277f6a;
+          box-shadow: 0 0 0 2px rgba(39, 127, 106, 0.12);
+        }
+      }
+
+      textarea {
+        min-height: 96px;
+        line-height: 22px;
+      }
+    }
+
+    .resume-preview-panel {
+      padding-top: 8px;
+      border-top: 1px solid #eeeeee;
+    }
+
+    .resume-pdf-frame {
+      width: 100%;
+      min-height: 520px;
+      height: 70vh;
+      max-height: 800px;
+      border: 1px solid #e4e7e8;
+      border-radius: 6px;
+      background: #f8fbfa;
+    }
+
+    .resume-preview-placeholder {
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      border: 1px dashed #c9d4d0;
+      border-radius: 6px;
+      color: #76899c;
+      font-family: "Poppin-Regular";
+      font-size: 14px;
+      background: #f8fbfa;
     }
   }
 }

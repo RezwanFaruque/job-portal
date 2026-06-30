@@ -485,12 +485,12 @@
   margin-bottom: 30px;
 }
 #left-sidebar .left-sidebar .section .title {
-  font-size: 10px;
-  font-family: "Poppin-Medium";
+  font-size: 15px;
+  font-family: "Poppin-SemiBold";
   color: #2f3639;
-  line-height: 16px;
-  margin-bottom: 12px;
-  padding-bottom: 5px;
+  line-height: 22px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #dde6e9;
   display: flex;
   justify-content: space-between;
@@ -501,6 +501,10 @@
 #left-sidebar .left-sidebar .section .links .link-with-logo {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
+}
+#left-sidebar .left-sidebar .section .links .link-with-logo:last-child {
+  margin-bottom: 0;
 }
 #left-sidebar .left-sidebar .section .links .link-with-logo.active a,
 #left-sidebar .left-sidebar .section .links .link-with-logo.active .sidebar-logout-button {
@@ -511,17 +515,25 @@
   border: none;
   background: transparent;
   padding: 0;
-  font-size: 12px;
-  font-family: "Poppin-Light";
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  line-height: 21px;
   color: #2f3639;
   cursor: pointer;
 }
+#left-sidebar .left-sidebar .section .links .link-with-logo .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
 #left-sidebar .left-sidebar .section .links .link-with-logo .logo .logo-img {
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 #left-sidebar .left-sidebar .section .links .link-with-logo .links {
-  padding-left: 13px;
+  padding-left: 14px;
 }
 #left-sidebar .left-sidebar .section .links .link-with-logo .links.special {
   width: 100%;
@@ -532,8 +544,8 @@
 #left-sidebar .left-sidebar .section .links .link-with-logo .links a {
   font-family: "Poppin-Regular";
   color: #2f3639;
-  font-size: 8px;
-  line-height: 12px;
+  font-size: 14px;
+  line-height: 21px;
   text-decoration: none;
 }
 
@@ -2457,48 +2469,60 @@
   margin-top: 50px;
   margin-bottom: 100px;
 }
-#appliedjob .title {
-  font-size: 16px;
-  font-family: "Poppin-Medium";
-  color: #2F3639;
-  line-height: 25px;
+#appliedjob > .title {
+  font-size: 18px;
+  font-family: "Poppin-SemiBold";
+  color: #2f3639;
+  line-height: 27px;
+  margin-bottom: 4px;
+}
+#appliedjob hr {
+  margin: 12px 0 0;
+  border: none;
+  border-top: 1px solid #eeeeee;
 }
 #appliedjob .applied-job-card {
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1607843137);
-  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef1f3;
+  border-radius: 8px;
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 #appliedjob .applied-job-card .header .header-content {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
 }
 #appliedjob .applied-job-card .header .header-content .left-side {
   display: flex;
-  gap: 12px;
+  gap: 14px;
+  align-items: center;
 }
 #appliedjob .applied-job-card .header .header-content .left-side .image {
-  width: 60px;
-  height: 45px;
+  width: 52px;
+  height: 52px;
   object-fit: cover;
+  border-radius: 6px;
 }
 #appliedjob .applied-job-card .header .header-content .left-side .job-meta {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 4px;
 }
 #appliedjob .applied-job-card .header .header-content .left-side .title {
-  font-size: 12px;
-  font-family: "Poppin-Medium";
-  color: #000000;
-  line-height: 18px;
+  font-size: 16px;
+  font-family: "Poppin-SemiBold";
+  color: #2f3639;
+  line-height: 24px;
 }
 #appliedjob .applied-job-card .header .header-content .left-side .location {
-  font-size: 6px;
+  font-size: 13px;
   font-family: "Poppin-Regular";
   color: #6B6B8C;
-  line-height: 9px;
+  line-height: 20px;
 }
 #appliedjob .applied-job-card .header .header-content .right-side {
   position: relative;
@@ -2508,75 +2532,87 @@
   background: transparent;
   padding: 0;
   line-height: 1;
+  cursor: pointer;
 }
 #appliedjob .applied-job-card .header .header-content .right-side .dot-text::after {
   content: "⠇";
   font-size: 20px;
-  cursor: pointer;
+  color: #76899c;
 }
 #appliedjob .applied-job-card .header .header-content .right-side .dot-click-open {
   position: absolute;
   right: 0;
-  top: 30px;
-  width: 155px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
+  top: 28px;
+  min-width: 170px;
+  background: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  overflow: hidden;
   z-index: 9;
 }
 #appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content {
   display: flex;
   align-items: center;
-  height: 27px;
-  padding-left: 6px;
+  min-height: 40px;
+  padding: 8px 12px;
   cursor: pointer;
 }
 #appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content:hover {
   background-color: #F6F7F8;
 }
+#appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+}
 #appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content .icon img {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
 }
 #appliedjob .applied-job-card .header .header-content .right-side .dot-click-open .share-content .text {
   padding-left: 10px;
   font-family: "Poppin-Regular";
-  font-size: 9px;
-  line-height: 13px;
+  font-size: 13px;
+  line-height: 20px;
   color: #2F3639;
 }
 #appliedjob .applied-job-card .body {
-  padding-top: 15px;
-  font-size: 8px;
-  font-family: "Poppin-Light";
-  color: #B6B6BB;
-  line-height: 12px;
-  height: 50px;
+  padding-top: 16px;
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  color: #76899c;
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 #appliedjob .applied-job-card .footer .tags {
   display: flex;
   align-items: center;
 }
 #appliedjob .applied-job-card .footer .tags span {
-  width: 75px;
-  height: 20px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 6px 12px;
+  border-radius: 4px;
   background-color: #277F6A;
-  flex-direction: column;
-  margin-right: 30px;
-  font-size: 8px;
+  font-size: 12px;
   font-family: "Poppin-Medium";
   color: #FFFFFF;
+  text-transform: capitalize;
 }
 #appliedjob .applied-job-card .footer .applied-duration {
-  margin-top: 30px;
-  font-size: 8px;
+  margin-top: 14px;
+  font-size: 13px;
   font-family: "Poppin-Regular";
   color: #277F6A;
-  line-height: 12px;
+  line-height: 20px;
 }
 
 #our_blog {
@@ -3113,130 +3149,344 @@
 
 #upload_resume {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 #upload_resume .upload-resume-card {
   background: #ffffff;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
-  border-radius: 5px;
+  border-radius: 8px;
   width: 100%;
-  height: 745px;
+  overflow: hidden;
 }
-#upload_resume .upload-resume-card .title {
-  font-size: 16px;
-  font-family: "Poppin-Medium";
+#upload_resume .upload-resume-card .card-header {
+  padding: 18px 24px;
+}
+#upload_resume .upload-resume-card .card-header .title {
+  font-size: 18px;
+  font-family: "Poppin-SemiBold";
   color: #2f3639;
-  line-height: 25px;
-  padding-left: 11px;
-  padding-top: 11px;
+  line-height: 27px;
+}
+#upload_resume .upload-resume-card hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #eeeeee;
 }
 #upload_resume .upload-resume-card .upload-resume-body {
+  padding: 30px 24px 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
-#upload_resume .upload-resume-card .upload-resume-body .title {
+#upload_resume .upload-resume-card .upload-resume-body .intro {
   font-size: 14px;
-  font-family: "Roboto-Medium";
-  line-height: 17px;
-  color: #2f3639;
-  width: 400px;
+  font-family: "Poppin-Regular";
+  line-height: 22px;
+  color: #76899c;
+  max-width: 520px;
   text-align: center;
-  margin-top: 50px;
+  margin-bottom: 28px;
 }
-#upload_resume .upload-resume-card .upload-resume-body .upload-section form {
-  text-align: center;
-}
-#upload_resume .upload-resume-card .upload-resume-body .upload-section form .buttons-upload {
+#upload_resume .upload-resume-card .upload-resume-body .upload-section {
+  width: 100%;
+  max-width: 520px;
   display: flex;
-  justify-content: center;
-  gap: 5px;
+  flex-direction: column;
+  align-items: center;
 }
-#upload_resume .upload-resume-card .upload-resume-body .upload-section form .image-section {
-  width: 140px;
-  min-height: 120px;
-  padding: 16px 12px;
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone {
+  width: 100%;
+  min-height: 180px;
+  padding: 28px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #277f6a;
-  margin: auto;
-  margin-top: 40px;
+  gap: 14px;
+  border: 2px dashed #c9d4d0;
+  border-radius: 8px;
+  background: #f8fbfa;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
-#upload_resume .upload-resume-card .upload-resume-body .upload-section form .image-section .upload-image-icon {
-  width: 32px;
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone:hover,
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone.dragging {
+  border-color: #277f6a;
+  background: #eef6f3;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone.has-file {
+  border-style: solid;
+  border-color: #277f6a;
+  background: #eef6f3;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone .upload-image-icon {
+  width: 40px;
   height: auto;
 }
-#upload_resume .upload-resume-card .upload-resume-body .upload-section form .image-section .empty {
-  color: #b5b5b5;
-  font-family: "Roboto-Regular";
-  font-size: 9px;
-  line-height: 12px;
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone .empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   text-align: center;
-  margin-top: 10px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone .empty .primary {
+  color: #2f3639;
+  font-family: "Poppin-Medium";
+  font-size: 14px;
+  line-height: 21px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone .empty .secondary {
+  color: #76899c;
+  font-family: "Poppin-Regular";
+  font-size: 13px;
+  line-height: 19px;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone .file-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone .file-preview .file-name {
+  color: #2f3639;
+  font-family: "Poppin-Medium";
+  font-size: 14px;
+  line-height: 21px;
   word-break: break-word;
 }
-#upload_resume .upload-resume-card .upload-resume-body .upload-section form .buttons-upload {
-  margin-bottom: 40px;
-  margin-top: 10px;
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .dropzone .file-preview .file-size {
+  color: #76899c;
+  font-family: "Poppin-Regular";
+  font-size: 12px;
+  line-height: 18px;
 }
-#upload_resume .upload-resume-card .upload-resume-body .upload-section form .buttons-upload .browse {
-  width: auto;
-  min-width: 70px;
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .upload-error {
+  width: 100%;
+  margin-top: 12px;
+  color: #d23c3c;
+  font-family: "Poppin-Regular";
+  font-size: 13px;
+  line-height: 19px;
+  text-align: center;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload button {
   border: none;
+  border-radius: 4px;
+  padding: 10px 22px;
+  font-family: "Poppin-Medium";
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload .browse {
   background: #2f3639;
-  padding: 6px 14px;
-  font-family: "Roboto-Regular";
-  font-size: 10px;
   color: #ffffff;
-  margin-right: 5px;
-  cursor: pointer;
 }
-#upload_resume .upload-resume-card .upload-resume-body .upload-section form .buttons-upload .upload {
-  width: auto;
-  min-width: 70px;
-  border: none;
-  background: #008020;
-  padding: 6px 14px;
-  font-family: "Roboto-Regular";
-  font-size: 10px;
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload .browse:hover {
+  background: #1f2426;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload .remove {
+  background: #f1f3f4;
+  color: #2f3639;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload .remove:hover {
+  background: #e4e7e8;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload .upload {
+  background: #277f6a;
   color: #ffffff;
-  cursor: pointer;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload .upload:hover {
+  background: #1f6657;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-section .buttons-upload .upload:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#upload_resume .upload-resume-card .upload-resume-body .upload-rulls {
+  width: 100%;
+  max-width: 520px;
+  margin-top: 36px;
+  text-align: center;
 }
 #upload_resume .upload-resume-card .upload-resume-body .upload-rulls .rulls-title {
-  font-size: 12px;
-  font-family: "Roboto-Bold";
+  font-size: 14px;
+  font-family: "Poppin-SemiBold";
   color: #2f3639;
-  line-height: 14px;
-  text-align: center;
-  margin-bottom: 15px;
+  line-height: 21px;
+  margin-bottom: 12px;
 }
 #upload_resume .upload-resume-card .upload-resume-body .upload-rulls .rulls {
-  font-size: 12px;
-  font-family: "Roboto-Regular";
-  color: #2f3639;
-  line-height: 14px;
-  text-align: center;
-  margin-bottom: 5px;
+  font-size: 13px;
+  font-family: "Poppin-Regular";
+  color: #76899c;
+  line-height: 20px;
+  margin-bottom: 6px;
 }
 #upload_resume .upload-resume-card .upload-resume-body .upload-resume-footer {
-  width: 515px;
-  height: 65px;
-  background: #277f6a 0% 0% no-repeat padding-box;
-  border-radius: 2px;
-  margin: auto;
-  margin-top: 45px;
-  font-size: 12px;
-  font-family: "Roboto-Bold";
-  line-height: 14px;
+  width: 100%;
+  max-width: 520px;
+  background: #277f6a;
+  border-radius: 4px;
+  margin-top: 32px;
+  padding: 18px 24px;
+  font-size: 13px;
+  font-family: "Poppin-Regular";
+  line-height: 20px;
   color: #FFFFFF;
+  text-align: center;
+}
+#upload_resume .resume-review-card .resume-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 24px;
+  flex-wrap: wrap;
+}
+#upload_resume .resume-review-card .resume-review-header .title {
+  padding: 0;
+}
+#upload_resume .resume-review-card .resume-review-header .resume-review-subtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-family: "Poppin-Regular";
+  color: #76899c;
+  line-height: 20px;
+}
+#upload_resume .resume-review-card .resume-review-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#upload_resume .resume-review-card .resume-review-actions button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-family: "Poppin-Medium";
+  font-size: 14px;
+  cursor: pointer;
+}
+#upload_resume .resume-review-card .resume-review-actions .secondary {
+  background: #f1f3f4;
+  color: #2f3639;
+}
+#upload_resume .resume-review-card .resume-review-actions .primary {
+  background: #277f6a;
+  color: #ffffff;
+}
+#upload_resume .resume-review-card .resume-review-actions .primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#upload_resume .resume-review-card .resume-review-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+#upload_resume .resume-review-card .resume-fields-panel,
+#upload_resume .resume-review-card .resume-preview-panel {
+  width: 100%;
+}
+#upload_resume .resume-review-card .panel-title {
+  font-size: 15px;
+  font-family: "Poppin-SemiBold";
+  color: #2f3639;
+  margin-bottom: 8px;
+}
+#upload_resume .resume-review-card .panel-file-name {
+  font-size: 12px;
+  font-family: "Poppin-Regular";
+  color: #76899c;
+  margin-bottom: 16px;
+  word-break: break-word;
+}
+#upload_resume .resume-review-card .resume-parsing-status {
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  color: #76899c;
+  margin-bottom: 16px;
+}
+#upload_resume .resume-review-card .resume-parse-error {
+  color: #d23c3c;
+  font-family: "Poppin-Regular";
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+#upload_resume .resume-review-card .resume-fields-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#upload_resume .resume-review-card .resume-field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+#upload_resume .resume-review-card .resume-field-row label {
+  font-size: 13px;
+  font-family: "Poppin-Medium";
+  color: #2f3639;
+}
+#upload_resume .resume-review-card .resume-field-row input,
+#upload_resume .resume-review-card .resume-field-row textarea {
+  width: 100%;
+  border: 1px solid #e4e7e8;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: "Poppin-Regular";
+  color: #2f3639;
+  background: #ffffff;
+  resize: vertical;
+}
+#upload_resume .resume-review-card .resume-field-row input:focus,
+#upload_resume .resume-review-card .resume-field-row textarea:focus {
+  outline: none;
+  border-color: #277f6a;
+  box-shadow: 0 0 0 2px rgba(39, 127, 106, 0.12);
+}
+#upload_resume .resume-review-card .resume-field-row textarea {
+  min-height: 96px;
+  line-height: 22px;
+}
+#upload_resume .resume-review-card .resume-preview-panel {
+  padding-top: 8px;
+  border-top: 1px solid #eeeeee;
+}
+#upload_resume .resume-review-card .resume-pdf-frame {
+  width: 100%;
+  min-height: 520px;
+  height: 70vh;
+  max-height: 800px;
+  border: 1px solid #e4e7e8;
+  border-radius: 6px;
+  background: #f8fbfa;
+}
+#upload_resume .resume-review-card .resume-preview-placeholder {
+  min-height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 68px;
-  padding-right: 68px;
   text-align: center;
+  padding: 24px;
+  border: 1px dashed #c9d4d0;
+  border-radius: 6px;
+  color: #76899c;
+  font-family: "Poppin-Regular";
+  font-size: 14px;
+  background: #f8fbfa;
 }
 
 #browse_job {

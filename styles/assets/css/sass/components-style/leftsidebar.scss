@@ -13,12 +13,12 @@
     .section {
       margin-bottom: 30px;
       .title {
-        font-size: 10px;
-        font-family: "Poppin-Medium";
+        font-size: 15px;
+        font-family: "Poppin-SemiBold";
         color: #2f3639;
-        line-height: 16px;
-        margin-bottom: 12px;
-        padding-bottom: 5px;
+        line-height: 22px;
+        margin-bottom: 14px;
+        padding-bottom: 8px;
         border-bottom: 1px solid #dde6e9;
         display: flex;
         justify-content: space-between;
@@ -31,6 +31,11 @@
         .link-with-logo {
           display: flex;
           align-items: center;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
 
           &.active {
             a,
@@ -44,19 +49,26 @@
             border: none;
             background: transparent;
             padding: 0;
-            font-size: 12px;
-            font-family: "Poppin-Light";
+            font-size: 14px;
+            font-family: "Poppin-Regular";
+            line-height: 21px;
             color: #2f3639;
             cursor: pointer;
           }
           .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+
             .logo-img {
-              width: 12px;
-              height: 12px;
+              width: 18px;
+              height: 18px;
+              object-fit: contain;
             }
           }
           .links {
-            padding-left: 13px;
+            padding-left: 14px;
 
             &.special {
               width: 100%;
@@ -68,8 +80,8 @@
             a {
               font-family: "Poppin-Regular";
               color: #2f3639;
-              font-size: 8px;
-              line-height: 12px;
+              font-size: 14px;
+              line-height: 21px;
 
               text-decoration: none;
             }
