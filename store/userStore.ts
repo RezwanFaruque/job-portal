@@ -14,6 +14,9 @@ interface Company {
 }
 
 export interface User {
+  /** User profile document id — required for job `postedBy` references */
+  profileId: string;
+  /** Auth account id when separate from profile */
   userId: string;
   userName: string;
   email: string;
@@ -84,8 +87,12 @@ export interface UserState {
 }
 
 function normalizeUser(raw: ApiUser, existing?: User | null): User {
+  const profileId = raw._id ?? existing?.profileId ?? "";
+  const authUserId = raw.userId ?? existing?.userId ?? "";
+
   return {
-    userId: raw._id ?? raw.userId ?? "",
+    profileId: profileId || authUserId,
+    userId: authUserId || profileId,
     userName: raw.userName,
     email: raw.email,
     userType: raw.userType,
@@ -93,6 +100,11 @@ function normalizeUser(raw: ApiUser, existing?: User | null): User {
     profilePicture: raw.profilePicture ?? existing?.profilePicture,
     company: raw.company,
   };
+}
+
+export function getPostedById(user: User | null | undefined): string {
+  if (!user) return "";
+  return user.profileId || user.userId;
 }
 
 function saveAuth(token: string, user: User) {
@@ -125,7 +137,18 @@ export const userStore = create<UserState>()(
       if (!token || !storedUser) return;
 
       try {
-        set({ token, user: JSON.parse(storedUser) as User });
+        const parsed = JSON.parse(storedUser) as Partial<User>;
+        const user: User = {
+          profileId: parsed.profileId ?? parsed.userId ?? "",
+          userId: parsed.userId ?? parsed.profileId ?? "",
+          userName: parsed.userName ?? "",
+          email: parsed.email ?? "",
+          userType: parsed.userType ?? "",
+          createdAt: parsed.createdAt,
+          profilePicture: parsed.profilePicture,
+          company: parsed.company,
+        };
+        set({ token, user });
       } catch {
         clearAuth();
       }

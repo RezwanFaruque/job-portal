@@ -37,11 +37,28 @@
   .job-results {
     margin-top: 25px;
 
+    .browse-job-loading,
+    .no-results {
+      padding: 48px 0;
+      text-align: center;
+      font-family: "Poppin-Regular";
+      font-size: 15px;
+      color: #76899c;
+    }
+
+    .browse-job-grid {
+      margin-bottom: 8px;
+    }
+
+    .browse-job-col {
+      display: flex;
+    }
+
     .browse-job-card {
       background: #ffffff;
       border-radius: 8px;
       padding: 20px;
-      margin-bottom: 25px;
+      width: 100%;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       border: 1px solid #eef1f3;
       height: 100%;
@@ -234,6 +251,13 @@
           }
         }
       }
+    }
+
+    .browse-job-pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      padding-top: 8px;
     }
   }
 }

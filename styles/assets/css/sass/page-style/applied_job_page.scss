@@ -172,4 +172,52 @@
       }
     }
   }
+
+  .applied-job-loading,
+  .applied-job-empty,
+  .applied-job-error {
+    margin-top: 24px;
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #6b6b8c;
+    line-height: 22px;
+  }
+
+  .applied-job-error a,
+  .applied-job-empty a {
+    color: #b32d7d;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .applied-job-login-link {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #b32d7d;
+    cursor: pointer;
+    font: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .dot-click-open .share-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+  }
 }

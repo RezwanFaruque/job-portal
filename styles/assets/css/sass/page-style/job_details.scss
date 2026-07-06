@@ -186,6 +186,34 @@
                     color: #2F3639;
                     line-height: 21px;
                     white-space: pre-line;
+
+                    &.job-poster-info {
+                        .job-poster-name {
+                            font-family: 'Poppin-Medium';
+                            font-size: 15px;
+                            margin-bottom: 6px;
+                        }
+
+                        .job-poster-contact,
+                        .job-poster-email,
+                        .job-poster-website,
+                        .job-poster-meta {
+                            margin-bottom: 4px;
+                        }
+
+                        a {
+                            color: #B32D7D;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .job-poster-description {
+                            margin-top: 8px;
+                        }
+                    }
                 }
 
                 .apply-button{

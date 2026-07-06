@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run sass:build && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sass:build": "sass styles/assets/css/style.scss styles/assets/css/style.css --no-source-map",
+    "sass:watch": "sass --watch styles/assets/css/style.scss:styles/assets/css/style.css --no-source-map"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

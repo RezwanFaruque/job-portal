@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getPosterContactName, getPosterDisplayName } from "@/lib/jobPoster";
 import { useJobStore } from "@/store/jobStore";
 import { useStore, RootState } from "@/store/modalStore";
 
@@ -59,6 +60,12 @@ export default function JobDetailsContent({ jobId }: JobDetailsContentProps) {
     );
   }
 
+  const postedBy = jobDetails.postedBy;
+  const posterName = getPosterDisplayName(postedBy);
+  const posterContact = getPosterContactName(postedBy);
+  const posterEmail = postedBy?.email;
+  const company = postedBy?.company;
+
   return (
     <div id="job-details">
       <div className="container">
@@ -75,7 +82,7 @@ export default function JobDetailsContent({ jobId }: JobDetailsContentProps) {
             <div className="main-image-icon">
               <Image
                 src="/assets/Images/digital-marketing.png"
-                alt={jobDetails.postedBy.userName}
+                alt={posterName}
                 width={80}
                 height={80}
               />
@@ -86,7 +93,7 @@ export default function JobDetailsContent({ jobId }: JobDetailsContentProps) {
             <div className="left">
               <div className="title">{jobDetails.title}</div>
               <div className="subtitle">
-                {jobDetails.postedBy.userName} · {jobDetails.location}
+                {posterName} · {jobDetails.location}
               </div>
               <div className="posting-date">Posted on {formatDate(jobDetails.createdAt)}</div>
             </div>
@@ -104,7 +111,9 @@ export default function JobDetailsContent({ jobId }: JobDetailsContentProps) {
                 </button>
               </div>
               <div className="details-applicants">
-                <div className="applicants">Vacancy: {jobDetails.vacancy}</div>
+                <div className="applicants">
+                  Vacancy: {jobDetails.vacancy ?? "—"}
+                </div>
                 <div className="deadline">{formatLabel(jobDetails.jobType)}</div>
               </div>
             </div>
@@ -132,13 +141,41 @@ export default function JobDetailsContent({ jobId }: JobDetailsContentProps) {
           <div className="main-detials">
             <div className="section">
               <div className="title">Job Description</div>
-              <div className="info">{jobDetails.description}</div>
+              <div
+                className="info job-description-html"
+                dangerouslySetInnerHTML={{ __html: jobDetails.description }}
+              />
             </div>
 
             <div className="section">
               <div className="title">Posted By</div>
-              <div className="info">
-                {jobDetails.postedBy.userName} ({jobDetails.postedBy.email})
+              <div className="info job-poster-info">
+                <div className="job-poster-name">{posterName}</div>
+                {posterContact && (
+                  <div className="job-poster-contact">Contact: {posterContact}</div>
+                )}
+                {posterEmail && (
+                  <div className="job-poster-email">
+                    Email:{" "}
+                    <a href={`mailto:${posterEmail}`}>{posterEmail}</a>
+                  </div>
+                )}
+                {company?.website && (
+                  <div className="job-poster-website">
+                    Website:{" "}
+                    <a href={company.website} target="_blank" rel="noopener noreferrer">
+                      {company.website}
+                    </a>
+                  </div>
+                )}
+                {(company?.industry || company?.location) && (
+                  <div className="job-poster-meta">
+                    {[company.industry, company.location].filter(Boolean).join(" · ")}
+                  </div>
+                )}
+                {company?.description && (
+                  <div className="job-poster-description">{company.description}</div>
+                )}
               </div>
             </div>
 
@@ -151,6 +188,7 @@ export default function JobDetailsContent({ jobId }: JobDetailsContentProps) {
                       id: jobDetails._id,
                       title: jobDetails.title,
                       location: jobDetails.location,
+                      employerId: jobDetails.postedBy?._id,
                     })
                   }
                 >

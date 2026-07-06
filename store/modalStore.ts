@@ -5,6 +5,7 @@ export interface ApplyJobTarget {
   id: string;
   title: string;
   location?: string;
+  employerId?: string;
 }
 
 // global state interface - extend with your app's state
@@ -14,12 +15,16 @@ export interface RootState {
   showCompanySignup?: boolean;
   showApplyJobModal?: boolean;
   selectedApplyJob?: ApplyJobTarget | null;
+  showAppliedJobDetailsModal?: boolean;
+  selectedApplicationId?: string | null;
   toggleLoginModal?: () => void;
   toggleSignupModal?: () => void;
   toggleCompanySignup?: () => void;
   setCompanySignup?: (isCompany: boolean) => void;
   openApplyJobModal?: (job: ApplyJobTarget) => void;
   closeApplyJobModal?: () => void;
+  openAppliedJobDetailsModal?: (applicationId: string) => void;
+  closeAppliedJobDetailsModal?: () => void;
 }
 
 // basic store with working toggles
@@ -32,6 +37,8 @@ export const useStore = create<RootState>()(
       showCompanySignup: false,
       showApplyJobModal: false,
       selectedApplyJob: null,
+      showAppliedJobDetailsModal: false,
+      selectedApplicationId: null,
 
       // toggle functions flip the corresponding flag
       toggleLoginModal: () => set((state) => ({ showLoginModal: !state.showLoginModal })),
@@ -47,6 +54,18 @@ export const useStore = create<RootState>()(
 
       closeApplyJobModal: () =>
         set({ showApplyJobModal: false, selectedApplyJob: null }),
+
+      openAppliedJobDetailsModal: (applicationId) =>
+        set({
+          showAppliedJobDetailsModal: true,
+          selectedApplicationId: applicationId,
+        }),
+
+      closeAppliedJobDetailsModal: () =>
+        set({
+          showAppliedJobDetailsModal: false,
+          selectedApplicationId: null,
+        }),
     })
   )
 );

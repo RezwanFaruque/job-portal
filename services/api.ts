@@ -74,4 +74,51 @@ function createApiClient(baseUrl: string, withAuth = false) {
 }
 
 export const jobApi = createApiClient(JOB_BASE_URL);
+export const jobAuthApi = createApiClient(JOB_BASE_URL, true);
 export const userApi = createApiClient(USER_BASE_URL, true);
+
+export interface ApplyJobApiResponse {
+  success: boolean;
+  message: string;
+}
+
+/** POST /apply — multipart form with resume file + application fields */
+export async function applyForJob(formData: FormData): Promise<ApplyJobApiResponse> {
+  const headers: Record<string, string> = {};
+
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem(AUTH_TOKEN_KEY);
+    if (token) {
+      headers.Authorization = `Bearer ${token}`;
+    }
+  }
+
+  const res = await fetch(`${JOB_BASE_URL}/apply`, {
+    method: "POST",
+    headers,
+    body: formData,
+  });
+
+  const contentType = res.headers.get("content-type") ?? "";
+  const text = await res.text();
+
+  if (!res.ok) {
+    if (contentType.includes("application/json")) {
+      try {
+        const json = JSON.parse(text) as { message?: string };
+        throw new Error(json.message || `Request failed (${res.status})`);
+      } catch (error) {
+        if (error instanceof Error && error.message && !error.message.includes("JSON")) {
+          throw error;
+        }
+      }
+    }
+    throw new Error(`API Error: ${res.status} ${res.statusText} - ${text}`);
+  }
+
+  if (contentType.includes("application/json")) {
+    return JSON.parse(text) as ApplyJobApiResponse;
+  }
+
+  throw new Error(`Expected JSON response but received: ${text.slice(0, 120)}`);
+}

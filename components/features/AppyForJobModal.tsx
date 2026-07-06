@@ -3,10 +3,12 @@
 import React, { FormEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useStore, RootState } from "@/store/modalStore";
+import { useJobStore } from "@/store/jobStore";
 import { userStore } from "@/store/userStore";
 import ProfileAvatar from "@/components/features/ProfileAvatar";
 import { useToastStore } from "@/store/toastStore";
 
+const MAX_RESUME_SIZE_BYTES = 5 * 1024 * 1024;
 const ACCEPTED_RESUME_TYPES = [
   "application/pdf",
   "application/msword",
@@ -27,6 +29,8 @@ export default function ApplyForJobModal() {
   const closeApplyJobModal = useStore((state: RootState) => state.closeApplyJobModal);
   const selectedApplyJob = useStore((state: RootState) => state.selectedApplyJob);
   const user = userStore((state) => state.user);
+  const applyJob = useJobStore((state) => state.applyJob);
+  const resolveEmployerId = useJobStore((state) => state.resolveEmployerId);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [resumeFile, setResumeFile] = useState<File | null>(null);
@@ -45,6 +49,8 @@ export default function ApplyForJobModal() {
     event.preventDefault();
     setError(null);
 
+    if (!selectedApplyJob) return;
+
     if (!acceptedTerms) {
       setError("Please accept the terms & conditions to continue.");
       return;
@@ -58,9 +64,26 @@ export default function ApplyForJobModal() {
     setIsSubmitting(true);
 
     try {
-      await new Promise((resolve) => window.setTimeout(resolve, 600));
+      const formData = new FormData(event.currentTarget);
+      const employerId = await resolveEmployerId(
+        selectedApplyJob.id,
+        selectedApplyJob.employerId
+      );
+
+      const payload = new FormData();
+      payload.append("job", selectedApplyJob.id);
+      payload.append("employer", employerId);
+      payload.append("firstName", (formData.get("firstName") as string).trim());
+      payload.append("lastName", (formData.get("lastName") as string).trim());
+      payload.append("email", (formData.get("email") as string).trim());
+      payload.append("phone", (formData.get("phone") as string).trim());
+      payload.append("location", (formData.get("location") as string).trim());
+      payload.append("coverLetter", (formData.get("coverLetter") as string).trim());
+      payload.append("resume", resumeFile);
+
+      const response = await applyJob(payload);
       useToastStore.getState().showToast(
-        `Application submitted for ${selectedApplyJob?.title ?? "this job"}!`
+        response.message || `Application submitted for ${selectedApplyJob.title}!`
       );
       closeApplyJobModal?.();
     } catch (err) {
@@ -79,8 +102,8 @@ export default function ApplyForJobModal() {
       return;
     }
 
-    if (file.size > 500 * 1024) {
-      setError("Resume must be less than 500 KB.");
+    if (file.size > MAX_RESUME_SIZE_BYTES) {
+      setError("Resume must be less than 5 MB.");
       return;
     }
 

@@ -1,0 +1,157 @@
+#appliedjob-details-modal {
+  &.appliedjob-details-modal-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  .apply-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    line-height: 1;
+    color: #76899c;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .modal-content {
+    background: #ffffff;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    max-height: calc(100vh - 96px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    padding: 28px 32px 32px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .applied-job-loading,
+  .applied-job-error {
+    font-size: 14px;
+    font-family: "Poppin-Regular";
+    color: #6b6b8c;
+    line-height: 22px;
+    padding: 24px 0;
+  }
+
+  .applied-details-header {
+    margin-bottom: 24px;
+    padding-right: 28px;
+
+    .applied-details-title {
+      font-size: 22px;
+      font-family: "Poppin-SemiBold";
+      color: #2f3639;
+      line-height: 32px;
+    }
+
+    .applied-details-subtitle {
+      margin-top: 6px;
+      font-size: 15px;
+      font-family: "Poppin-Regular";
+      color: #6b6b8c;
+    }
+
+    .applied-details-meta {
+      margin-top: 8px;
+      font-size: 13px;
+      font-family: "Poppin-Regular";
+      color: #76899c;
+    }
+  }
+
+  .applied-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .applied-details-section {
+    background: #f8fafb;
+    border: 1px solid #eef1f3;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+
+    .section-title {
+      font-size: 15px;
+      font-family: "Poppin-SemiBold";
+      color: #2f3639;
+      margin-bottom: 10px;
+    }
+
+    .section-info {
+      font-size: 14px;
+      font-family: "Poppin-Light";
+      color: #2f3639;
+      line-height: 22px;
+
+      p {
+        margin: 0 0 8px;
+      }
+
+      a {
+        color: #b32d7d;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.cover-letter {
+        white-space: pre-line;
+      }
+
+      &.job-description-html {
+        max-height: 220px;
+        overflow-y: auto;
+        padding-right: 4px;
+      }
+    }
+  }
+
+  .applied-details-actions {
+    margin-top: 4px;
+    padding-top: 8px;
+
+    .applied-details-job-link {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 4px;
+      background: #b32d7d;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: "Poppin-Medium";
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.92;
+      }
+    }
+  }
+}
