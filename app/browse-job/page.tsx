@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import JobFilterSideBar from "@/components/features/JobFilterSideBar";
 import JobSearchBannar from "@/components/features/JobSearchBannar";
 import JobCardMenu from "@/components/features/JobCardMenu";
@@ -9,7 +9,7 @@ import { useJobStore } from "@/store/jobStore";
 import { useStore, RootState } from "@/store/modalStore";
 import { stripHtmlToText } from "@/lib/stripHtml";
 
-const JOBS_PER_PAGE = 9;
+const JOBS_PER_PAGE = 10;
 
 function formatJobType(jobType?: string) {
   if (!jobType) return "";
@@ -22,21 +22,37 @@ export default function BrowseJobPage() {
     jobsTotal,
     jobsPage,
     jobsLimit,
+    jobsError,
     isLoadingJobs,
+    searchFilters,
+    searchInitialized,
     fetchJobs,
+    setSearchPage,
+    hydrateSearchFromUrl,
   } = useJobStore();
   const openApplyJobModal = useStore((state: RootState) => state.openApplyJobModal);
-  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    fetchJobs(currentPage, JOBS_PER_PAGE);
-  }, [currentPage, fetchJobs]);
+    hydrateSearchFromUrl();
+
+    function handlePopState() {
+      hydrateSearchFromUrl();
+    }
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [hydrateSearchFromUrl]);
+
+  useEffect(() => {
+    if (!searchInitialized) return;
+    fetchJobs(jobsPage, JOBS_PER_PAGE);
+  }, [fetchJobs, jobsPage, searchFilters, searchInitialized]);
 
   const totalPages = Math.max(1, Math.ceil(jobsTotal / (jobsLimit || JOBS_PER_PAGE)));
 
   function handlePageChange(page: number) {
-    if (page < 1 || page > totalPages || page === currentPage) return;
-    setCurrentPage(page);
+    if (page < 1 || page > totalPages || page === jobsPage) return;
+    setSearchPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -68,6 +84,8 @@ export default function BrowseJobPage() {
               <div className="job-results">
                 {isLoadingJobs ? (
                   <div className="browse-job-loading">Loading jobs...</div>
+                ) : jobsError ? (
+                  <div className="no-results" role="alert">{jobsError}</div>
                 ) : jobs.length === 0 ? (
                   <div className="no-results">No jobs found.</div>
                 ) : (
@@ -148,7 +166,7 @@ export default function BrowseJobPage() {
                 )}
 
                 <PaginationComponent
-                  currentPage={jobsPage || currentPage}
+                  currentPage={jobsPage}
                   totalPages={totalPages}
                   onPageChange={handlePageChange}
                 />

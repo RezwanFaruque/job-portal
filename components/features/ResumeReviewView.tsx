@@ -8,10 +8,19 @@ interface ResumeReviewViewProps {
   pdfUrl: string | null;
   fields: ResumeField[];
   isParsing: boolean;
+  isSaving: boolean;
+  isSavedResume: boolean;
+  isDeleting: boolean;
+  isDownloading: boolean;
+  isLoadingPreview: boolean;
   parseError: string | null;
+  saveError: string | null;
+  previewError: string | null;
   onFieldChange: (id: string, value: string) => void;
   onUploadAnother: () => void;
   onSave: () => void;
+  onDownload: () => void;
+  onDelete: () => void;
 }
 
 export default function ResumeReviewView({
@@ -19,10 +28,19 @@ export default function ResumeReviewView({
   pdfUrl,
   fields,
   isParsing,
+  isSaving,
+  isSavedResume,
+  isDeleting,
+  isDownloading,
+  isLoadingPreview,
   parseError,
+  saveError,
+  previewError,
   onFieldChange,
   onUploadAnother,
   onSave,
+  onDownload,
+  onDelete,
 }: ResumeReviewViewProps) {
   return (
     <div className="upload-resume-card resume-review-card">
@@ -34,11 +52,48 @@ export default function ResumeReviewView({
           </p>
         </div>
         <div className="resume-review-actions">
-          <button type="button" className="secondary" onClick={onUploadAnother}>
-            Upload Another
-          </button>
-          <button type="button" className="primary" onClick={onSave} disabled={isParsing}>
-            Save Resume Data
+          {isSavedResume ? (
+            <>
+              <button
+                type="button"
+                className="secondary"
+                onClick={onDownload}
+                disabled={isDownloading || isDeleting}
+              >
+                {isDownloading ? "Downloading..." : "Download Resume"}
+              </button>
+              <button
+                type="button"
+                className="danger"
+                onClick={onDelete}
+                disabled={isDeleting || isSaving || isDownloading}
+              >
+                {isDeleting ? "Deleting..." : "Delete Resume"}
+              </button>
+            </>
+          ) : (
+            <button
+              type="button"
+              className="secondary"
+              onClick={onUploadAnother}
+              disabled={isSaving}
+            >
+              Upload Another
+            </button>
+          )}
+          <button
+            type="button"
+            className="primary"
+            onClick={onSave}
+            disabled={isParsing || isSaving || isDeleting}
+          >
+            {isSaving
+              ? isSavedResume
+                ? "Saving..."
+                : "Uploading..."
+              : isSavedResume
+                ? "Save Section Changes"
+                : "Save Resume Data"}
           </button>
         </div>
       </div>
@@ -54,6 +109,7 @@ export default function ResumeReviewView({
           )}
 
           {parseError && <div className="resume-parse-error">{parseError}</div>}
+          {saveError && <div className="resume-parse-error">{saveError}</div>}
 
           {!isParsing && fields.length === 0 && (
             <div className="resume-parsing-status">
@@ -95,7 +151,13 @@ export default function ResumeReviewView({
             />
           ) : (
             <div className="resume-preview-placeholder">
-              Preview is available for PDF files only.
+              {isLoadingPreview
+                ? "Loading your resume preview..."
+                : previewError
+                  ? `${previewError} Use Download Resume to open the file.`
+                  : isSavedResume
+                    ? "Preview is available for PDF files only. Download the file to view it."
+                    : "Preview is available for PDF files only."}
             </div>
           )}
         </div>

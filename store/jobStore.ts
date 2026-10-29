@@ -131,11 +131,86 @@ interface CreateJobApiResponse {
   data?: JobDetails;
 }
 
+export interface JobSearchFilters {
+  keyword: string;
+  category: string;
+  location: string;
+  jobTypes: string[];
+  seniorityLevels: string[];
+  salaryRanges: string[];
+}
+
+const SEARCH_QUERY_KEYS = [
+  "keyword",
+  "category",
+  "location",
+  "jobType",
+  "seniorityLevel",
+  "salaryRange",
+  "page",
+  "limit",
+] as const;
+
+function updateJobSearchUrl(filters: JobSearchFilters, page: number) {
+  if (typeof window === "undefined") return;
+
+  const url = new URL(window.location.href);
+  SEARCH_QUERY_KEYS.forEach((key) => url.searchParams.delete(key));
+
+  if (filters.keyword.trim()) url.searchParams.set("keyword", filters.keyword.trim());
+  if (filters.category) url.searchParams.set("category", filters.category);
+  if (filters.location.trim()) url.searchParams.set("location", filters.location.trim());
+  if (filters.jobTypes.length) url.searchParams.set("jobType", filters.jobTypes.join(","));
+  if (filters.seniorityLevels.length) {
+    url.searchParams.set("seniorityLevel", filters.seniorityLevels.join(","));
+  }
+  if (filters.salaryRanges.length) {
+    url.searchParams.set("salaryRange", filters.salaryRanges.join(","));
+  }
+  url.searchParams.set("page", String(page));
+  url.searchParams.set("limit", "10");
+
+  window.history.replaceState(window.history.state, "", url);
+}
+
+function readJobSearchUrl(): {
+  filters: JobSearchFilters;
+  page: number;
+} {
+  const params = new URLSearchParams(window.location.search);
+  const page = Number.parseInt(params.get("page") ?? "1", 10);
+
+  return {
+    filters: {
+      keyword: params.get("keyword") ?? "",
+      category: params.get("category") ?? "",
+      location: params.get("location") ?? "",
+      jobTypes: (params.get("jobType") ?? "").split(",").filter(Boolean),
+      seniorityLevels: (params.get("seniorityLevel") ?? "").split(",").filter(Boolean),
+      salaryRanges: (params.get("salaryRange") ?? "").split(",").filter(Boolean),
+    },
+    page: Number.isFinite(page) && page > 0 ? page : 1,
+  };
+}
+
+const EMPTY_JOB_SEARCH_FILTERS: JobSearchFilters = {
+  keyword: "",
+  category: "",
+  location: "",
+  jobTypes: [],
+  seniorityLevels: [],
+  salaryRanges: [],
+};
+
 export interface JobState {
   jobs: Job[];
   jobsTotal: number;
   jobsPage: number;
   jobsLimit: number;
+  jobsError: string | null;
+  searchFilters: JobSearchFilters;
+  searchInitialized: boolean;
+  searchFormVersion: number;
   isLoadingJobs: boolean;
   jobDetails: JobDetails | null;
   isLoadingDetails: boolean;
@@ -149,6 +224,13 @@ export interface JobState {
   selectedApplication: JobApplication | null;
   isLoadingApplicationDetails: boolean;
   setJobs: (jobs: Job[]) => void;
+  setSearchFilters: (filters: Partial<JobSearchFilters>) => void;
+  toggleSearchFilter: (
+    key: "jobTypes" | "seniorityLevels" | "salaryRanges",
+    value: string
+  ) => void;
+  setSearchPage: (page: number) => void;
+  hydrateSearchFromUrl: () => void;
   fetchJobs: (page?: number, limit?: number) => Promise<void>;
   fetchJobDetails: (jobId: string) => Promise<JobDetailsApiResponse>;
   createJob: (payload: CreateJobPayload) => Promise<CreateJobApiResponse>;
@@ -161,11 +243,15 @@ export interface JobState {
 }
 
 export const useJobStore = create<JobState>()(
-  devtools((set) => ({
+  devtools((set, get) => ({
     jobs: [],
     jobsTotal: 0,
     jobsPage: 1,
-    jobsLimit: 9,
+    jobsLimit: 10,
+    jobsError: null,
+    searchFilters: EMPTY_JOB_SEARCH_FILTERS,
+    searchInitialized: false,
+    searchFormVersion: 0,
     isLoadingJobs: false,
     jobDetails: null,
     isLoadingDetails: false,
@@ -181,15 +267,72 @@ export const useJobStore = create<JobState>()(
 
     setJobs: (jobs) => set({ jobs }),
 
+    setSearchFilters: (filters) =>
+      {
+        const searchFilters = { ...get().searchFilters, ...filters };
+        set({ searchFilters, jobsPage: 1 });
+        updateJobSearchUrl(searchFilters, 1);
+      },
+
+    toggleSearchFilter: (key, value) => {
+      const current = get().searchFilters;
+      const selected = current[key];
+      const nextValues = selected.includes(value)
+        ? selected.filter((item) => item !== value)
+        : [...selected, value];
+      const searchFilters = { ...current, [key]: nextValues };
+
+      set({ searchFilters, jobsPage: 1 });
+      updateJobSearchUrl(searchFilters, 1);
+    },
+
+    setSearchPage: (page) => {
+      set({ jobsPage: page });
+      updateJobSearchUrl(get().searchFilters, page);
+    },
+
+    hydrateSearchFromUrl: () => {
+      if (typeof window === "undefined") return;
+      const { filters, page } = readJobSearchUrl();
+      set((state) => ({
+        searchFilters: filters,
+        jobsPage: page,
+        searchInitialized: true,
+        searchFormVersion: state.searchFormVersion + 1,
+      }));
+    },
+
     clearJobDetails: () => set({ jobDetails: null }),
 
     clearSelectedApplication: () => set({ selectedApplication: null }),
 
-    fetchJobs: async (page = 1, limit = 9) => {
-      set({ isLoadingJobs: true });
+    fetchJobs: async (page = 1, limit = 10) => {
+      set({ isLoadingJobs: true, jobsError: null });
       try {
+        const { searchFilters } = get();
+        const params = new URLSearchParams({
+          page: String(page),
+          limit: String(limit),
+        });
+        if (searchFilters.keyword.trim()) {
+          params.set("keyword", searchFilters.keyword.trim());
+        }
+        if (searchFilters.category) params.set("category", searchFilters.category);
+        if (searchFilters.location.trim()) {
+          params.set("location", searchFilters.location.trim());
+        }
+        if (searchFilters.jobTypes.length) {
+          params.set("jobType", searchFilters.jobTypes.join(","));
+        }
+        if (searchFilters.seniorityLevels.length) {
+          params.set("seniorityLevel", searchFilters.seniorityLevels.join(","));
+        }
+        if (searchFilters.salaryRanges.length) {
+          params.set("salaryRange", searchFilters.salaryRanges.join(","));
+        }
+
         const response = await jobApi.get<JobListApiResponse>(
-          `/get-jobs?page=${page}&limit=${limit}`
+          `/get-jobs?${params.toString()}`
         );
         set({
           jobs: response.data.jobs ?? [],
@@ -199,7 +342,14 @@ export const useJobStore = create<JobState>()(
         });
       } catch (error) {
         console.error("Failed to load jobs", error);
-        set({ jobs: [], jobsTotal: 0, jobsPage: page, jobsLimit: limit });
+        set({
+          jobs: [],
+          jobsTotal: 0,
+          jobsPage: page,
+          jobsLimit: limit,
+          jobsError:
+            error instanceof Error ? error.message : "Failed to load jobs.",
+        });
       } finally {
         set({ isLoadingJobs: false });
       }

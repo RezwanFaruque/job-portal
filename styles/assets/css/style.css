@@ -3587,6 +3587,15 @@
   background: #f1f3f4;
   color: #2f3639;
 }
+#upload_resume .resume-review-card .resume-review-actions .danger {
+  background: #fff0f0;
+  color: #c53030;
+}
+#upload_resume .resume-review-card .resume-review-actions .secondary:disabled,
+#upload_resume .resume-review-card .resume-review-actions .danger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 #upload_resume .resume-review-card .resume-review-actions .primary {
   background: #277f6a;
   color: #ffffff;

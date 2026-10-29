@@ -82,6 +82,154 @@ export interface ApplyJobApiResponse {
   message: string;
 }
 
+export interface UploadResumeApiResponse {
+  success?: boolean;
+  message?: string;
+}
+
+export interface ResumeSectionPayload {
+  key: string;
+  title: string;
+  content: string | string[];
+  order: number;
+}
+
+function getResumeAuthHeaders(includeJsonContentType = false): HeadersInit {
+  const token =
+    typeof window !== "undefined"
+      ? localStorage.getItem(AUTH_TOKEN_KEY)
+      : null;
+
+  if (!token) {
+    throw new Error("You must be signed in to manage your resume.");
+  }
+
+  return {
+    Authorization: `Bearer ${token}`,
+    ...(includeJsonContentType ? { "Content-Type": "application/json" } : {}),
+  };
+}
+
+async function getApiError(res: Response): Promise<Error> {
+  const text = await res.text();
+  if (text) {
+    try {
+      const body = JSON.parse(text) as { message?: string };
+      if (body.message) return new Error(body.message);
+    } catch {
+      return new Error(`API Error: ${res.status} ${res.statusText} - ${text}`);
+    }
+  }
+
+  return new Error(`API Error: ${res.status} ${res.statusText}`);
+}
+
+async function readResumeMutationResponse(
+  res: Response
+): Promise<UploadResumeApiResponse> {
+  const text = await res.text();
+  if (!text) return {};
+
+  if ((res.headers.get("content-type") ?? "").includes("application/json")) {
+    try {
+      return JSON.parse(text) as UploadResumeApiResponse;
+    } catch {
+      throw new Error("The resume API returned invalid JSON.");
+    }
+  }
+
+  return { message: text };
+}
+
+/** GET /resume — retrieve saved resume metadata and sections */
+export async function getResume(): Promise<unknown | null> {
+  const res = await fetch(`${USER_BASE_URL}/resume`, {
+    headers: getResumeAuthHeaders(),
+  });
+
+  if (res.status === 404) return null;
+  if (res.status === 204) return null;
+  if (!res.ok) throw await getApiError(res);
+
+  return handleResponse<unknown>(res);
+}
+
+export interface DownloadedResume {
+  blob: Blob;
+  fileName: string | null;
+}
+
+/** GET /resume/file — retrieve the uploaded resume file */
+export async function getResumeFile(): Promise<DownloadedResume> {
+  const res = await fetch(`${USER_BASE_URL}/resume/file`, {
+    headers: getResumeAuthHeaders(),
+  });
+
+  if (!res.ok) throw await getApiError(res);
+
+  const disposition = res.headers.get("content-disposition");
+  const encodedName = disposition?.match(/filename\*=UTF-8''([^;]+)/i)?.[1];
+  const quotedName = disposition?.match(/filename="?([^";]+)"?/i)?.[1];
+
+  return {
+    blob: await res.blob(),
+    fileName: encodedName
+      ? decodeURIComponent(encodedName)
+      : quotedName ?? null,
+  };
+}
+
+/** PATCH /resume — replace the saved resume sections */
+export async function updateResumeSections(
+  sections: ResumeSectionPayload[]
+): Promise<UploadResumeApiResponse> {
+  const res = await fetch(`${USER_BASE_URL}/resume`, {
+    method: "PATCH",
+    headers: getResumeAuthHeaders(true),
+    body: JSON.stringify({ sections }),
+  });
+
+  if (!res.ok) throw await getApiError(res);
+
+  return readResumeMutationResponse(res);
+}
+
+/** DELETE /resume — remove the saved resume and its file */
+export async function deleteResume(): Promise<UploadResumeApiResponse> {
+  const res = await fetch(`${USER_BASE_URL}/resume`, {
+    method: "DELETE",
+    headers: getResumeAuthHeaders(),
+  });
+
+  if (!res.ok) throw await getApiError(res);
+
+  return readResumeMutationResponse(res);
+}
+
+/** POST /resume — multipart form with the resume file and extracted sections */
+export async function uploadResume(
+  formData: FormData
+): Promise<UploadResumeApiResponse> {
+  const token =
+    typeof window !== "undefined"
+      ? localStorage.getItem(AUTH_TOKEN_KEY)
+      : null;
+
+  if (!token) {
+    throw new Error("You must be signed in to upload a resume.");
+  }
+
+  const res = await fetch(`${USER_BASE_URL}/resume`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    body: formData,
+  });
+
+  return handleResponse<UploadResumeApiResponse>(res);
+}
+
 /** POST /apply — multipart form with resume file + application fields */
 export async function applyForJob(formData: FormData): Promise<ApplyJobApiResponse> {
   const headers: Record<string, string> = {};

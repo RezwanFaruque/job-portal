@@ -269,6 +269,17 @@
         color: #2f3639;
       }
 
+      .danger {
+        background: #fff0f0;
+        color: #c53030;
+      }
+
+      .secondary:disabled,
+      .danger:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
       .primary {
         background: #277f6a;
         color: #ffffff;
