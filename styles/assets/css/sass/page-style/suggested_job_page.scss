@@ -1,126 +1,192 @@
 #suggestedjob{
-    margin-top: 50px;
-    margin-bottom: 100px;
+  margin: 50px 0 100px;
 
-    .title{
-        font-size: 16px;
-        font-family: 'Poppin-Medium';
-        color: #2F3639;
-        line-height: 25px;
+  .suggested-jobs-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+
+    h1 {
+      margin: 0;
+      color: #2f3639;
+      font: 20px/30px "Poppin-SemiBold";
     }
-    hr{
 
+    p {
+      margin: 4px 0 0;
+      color: #76899c;
+      font: 13px/20px "Poppin-Regular";
     }
-    .applied-job-card{
-        background-color: #FFFFFF;
-        box-shadow: 0px 0px 2px #00000029;
-        border-radius: 5px;
-        padding: 20px;
-        margin-top: 30px;
-        .header{
-            .header-content{
-                display: flex;
-                justify-content: space-between;
+  }
 
-                .left-side{
-                    .image{
-                        width: 60px;
-                        height: 45px;
-                    }
-                    .title{
-                        font-size: 12px;
-                        font-family: 'Poppin-Medium';
-                        color: #000000;
-                        line-height: 18px;
-                    }
-                    .location{
-                        font-size: 6px;
-                        font-family: 'Poppin-Regular';
-                        color: #6B6B8C;
-                        line-height: 9px;
-                    }
-                }
-                .right-side{
-                    position: relative;
-                    .dot-text{
-                        &::after{
-                            content: '\2807';
-                            font-size: 20px;
-                            cursor: pointer;
-                        }
-                    }
-                    .dot-click-open{
-                        position: absolute;
-                        right: 0;
-                        top: 30px;
-                        width: 155px;
-                        background: #FFFFFF 0% 0% no-repeat padding-box;
-                        box-shadow: 0px 0px 6px #00000029;
-                        z-index: 9;
-                        .share-content{
-                            display: flex;
-                            align-items: center;
-                            height: 27px;
-                            padding-left: 6px;
-                            cursor: pointer;
-                            &:hover{
-                                background-color: #F6F7F8;
-                            }
+  .suggested-jobs-browse-link {
+    color: #277f6a;
+    font: 13px/20px "Poppin-Medium";
+    text-decoration: none;
+    white-space: nowrap;
 
-                            .icon{
-                                img{
-                                    width: 10px;
-                                    height: 10px;
-                                }
-                            }
-                            .text{
-                                padding-left: 10px;
-                                font-family: 'Poppin-Regular';
-                                font-size: 9px;
-                                line-height: 13px;
-                                color: #2F3639;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .body{
-            padding-top: 15px;
-            font-size: 8px;
-            font-family: 'Poppin-Light';
-            color: #B6B6BB;
-            line-height: 12px;
-            height: 50px;
-            overflow: hidden;
-            margin-bottom: 15px;
-        }
-        .footer{
-            .tags{
-                display: flex;
-                align-items: center;
-                span{
-                    width: 75px;
-                    height: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #277F6A;
-                    flex-direction: column;
-                    margin-right: 30px;
-                    font-size: 8px;
-                    font-family: 'Poppin-Medium';
-                    color: #FFFFFF;
-                }
-            }
-
-            .applied-duration{
-                margin-top: 30px;
-                font-size: 8px;
-                font-family: 'Poppin-Regular';
-                color: #277F6A;
-                line-height: 12px;
-            }
-        }
+    &:hover {
+      text-decoration: underline;
     }
+  }
+
+  .suggested-jobs-count {
+    margin: 20px 0 12px;
+    color: #76899c;
+    font: 13px/20px "Poppin-Regular";
+  }
+
+  .suggested-jobs-list {
+    display: grid;
+    gap: 16px;
+  }
+
+  .suggested-job-card {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #eef1f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .suggested-job-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .suggested-job-company-mark {
+    display: flex;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #eaf5f1;
+    color: #277f6a;
+    font: 20px "Poppin-SemiBold";
+  }
+
+  .suggested-job-meta {
+    min-width: 0;
+
+    h2 {
+      margin: 0;
+      color: #2f3639;
+      font: 16px/24px "Poppin-SemiBold";
+    }
+
+    p {
+      margin: 3px 0 0;
+      color: #6b6b8c;
+      font: 13px/20px "Poppin-Regular";
+    }
+  }
+
+  .suggested-job-description {
+    display: -webkit-box;
+    margin: 16px 0;
+    overflow: hidden;
+    color: #76899c;
+    font: 14px/22px "Poppin-Regular";
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .suggested-job-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .suggested-job-tags,
+  .suggested-job-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .suggested-job-tags span {
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #f2f6f5;
+    color: #277f6a;
+    font: 12px/16px "Poppin-Medium";
+  }
+
+  .suggested-job-actions {
+    a,
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border-radius: 4px;
+      font: 13px/20px "Poppin-Medium";
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a {
+      border: 1px solid #dfe7e4;
+      color: #277f6a;
+    }
+
+    button {
+      border: 1px solid #277f6a;
+      background: #277f6a;
+      color: #ffffff;
+
+      &:hover {
+        background: #1f6657;
+      }
+    }
+  }
+
+  .suggested-jobs-state {
+    margin-top: 24px;
+    padding: 28px 20px;
+    border: 1px solid #eef1f3;
+    border-radius: 8px;
+    color: #76899c;
+    font: 14px/22px "Poppin-Regular";
+    text-align: center;
+
+    a {
+      color: #277f6a;
+      text-decoration: none;
+    }
+  }
+
+  .suggested-jobs-error {
+    color: #b42318;
+  }
+}
+
+@media (max-width: 767px) {
+  #suggestedjob {
+    margin-top: 30px;
+
+    .suggested-jobs-heading,
+    .suggested-job-footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .suggested-job-actions {
+      width: 100%;
+
+      a,
+      button {
+        flex: 1;
+      }
+    }
+  }
 }

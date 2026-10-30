@@ -4,6 +4,7 @@
  * Configure in `.env.local`:
  * - NEXT_PUBLIC_USER_API_URL=http://localhost:5000/api/users
  * - NEXT_PUBLIC_JOB_API_URL=http://localhost:5001/api/jobs
+ * Saved jobs use authenticated GET /saved-jobs and POST/DELETE /saved-jobs/:jobId routes.
  */
 
 const JOB_BASE_URL =
@@ -11,7 +12,16 @@ const JOB_BASE_URL =
 const USER_BASE_URL =
   process.env.NEXT_PUBLIC_USER_API_URL ?? "http://localhost:5000/api/users";
 
-type HttpMethod = "GET" | "POST" | "PUT" | "DELETE";
+export function getUserServiceAssetUrl(path: string): string {
+  if (!path || /^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(path)) {
+    return path;
+  }
+
+  const userServiceOrigin = new URL(USER_BASE_URL).origin;
+  return new URL(path, `${userServiceOrigin}/`).toString();
+}
+
+type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
 async function handleResponse<T>(res: Response): Promise<T> {
   const contentType = res.headers.get("content-type") ?? "";
@@ -19,6 +29,10 @@ async function handleResponse<T>(res: Response): Promise<T> {
   if (!res.ok) {
     const text = await res.text();
     throw new Error(`API Error: ${res.status} ${res.statusText} - ${text}`);
+  }
+
+  if (res.status === 204) {
+    return undefined as T;
   }
 
   if (contentType.includes("application/json")) {
@@ -31,10 +45,10 @@ async function handleResponse<T>(res: Response): Promise<T> {
 
 const AUTH_TOKEN_KEY = "auth_token";
 
-function getAuthHeaders(): Record<string, string> {
-  const headers: Record<string, string> = {
-    "Content-Type": "application/json",
-  };
+function getAuthHeaders(includeJsonContentType = true): Record<string, string> {
+  const headers: Record<string, string> = includeJsonContentType
+    ? { "Content-Type": "application/json" }
+    : {};
 
   if (typeof window !== "undefined") {
     const token = localStorage.getItem(AUTH_TOKEN_KEY);
@@ -46,6 +60,10 @@ function getAuthHeaders(): Record<string, string> {
   return headers;
 }
 
+function isFormData(body: unknown): body is FormData {
+  return typeof FormData !== "undefined" && body instanceof FormData;
+}
+
 async function request<T, B = unknown>(
   baseUrl: string,
   endpoint: string,
@@ -53,10 +71,17 @@ async function request<T, B = unknown>(
   body?: B,
   withAuth = false
 ): Promise<T> {
+  const multipartBody = isFormData(body);
   const res = await fetch(`${baseUrl}${endpoint}`, {
     method,
-    headers: withAuth ? getAuthHeaders() : { "Content-Type": "application/json" },
-    ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
+    headers: withAuth
+      ? getAuthHeaders(!multipartBody)
+      : multipartBody
+        ? {}
+        : { "Content-Type": "application/json" },
+    ...(body !== undefined
+      ? { body: multipartBody ? body : JSON.stringify(body) }
+      : {}),
   });
 
   return handleResponse<T>(res);
@@ -65,10 +90,12 @@ async function request<T, B = unknown>(
 function createApiClient(baseUrl: string, withAuth = false) {
   return {
     get: <T>(endpoint: string) => request<T>(baseUrl, endpoint, "GET", undefined, withAuth),
-    post: <T, B = unknown>(endpoint: string, body: B) =>
+    post: <T, B = unknown>(endpoint: string, body?: B) =>
       request<T, B>(baseUrl, endpoint, "POST", body, withAuth),
     put: <T, B = unknown>(endpoint: string, body: B) =>
       request<T, B>(baseUrl, endpoint, "PUT", body, withAuth),
+    patch: <T, B = unknown>(endpoint: string, body: B) =>
+      request<T, B>(baseUrl, endpoint, "PATCH", body, withAuth),
     del: <T>(endpoint: string) => request<T>(baseUrl, endpoint, "DELETE", undefined, withAuth),
   };
 }

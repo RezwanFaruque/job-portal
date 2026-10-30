@@ -6,6 +6,7 @@ import Link from "next/link";
 import { getPosterContactName, getPosterDisplayName } from "@/lib/jobPoster";
 import { useJobStore } from "@/store/jobStore";
 import { useStore, RootState } from "@/store/modalStore";
+import SaveJobButton from "@/components/features/SaveJobButton";
 
 interface JobDetailsContentProps {
   jobId: string;
@@ -99,16 +100,7 @@ export default function JobDetailsContent({ jobId }: JobDetailsContentProps) {
             </div>
             <div className="right">
               <div className="details">
-                <button type="button" className="love-job" aria-label="Save job">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path
-                      d="M12 21s-7.5-4.7-9.9-9.1C.2 8.3 2.2 5 5.5 5c1.7 0 3.3.8 4.5 2.1C11.2 5.8 12.8 5 14.5 5 17.8 5 19.8 8.3 21.9 11.9 19.5 16.3 12 21 12 21z"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
+                <SaveJobButton jobId={jobDetails._id} className="love-job" />
               </div>
               <div className="details-applicants">
                 <div className="applicants">

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getUserServiceAssetUrl } from "@/services/api";
 
 const DEFAULT_AVATAR = "/assets/Images/personal-info-profile.png";
 
@@ -13,7 +14,11 @@ interface ProfileAvatarProps {
 }
 
 export function getProfileAvatarSrc(profilePicture?: string) {
-  return profilePicture || DEFAULT_AVATAR;
+  if (!profilePicture || profilePicture === DEFAULT_AVATAR) {
+    return DEFAULT_AVATAR;
+  }
+
+  return getUserServiceAssetUrl(profilePicture);
 }
 
 export default function ProfileAvatar({

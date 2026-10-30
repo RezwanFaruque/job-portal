@@ -1,133 +1,185 @@
-#save_for_later{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    .title{
-        font-size: 16px;
-        font-family: 'Poppin-Medium';
-        color: #2F3639;
-        line-height: 25px;
+#save_for_later {
+  margin: 50px 0;
 
+  > .title {
+    margin: 0;
+    color: #2f3639;
+    font: 20px/30px "Poppin-SemiBold";
+  }
+
+  hr {
+    margin: 12px 0 20px;
+    border-color: #eeeeee;
+  }
+
+  .saved-jobs-count,
+  .saved-jobs-state {
+    margin: 20px 0;
+    color: #76899c;
+    font: 14px/22px "Poppin-Regular";
+  }
+
+  .saved-jobs-state {
+    padding: 28px 20px;
+    border: 1px solid #eef1f3;
+    border-radius: 8px;
+    text-align: center;
+
+    a {
+      color: #277f6a;
+      text-decoration: none;
     }
-    hr{
+  }
 
-    }
-    .save-for-later-body{
-        .container{
-            .row{
-                .col-sm-12{
-                    .save-for-later-card{
-                        background: #FFFFFF 0% 0% no-repeat padding-box;
-                        box-shadow: 0px 0px 2px #00000029;
-                        border-radius: 5px;
-                        padding: 18px;
-                        margin-bottom: 35px;
-                        .header{
-                            display: flex;
-                            justify-content: space-between;
-                            margin-bottom: 14px;
-                            .left{
-                                display: flex;
-                                gap: 12px;
+  .saved-jobs-error {
+    color: #b42318;
+  }
 
-                                .job-meta {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                }
+  .save-for-later-body {
+    display: grid;
+    gap: 16px;
+  }
 
-                                .image{
-                                    img{
-                                        width: 57px;
-                                        height: 43px;
-                                    }
-                                 }
-                                .job-title{
-                                    font-size: 11px;
-                                    line-height: 17px;
-                                    font-family: 'Poppin-Medium';
-                                    color: #000000;
-                                }
-                                .job-location{
-                                    font-size: 5px;
-                                    font-family: 'Poppin-Regular';
-                                    color: #6B6B8C;
-                                    line-height: 8px;
+  .save-for-later-card {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #eef1f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 
-                                }
-                            }
-                            .right{
-                                .dot-button{
-                                    border: none;
-                                    background: transparent;
-                                    padding: 0;
-                                    line-height: 1;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
 
-                                    &::after{
-                                        content: '\2807';
-                                        font-size: 20px;
-                                        cursor: pointer;
-                                    }
-                                }
-                            }
-                            
-                        }
-                        .body{
-                            height: 90px;
-                            margin-bottom: 10px;
-                            .job-des{
-                                height: 45px;
-                                font-family: 'Poppin-Light';
-                                font-size: 8px;
-                                color: #B6B6BB;
-                                line-height: 12px;
-                                overflow: hidden;
-                                margin-bottom: 10px;
-                            }
-                            .tags{
-                                display: flex;
-                               
-                                span{
-                                    width: 70px;
-                                    background-color: #F6F7F8;
-                                    padding-top: 5px;
-                                    padding-bottom: 5px;
-                                    padding-left: 5px;
-                                    font-size: 7px;
-                                    font-family: 'Poppin-Medium';
-                                    color: #277F6A;
-                                    line-height: 10px;
-                                    margin-right: 10px;
-                                }
-                            }
-                        }
-                        .footer{
-                            display: flex;
-                            justify-content: space-between;
-                            .apply-button{
-                                button{
-                                    background: #277F6A 0% 0% no-repeat padding-box;
-                                    border-radius: 2px;
-                                    border: none;
-                                    padding-top: 4px;
-                                    padding-bottom: 4px;
-                                    font-family: 'Poppin-Medium';
-                                    font-size: 9px;
-                                    color: #FFFFFF;
-                                    line-height: 13px;
-                                    width: 100px;
-                                }
-                            }
-                            .love-icon{
-                                img{
-                                    width: 23px;
-                                    height: 23px;
-                                }
-                            }
-                        }
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
 
-                    }
-                }
-            }
+      .saved-job-mark {
+        display: flex;
+        flex: 0 0 48px;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        background: #eaf5f1;
+        color: #277f6a;
+        font: 20px "Poppin-SemiBold";
+      }
+
+      .job-meta {
+        min-width: 0;
+      }
+
+      .job-title {
+        display: block;
+        color: #2f3639;
+        font: 16px/24px "Poppin-SemiBold";
+        text-decoration: none;
+      }
+
+      .job-location {
+        margin-top: 3px;
+        color: #6b6b8c;
+        font: 13px/20px "Poppin-Regular";
+      }
+
+      .remove-saved-job {
+        flex: 0 0 auto;
+        padding: 6px 10px;
+        border: 1px solid #e6ecea;
+        border-radius: 4px;
+        background: #ffffff;
+        color: #6b6b8c;
+        font: 12px/18px "Poppin-Medium";
+        cursor: pointer;
+
+        &:hover {
+          border-color: #f1c5c1;
+          color: #b42318;
         }
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: wait;
+        }
+      }
     }
+
+    .body {
+      margin-bottom: 16px;
+
+      .job-des {
+        display: -webkit-box;
+        margin: 0 0 12px;
+        overflow: hidden;
+        color: #76899c;
+        font: 14px/22px "Poppin-Regular";
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        span {
+          padding: 6px 10px;
+          border-radius: 4px;
+          background: #f2f6f5;
+          color: #277f6a;
+          font: 12px/16px "Poppin-Medium";
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+
+      .saved-job-details-link,
+      .saved-job-apply-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 8px 14px;
+        border-radius: 4px;
+        font: 13px/20px "Poppin-Medium";
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .saved-job-details-link {
+        border: 1px solid #dfe7e4;
+        color: #277f6a;
+      }
+
+      .saved-job-apply-button {
+        border: 1px solid #277f6a;
+        background: #277f6a;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  #save_for_later .save-for-later-card .footer {
+    justify-content: stretch;
+
+    .saved-job-details-link,
+    .saved-job-apply-button {
+      flex: 1;
+    }
+  }
 }

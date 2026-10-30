@@ -180,7 +180,7 @@ const Footer: React.FC = () => (
               <div className="logo">
                 <img
                   className="img-fluid last-footer-logo"
-                  src="/last-footer-logo.png"
+                  src="/assets/Images/last-footer-logo.png"
                   alt=""
                 />
               </div>
@@ -194,4 +194,3 @@ const Footer: React.FC = () => (
 );
 
 export default Footer;
-

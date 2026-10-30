@@ -8,6 +8,7 @@ import PaginationComponent from "@/components/features/PaginationComponent";
 import { useJobStore } from "@/store/jobStore";
 import { useStore, RootState } from "@/store/modalStore";
 import { stripHtmlToText } from "@/lib/stripHtml";
+import SaveJobButton from "@/components/features/SaveJobButton";
 
 const JOBS_PER_PAGE = 10;
 
@@ -57,7 +58,7 @@ export default function BrowseJobPage() {
   }
 
   return (
-    <div id="browse-job-page" className="layout-body">
+    <div id="browse-job-page" className="layout-body browse-page-modern">
       <JobSearchBannar />
       <div className="container">
         <div className="row">
@@ -138,25 +139,7 @@ export default function BrowseJobPage() {
                               >
                                 Apply Now
                               </button>
-                              <button
-                                type="button"
-                                className="love-jobs-button"
-                                aria-label="Save job"
-                              >
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  aria-hidden="true"
-                                >
-                                  <path
-                                    d="M12 21s-7.5-4.7-9.9-9.1C.2 8.3 2.2 5 5.5 5c1.7 0 3.3.8 4.5 2.1C11.2 5.8 12.8 5 14.5 5 17.8 5 19.8 8.3 21.9 11.9 19.5 16.3 12 21 12 21z"
-                                    stroke="currentColor"
-                                    strokeWidth="1.5"
-                                    strokeLinejoin="round"
-                                  />
-                                </svg>
-                              </button>
+                              <SaveJobButton jobId={job._id} />
                             </div>
                           </div>
                         </div>

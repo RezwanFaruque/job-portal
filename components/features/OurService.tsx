@@ -2,87 +2,62 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-/**
- * Placeholder component for "Our Service" section.
- * Add props and UI as needed by the design.
- */
 const OurService: React.FC = () => {
+  const services = [
+    {
+      icon: "/assets/Images/our-service-one.png",
+      title: "Build your profile",
+      description:
+        "Showcase your experience, skills, and goals with a profile that helps employers understand what you bring.",
+      link: "/profile",
+      linkText: "Complete your profile",
+    },
+    {
+      icon: "/assets/Images/our-service-two.png",
+      title: "Find your next role",
+      description:
+        "Explore opportunities, save promising roles, and keep your job search organized in one place.",
+      link: "/browse-job",
+      linkText: "Explore open jobs",
+    },
+    {
+      icon: "/assets/Images/our-service-three.png",
+      title: "Find the right talent",
+      description:
+        "Reach motivated candidates and share your next opportunity with the people who fit your team.",
+      link: "/post-job/primary-job-information",
+      linkText: "Post a job",
+    },
+  ];
+
   return (
-    <section className="our-services">
+    <section className="our-services" aria-label="Ways to use Jobpot">
       <div className="container">
-        <div className="row">
-          {/* card 1 */}
-          <div className="col-lg-4 col-md-4 col-sm-12 start">
-            <div className="service-card">
-              <div className="header">
-                <div className="icon-section">
-                  <div className="icon">
-                    <img
-                      src="/assets/Images/our-service-one.png"
-                      alt=""
-                      srcSet=""
-                    />
-                  </div>
+        <div className="home-section-heading">
+          <span className="home-section-eyebrow">One platform, more possibilities</span>
+          <h2>Make your next move with confidence</h2>
+          <p>Tools for every step of your job search and hiring journey.</p>
+        </div>
+        <div className="row" data-home-reveal-stagger>
+          {services.map((service, index) => (
+            <div className="col-lg-4 col-md-6 col-sm-12" key={service.title}>
+              <article className={`service-card service-card-${index + 1}`}>
+                <div className="service-icon">
+                  <Image src={service.icon} alt="" width={68} height={68} />
                 </div>
-              </div>
-              <div className="title">Create Your Resume</div>
-              <div className="short-description">
-                Aenean sed nibh a magna posuere tempor. Nunc faucibus
-                pellentesque nunc in aliquet. Donec congue, nunc vel tempor
-                congue, enim sapien lobortis ipsum, in volutpat sem ex in ligula.
-              </div>
-            </div>
-          </div>
-
-          {/* card 2 */}
-          <div className="col-lg-4 col-md-4 col-sm-12 middle">
-            <div className="service-card">
-              <div className="header">
-                <div className="icon-section">
-                  <div className="icon">
-                    <img
-                      src="/assets/Images/our-service-two.png"
-                      alt=""
-                      srcSet=""
-                    />
-                  </div>
+                <span className="service-step">0{index + 1}</span>
+                <h3 className="title">{service.title}</h3>
+                <p className="short-description">{service.description}</p>
+                <div className="footer">
+                  <Link href={service.link}>
+                    {service.linkText} <span aria-hidden="true">→</span>
+                  </Link>
                 </div>
-              </div>
-              <div className="title">Apply for New Job</div>
-              <div className="short-description">
-                Aenean sed nibh a magna posuere tempor. Nunc faucibus
-                pellentesque nunc in aliquet. Donec congue, nunc vel tempor
-                congue, enim sapien lobortis ipsum, in volutpat sem ex in ligula.
-              </div>
+              </article>
             </div>
-          </div>
-
-          {/* card 3 */}
-          <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="service-card">
-              <div className="header">
-                <div className="icon-section">
-                  <div className="icon">
-                    <img
-                      src="/assets/Images/our-service-three.png"
-                      alt=""
-                      srcSet=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="title">Need To Hire</div>
-              <div className="short-description">
-                Aenean sed nibh a magna posuere tempor. Nunc faucibus
-                pellentesque nunc in aliquet. Donec congue, nunc vel tempor
-                congue, enim sapien lobortis ipsum, in volutpat sem ex in ligula.
-              </div>
-              <div className="footer">
-                <Link href="/">Post a Job for free</Link>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -31,59 +31,82 @@ const SALARY_RANGES = [
 const JobFilterSideBar: React.FC = () => {
   const searchFilters = useJobStore((state) => state.searchFilters);
   const toggleSearchFilter = useJobStore((state) => state.toggleSearchFilter);
+  const setSearchFilters = useJobStore((state) => state.setSearchFilters);
+  const resetSearchForm = useJobStore((state) => state.resetSearchForm);
+  const activeFilterCount =
+    searchFilters.jobTypes.length +
+    searchFilters.seniorityLevels.length +
+    searchFilters.salaryRanges.length;
 
   function renderOptions(
     options: ReadonlyArray<readonly [string, string]>,
     filter: "jobTypes" | "seniorityLevels" | "salaryRanges"
   ) {
     return options.map(([value, label]) => (
-      <div className="check-boxes-with-number" key={value}>
-        <div className="check-box">
-          <label>
+      <label className="check-boxes-with-number" key={value}>
+          <span className="check-box">
             <input
               type="checkbox"
               checked={searchFilters[filter].includes(value)}
               onChange={() => toggleSearchFilter(filter, value)}
-            />{" "}
-            <span>{label}</span>
-          </label>
-        </div>
-      </div>
+            />
+          </span>
+          <span className="filter-option-label">{label}</span>
+      </label>
     ));
   }
 
   return (
     <div id="jobfilter_sidebar">
+      <div className="filter-sidebar-header">
+        <div>
+          <span className="filter-sidebar-eyebrow">Refine your search</span>
+          <h2>Filters</h2>
+        </div>
+        <span className="filter-count" aria-label={`${activeFilterCount} active filters`}>
+          {activeFilterCount}
+        </span>
+      </div>
+      {activeFilterCount > 0 && (
+        <button
+          type="button"
+          className="clear-filters-button"
+          onClick={() => {
+            setSearchFilters({
+              keyword: "",
+              category: "",
+              location: "",
+              jobTypes: [],
+              seniorityLevels: [],
+              salaryRanges: [],
+            });
+            resetSearchForm();
+          }}
+        >
+          Clear all filters
+        </button>
+      )}
       <div className="section">
         <div className="section-title">Type of Employment</div>
-        <hr />
         <div className="section-body">
-          <form onSubmit={(event) => event.preventDefault()}>
-            {renderOptions(EMPLOYMENT_TYPES, "jobTypes")}
-          </form>
+          {renderOptions(EMPLOYMENT_TYPES, "jobTypes")}
         </div>
       </div>
 
       <div className="section">
         <div className="section-title">Seniority Level</div>
-        <hr />
         <div className="section-body">
-          <form onSubmit={(event) => event.preventDefault()}>
-            {renderOptions(SENIORITY_LEVELS, "seniorityLevels")}
-          </form>
+          {renderOptions(SENIORITY_LEVELS, "seniorityLevels")}
         </div>
       </div>
 
       <div className="section">
         <div className="section-title">Salary Range</div>
-        <hr />
         <div className="section-body">
-          <form onSubmit={(event) => event.preventDefault()}>
-            {renderOptions(
-              SALARY_RANGES.map((range) => [range, range] as const),
-              "salaryRanges"
-            )}
-          </form>
+          {renderOptions(
+            SALARY_RANGES.map((range) => [range, range] as const),
+            "salaryRanges"
+          )}
         </div>
       </div>
     </div>

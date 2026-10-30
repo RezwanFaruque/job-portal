@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useCategoryStore } from "@/store/categoryStore";
 import { useJobStore } from "@/store/jobStore";
 
@@ -12,6 +12,134 @@ const JOB_TYPE_OPTIONS = [
   ["freelance", "Freelance"],
   ["training", "Training"],
 ];
+
+interface SearchDropdownProps {
+  label: string;
+  value: string;
+  placeholder: string;
+  options: Array<{ value: string; label: string }>;
+  onChange: (value: string) => void;
+}
+
+function SearchDropdown({
+  label,
+  value,
+  placeholder,
+  options,
+  onChange,
+}: SearchDropdownProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const optionRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const selectedIndex = options.findIndex((option) => option.value === value);
+  const displayedValue = options[selectedIndex]?.label ?? placeholder;
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function handlePointerDown(event: PointerEvent) {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
+  function focusOption(index: number) {
+    optionRefs.current[index]?.focus();
+  }
+
+  function handleTriggerKeyDown(event: React.KeyboardEvent<HTMLButtonElement>) {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      if (options.length === 0) return;
+      setIsOpen(true);
+      requestAnimationFrame(() =>
+        focusOption(
+          selectedIndex >= 0
+            ? selectedIndex
+            : event.key === "ArrowDown"
+              ? 0
+              : options.length - 1
+        )
+      );
+    }
+  }
+
+  function handleOptionKeyDown(
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    index: number
+  ) {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      const direction = event.key === "ArrowDown" ? 1 : -1;
+      focusOption((index + direction + options.length) % options.length);
+    } else if (event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      focusOption(event.key === "Home" ? 0 : options.length - 1);
+    } else if (event.key === "Tab") {
+      setIsOpen(false);
+    }
+  }
+
+  return (
+    <div className="browse-search-dropdown" ref={rootRef}>
+      <button
+        ref={triggerRef}
+        type="button"
+        className="browse-search-dropdown-trigger"
+        aria-label={label}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen((open) => !open)}
+        onKeyDown={handleTriggerKeyDown}
+      >
+        <span className={value ? "" : "is-placeholder"}>{displayedValue}</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="m3.5 6 4.5 4 4.5-4" />
+        </svg>
+      </button>
+      {isOpen && (
+        <div className="browse-search-dropdown-menu" role="listbox" aria-label={label}>
+          {options.map((option, index) => (
+            <button
+              key={option.value}
+              ref={(element) => {
+                optionRefs.current[index] = element;
+              }}
+              type="button"
+              role="option"
+              aria-selected={value === option.value}
+              className={`browse-search-dropdown-option${value === option.value ? " is-selected" : ""}`}
+              onClick={() => {
+                onChange(option.value);
+                setIsOpen(false);
+                triggerRef.current?.focus();
+              }}
+              onKeyDown={(event) => handleOptionKeyDown(event, index)}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface JobSearchFormProps {
   categories: ReturnType<typeof useCategoryStore.getState>["categories"];
@@ -39,13 +167,17 @@ function JobSearchForm({
       <form onSubmit={handleSubmit}>
         <div className="search-bar-bannar">
           <div className="search-by keyword">
-            <div className="search-icon">
-              <i className="fas fa-search" />
+            <div className="search-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="10.8" cy="10.8" r="6.8" />
+                <path d="m16 16 4.5 4.5" />
+              </svg>
             </div>
             <div className="input">
               <input
                 className="form-control"
-                placeholder="Search by job keyword"
+                aria-label="Job title or keyword"
+                placeholder="Job title or keyword"
                 value={keyword}
                 onChange={(event) => setKeyword(event.target.value)}
               />
@@ -53,51 +185,50 @@ function JobSearchForm({
           </div>
 
           <div className="search-by category">
-            <select
-              className="form-select"
+            <SearchDropdown
+              label="Job category"
               value={category}
-              onChange={(event) => {
-                const nextCategory = event.target.value;
+              placeholder="Select category"
+              options={categories.map((item) => ({
+                value: item.name,
+                label: item.name,
+              }))}
+              onChange={(nextCategory) => {
                 setCategory(nextCategory);
                 setSearchFilters({ category: nextCategory });
               }}
-            >
-              <option value="">Select category</option>
-              {categories.map((item) => (
-                <option key={item._id} value={item.name}>
-                  {item.name}
-                </option>
-              ))}
-            </select>
+            />
           </div>
 
           <div className="search-by job-type">
-            <select
-              className="form-select"
+            <SearchDropdown
+              label="Employment type"
               value={jobType}
-              onChange={(event) =>
+              placeholder="Job Type"
+              options={JOB_TYPE_OPTIONS.map(([optionValue, label]) => ({
+                value: optionValue,
+                label,
+              }))}
+              onChange={(nextJobType) =>
                 setSearchFilters({
-                  jobTypes: event.target.value ? [event.target.value] : [],
+                  jobTypes: nextJobType ? [nextJobType] : [],
                 })
               }
-            >
-              <option value="">Job Type</option>
-              {JOB_TYPE_OPTIONS.map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
+            />
           </div>
 
           <div className="search-by postal-code">
-            <div className="postal-icon">
-              <i className="fas fa-map-marker-alt" />
+            <div className="postal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M19 10.2c0 5.1-7 11-7 11s-7-5.9-7-11a7 7 0 1 1 14 0Z" />
+                <circle cx="12" cy="10" r="2.2" />
+              </svg>
             </div>
             <div className="input">
               <input
                 className="form-control"
-                placeholder="City or Postal code"
+                aria-label="City or location"
+                placeholder="City or location"
                 value={location}
                 onChange={(event) => setLocation(event.target.value)}
               />
@@ -106,7 +237,7 @@ function JobSearchForm({
 
           <div className="submit-button">
             <button className="find-job" type="submit">
-              Find Job
+              Search jobs <span aria-hidden="true">→</span>
             </button>
           </div>
         </div>
@@ -129,10 +260,13 @@ const JobSearchBannar: React.FC = () => {
   }, [getCategories]);
 
   return (
-    <div id="job_search_bannar">
+    <section id="job_search_bannar" aria-labelledby="job-search-title">
       <div className="bannar-layer">
-        <div className="title">10,000 Job Listed Here!!!</div>
-        <div className="subtitle">Your dream job is waitng</div>
+        <span className="job-search-eyebrow">The next step starts here</span>
+        <h1 className="title" id="job-search-title">Find a role that fits your future</h1>
+        <p className="subtitle">
+          Search opportunities by title, category, work type, or location.
+        </p>
       </div>
       <JobSearchForm
         key={searchFormVersion}
@@ -140,7 +274,7 @@ const JobSearchBannar: React.FC = () => {
         searchFilters={searchFilters}
         setSearchFilters={setSearchFilters}
       />
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 import { userApi } from "@/services/api";
+import { useSavedJobStore } from "@/store/savedJobStore";
 
 const AUTH_TOKEN_KEY = "auth_token";
 const AUTH_USER_KEY = "auth_user";
@@ -23,6 +24,9 @@ export interface User {
   userType: string;
   createdAt?: string;
   profilePicture?: string;
+  jobCategory?: string[];
+  skills?: string[];
+  about?: string;
   company?: Company;
 }
 
@@ -34,6 +38,9 @@ interface ApiUser {
   userType: string;
   createdAt?: string;
   profilePicture?: string;
+  jobCategory?: string[];
+  skills?: string[];
+  about?: string;
   company?: Company;
 }
 
@@ -72,6 +79,20 @@ export interface UpdateProfileInfo {
   profilePicture?: string;
 }
 
+export interface UpdateCandidateProfileInfo {
+  userName: string;
+  email: string;
+  jobCategory: string[];
+  skills: string[];
+  about: string;
+  profilePicture?: File;
+}
+
+interface ProfileUpdateResponse {
+  message?: string;
+  user?: ApiUser;
+}
+
 export interface UserState {
   user: User | null;
   token: string | null;
@@ -82,6 +103,9 @@ export interface UserState {
   register: (formData: RegisterInfo) => Promise<UserRegisterAPiResponse>;
   fetchUserDetails: () => Promise<UserDetailsResponse>;
   updateUserProfile: (formData: UpdateProfileInfo) => Promise<UserDetailsResponse>;
+  updateCandidateProfile: (
+    formData: UpdateCandidateProfileInfo
+  ) => Promise<ProfileUpdateResponse>;
   logout: () => void;
   hydrateAuth: () => void;
 }
@@ -98,6 +122,9 @@ function normalizeUser(raw: ApiUser, existing?: User | null): User {
     userType: raw.userType,
     createdAt: raw.createdAt,
     profilePicture: raw.profilePicture ?? existing?.profilePicture,
+    jobCategory: raw.jobCategory ?? existing?.jobCategory ?? [],
+    skills: raw.skills ?? existing?.skills ?? [],
+    about: raw.about ?? existing?.about ?? "",
     company: raw.company,
   };
 }
@@ -146,6 +173,9 @@ export const userStore = create<UserState>()(
           userType: parsed.userType ?? "",
           createdAt: parsed.createdAt,
           profilePicture: parsed.profilePicture,
+          jobCategory: parsed.jobCategory ?? [],
+          skills: parsed.skills ?? [],
+          about: parsed.about ?? "",
           company: parsed.company,
         };
         set({ token, user });
@@ -168,6 +198,7 @@ export const userStore = create<UserState>()(
 
         const user = normalizeUser(response.user, existing);
         saveAuth(response.token, user);
+        useSavedJobStore.getState().clearSavedJobs();
         set({ token: response.token, user, userDetails: user });
       }
 
@@ -221,8 +252,49 @@ export const userStore = create<UserState>()(
       return response;
     },
 
+    updateCandidateProfile: async (formData: UpdateCandidateProfileInfo) => {
+      const requestBody = new FormData();
+      requestBody.append("userName", formData.userName);
+      requestBody.append("email", formData.email);
+      requestBody.append("jobCategory", JSON.stringify(formData.jobCategory));
+      requestBody.append("skills", JSON.stringify(formData.skills));
+      requestBody.append("about", formData.about);
+      if (formData.profilePicture) {
+        requestBody.append("profilePicture", formData.profilePicture);
+      }
+
+      const response =
+        (await userApi.patch<
+          ProfileUpdateResponse | undefined,
+          FormData
+        >("/profile", requestBody)) ?? {};
+      const existing = get().userDetails ?? get().user;
+      const user = {
+        ...normalizeUser(
+          response.user ?? {
+            userName: formData.userName,
+            email: formData.email,
+            userType: existing?.userType ?? "",
+          },
+          existing
+        ),
+        jobCategory: formData.jobCategory,
+        skills: formData.skills,
+        about: formData.about,
+      };
+      set({ userDetails: user, user });
+
+      const token = get().token ?? localStorage.getItem(AUTH_TOKEN_KEY);
+      if (token) {
+        saveAuth(token, user);
+      }
+
+      return response;
+    },
+
     logout: () => {
       clearAuth();
+      useSavedJobStore.getState().clearSavedJobs();
       set({ user: null, token: null, userDetails: null });
     },
   }))

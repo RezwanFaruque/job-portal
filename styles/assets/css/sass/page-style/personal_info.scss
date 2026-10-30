@@ -67,6 +67,7 @@
   }
 
   .profile-form-row {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -78,7 +79,8 @@
     }
 
     input,
-    select {
+    select,
+    textarea {
       height: 44px;
       border: 1px solid #dddddd;
       border-radius: 4px;
@@ -87,6 +89,114 @@
       font-size: 14px;
       color: #2f3639;
       background: #ffffff;
+    }
+
+    textarea {
+      height: auto;
+      min-height: 120px;
+      padding: 12px;
+      resize: vertical;
+    }
+
+    .profile-field-hint {
+      color: #76899c;
+      font-family: "Poppin-Light";
+      font-size: 11px;
+    }
+  }
+
+  .profile-multiselect {
+    position: relative;
+  }
+
+  .profile-multiselect-trigger {
+    display: flex;
+    width: 100%;
+    height: 44px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #2f3639;
+    font-family: "Poppin-Light";
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid #2b9cfd;
+      outline-offset: 2px;
+    }
+  }
+
+  .profile-multiselect-options {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 4px);
+    left: 0;
+    display: flex;
+    width: 100%;
+    max-height: 220px;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 6px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .profile-multiselect-option {
+    display: flex;
+    min-height: 38px;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 8px;
+    border-radius: 4px;
+    color: #2f3639;
+    font-family: "Poppin-Regular";
+    font-size: 13px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f3f8f6;
+    }
+
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
+      margin: 0;
+      accent-color: #277f6a;
+    }
+  }
+
+  .profile-skill-input {
+    min-height: 44px;
+    padding: 6px 9px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background: #ffffff;
+
+    &:focus-within {
+      border-color: #2b9cfd;
+      box-shadow: 0 0 0 2px rgba(43, 156, 253, 0.12);
+    }
+
+    .profile-tag-list {
+      align-items: center;
+    }
+
+    input[type="text"] {
+      width: auto;
+      min-width: 180px;
+      height: 30px;
+      flex: 1 1 180px;
+      padding: 0 4px;
+      border: 0;
+      outline: 0;
     }
   }
 
@@ -101,6 +211,14 @@
     flex-direction: column;
     gap: 16px;
     padding-bottom: 10px;
+  }
+
+  .section-body.professional-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .profile-detail-item {
@@ -119,6 +237,53 @@
     font-size: 14px;
     font-family: "Roboto-Regular";
     color: #2f3639;
+  }
+
+  .profile-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .profile-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #eaf4f1;
+    color: #277f6a;
+    font-family: "Roboto-Regular";
+    font-size: 12px;
+
+    button {
+      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: inherit;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(39, 127, 106, 0.12);
+      }
+    }
+  }
+
+  .profile-about-value {
+    margin: 0;
+    color: #2f3639;
+    font-family: "Roboto-Regular";
+    font-size: 14px;
+    line-height: 1.65;
+    white-space: pre-wrap;
   }
 
   .title {

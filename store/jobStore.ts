@@ -225,6 +225,7 @@ export interface JobState {
   isLoadingApplicationDetails: boolean;
   setJobs: (jobs: Job[]) => void;
   setSearchFilters: (filters: Partial<JobSearchFilters>) => void;
+  resetSearchForm: () => void;
   toggleSearchFilter: (
     key: "jobTypes" | "seniorityLevels" | "salaryRanges",
     value: string
@@ -273,6 +274,9 @@ export const useJobStore = create<JobState>()(
         set({ searchFilters, jobsPage: 1 });
         updateJobSearchUrl(searchFilters, 1);
       },
+
+    resetSearchForm: () =>
+      set((state) => ({ searchFormVersion: state.searchFormVersion + 1 })),
 
     toggleSearchFilter: (key, value) => {
       const current = get().searchFilters;

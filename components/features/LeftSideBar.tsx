@@ -53,21 +53,12 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({ activePath = "" }) => {
         <div className="section">
           <div className="title">Resume</div>
           <div className="links">
-            <div className="link-with-logo">
+            <div className={`link-with-logo ${isActive("/view-resume")}`}>
               <div className="logo">
                 <img className="logo-img" src="/assets/Images/view-resume.png" alt="" />
               </div>
               <div className="links">
-                <Link href="/">View Resume</Link>
-              </div>
-            </div>
-
-            <div className="link-with-logo">
-              <div className="logo">
-                <img className="logo-img" src="/assets/Images/edit-resume.png" alt="" />
-              </div>
-              <div className="links">
-                <Link href="/edit-resume">Edit Resume</Link>
+                <Link href="/view-resume">View Resume</Link>
               </div>
             </div>
 
@@ -103,7 +94,7 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({ activePath = "" }) => {
               </div>
             </div>
 
-            <div className="link-with-logo">
+            <div className={`link-with-logo ${isActive("/suggested-job")}`}>
               <div className="logo">
                 <img className="logo-img" src="/assets/Images/suggested-job.png" alt="" />
               </div>

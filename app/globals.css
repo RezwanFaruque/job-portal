@@ -64,6 +64,10 @@ body {
   color: #d9534f;
 }
 
+.save-success-animation {
+  animation: saved-button-pop 550ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 .toast-message {
   font-size: 14px;
   line-height: 1.4;
@@ -96,3 +100,30 @@ body {
   }
 }
 
+@keyframes saved-button-pop {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(39, 127, 106, 0));
+  }
+
+  35% {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 7px rgba(39, 127, 106, 0.55));
+  }
+
+  70% {
+    transform: scale(0.94);
+    filter: drop-shadow(0 0 2px rgba(39, 127, 106, 0.25));
+  }
+
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(39, 127, 106, 0));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .save-success-animation {
+    animation: none;
+  }
+}

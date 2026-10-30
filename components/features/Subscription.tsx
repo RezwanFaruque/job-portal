@@ -6,7 +6,7 @@ const SubscribeSection: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="main-section">
+            <div className="main-section" data-home-reveal="up">
               <div className="title">
                 Subscribe Newsletter & 
                 <div>Ready for some good news?</div>
