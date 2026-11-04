@@ -9,7 +9,7 @@ export default async function JobDetailsPage({ params }: JobDetailsPageProps) {
   const { jobId } = await params;
 
   return (
-    <div className="layout-body">
+    <div className="layout-body browse-page-modern">
       <JobSearchBannar />
       <JobDetailsContent jobId={jobId} />
     </div>
