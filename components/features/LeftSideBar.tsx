@@ -1,10 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useCallback, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { userStore } from "@/store/userStore";
+import type { SocialLinkPlatform, SocialLinks } from "@/store/userStore";
 import { useToastStore } from "@/store/toastStore";
+import SocialLinkModal from "@/components/features/SocialLinkModal";
+
+const EMPTY_SOCIAL_LINKS: SocialLinks = {};
+
+const SOCIAL_LINK_OPTIONS: {
+  platform: SocialLinkPlatform;
+  label: string;
+  image?: string;
+  iconText?: string;
+}[] = [
+  { platform: "website", label: "Website", image: "/assets/Images/add-website.png" },
+  { platform: "facebook", label: "Facebook", image: "/assets/Images/facebook.png" },
+  { platform: "twitter", label: "Twitter", image: "/assets/Images/twitter.png" },
+  { platform: "linkedin", label: "LinkedIn", iconText: "in" },
+  { platform: "googlePlus", label: "Google+", image: "/assets/Images/google.png" },
+];
 
 interface LeftSideBarProps {
   activePath?: string;
@@ -13,6 +30,18 @@ interface LeftSideBarProps {
 const LeftSideBar: React.FC<LeftSideBarProps> = ({ activePath = "" }) => {
   const router = useRouter();
   const logout = userStore((state) => state.logout);
+  const socialLinks = userStore(
+    (state) => state.userDetails?.socialLinks ?? state.user?.socialLinks ?? EMPTY_SOCIAL_LINKS
+  );
+  const [editingSocialLink, setEditingSocialLink] =
+    useState<SocialLinkPlatform | null>(null);
+  const closeSocialLinkModal = useCallback(
+    () => setEditingSocialLink(null),
+    []
+  );
+  const editingSocialOption = SOCIAL_LINK_OPTIONS.find(
+    (item) => item.platform === editingSocialLink
+  );
 
   function isActive(path: string) {
     return activePath === path ? "active" : "";
@@ -136,7 +165,7 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({ activePath = "" }) => {
         <div className="section">
           <div className="title">Account Setting</div>
           <div className="links">
-            <div className="link-with-logo">
+            <div className={`link-with-logo ${isActive("/change-password")}`}>
               <div className="logo">
                 <img className="logo-img" src="/assets/Images/change-password.png" alt="" />
               </div>
@@ -170,26 +199,47 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({ activePath = "" }) => {
         <div className="section">
           <div className="title">Social Link</div>
           <div className="links">
-            {[
-              { img: "/assets/Images/add-website.png", text: "Add Website" },
-              { img: "/assets/Images/facebook.png", text: "Add facebook link" },
-              { img: "/assets/Images/twitter.png", text: "Add twitter link" },
-              { img: "/assets/Images/twitter.png", text: "Add LinkedIn link" },
-              { img: "/assets/Images/google.png", text: "Add Google+ link" },
-            ].map((item, index) => (
-              <div className="link-with-logo" key={index}>
-                <div className="logo">
-                  <img className="logo-img" src={item.img} alt="" />
+            {SOCIAL_LINK_OPTIONS.map((item) => {
+              const value = socialLinks[item.platform];
+              return (
+                <div className="link-with-logo social-link-option" key={item.platform}>
+                  <div className="logo">
+                    {item.image ? (
+                      <img className="logo-img" src={item.image} alt="" />
+                    ) : (
+                      <span className="social-link-text-icon" aria-hidden="true">
+                        {item.iconText}
+                      </span>
+                    )}
+                  </div>
+                  <button
+                    className="links special social-link-edit"
+                    type="button"
+                    aria-label={`${value ? "Edit" : "Add"} ${item.label} link`}
+                    onClick={() => setEditingSocialLink(item.platform)}
+                  >
+                    <span className="social-link-label">
+                      {value ? item.label : `Add ${item.label} link`}
+                      {value && <span className="social-link-saved-url">{value}</span>}
+                    </span>
+                    <span className="plus-right" aria-hidden="true">
+                      {value ? "Edit" : "+"}
+                    </span>
+                  </button>
                 </div>
-                <div className="links special">
-                  <Link href="/">{item.text}</Link>
-                  <div className="plus-right">+</div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
+      {editingSocialLink && editingSocialOption && (
+        <SocialLinkModal
+          platform={editingSocialLink}
+          label={editingSocialOption.label}
+          value={socialLinks[editingSocialLink] ?? ""}
+          onClose={closeSocialLinkModal}
+        />
+      )}
     </div>
   );
 };

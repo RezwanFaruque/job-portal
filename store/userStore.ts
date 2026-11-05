@@ -14,6 +14,15 @@ interface Company {
   industry: string;
 }
 
+export type SocialLinkPlatform =
+  | "website"
+  | "facebook"
+  | "twitter"
+  | "linkedin"
+  | "googlePlus";
+
+export type SocialLinks = Partial<Record<SocialLinkPlatform, string>>;
+
 export interface User {
   /** User profile document id — required for job `postedBy` references */
   profileId: string;
@@ -28,6 +37,7 @@ export interface User {
   skills?: string[];
   about?: string;
   company?: Company;
+  socialLinks?: SocialLinks;
 }
 
 interface ApiUser {
@@ -42,6 +52,7 @@ interface ApiUser {
   skills?: string[];
   about?: string;
   company?: Company;
+  socialLinks?: SocialLinks;
 }
 
 interface UserApiResponse {
@@ -93,6 +104,15 @@ interface ProfileUpdateResponse {
   user?: ApiUser;
 }
 
+export interface ChangePasswordInfo {
+  currentPassword: string;
+  newPassword: string;
+}
+
+interface ChangePasswordResponse {
+  message?: string;
+}
+
 export interface UserState {
   user: User | null;
   token: string | null;
@@ -106,6 +126,10 @@ export interface UserState {
   updateCandidateProfile: (
     formData: UpdateCandidateProfileInfo
   ) => Promise<ProfileUpdateResponse>;
+  setSocialLink: (platform: SocialLinkPlatform, url: string) => void;
+  changePassword: (
+    formData: ChangePasswordInfo
+  ) => Promise<ChangePasswordResponse | undefined>;
   logout: () => void;
   hydrateAuth: () => void;
 }
@@ -126,6 +150,7 @@ function normalizeUser(raw: ApiUser, existing?: User | null): User {
     skills: raw.skills ?? existing?.skills ?? [],
     about: raw.about ?? existing?.about ?? "",
     company: raw.company,
+    socialLinks: raw.socialLinks ?? existing?.socialLinks ?? {},
   };
 }
 
@@ -291,6 +316,34 @@ export const userStore = create<UserState>()(
 
       return response;
     },
+
+    setSocialLink: (platform, url) => {
+      const currentUser = get().userDetails ?? get().user;
+      if (!currentUser) {
+        throw new Error("You must be signed in to update social links.");
+      }
+
+      const socialLinks = { ...currentUser.socialLinks };
+      if (url) {
+        socialLinks[platform] = url;
+      } else {
+        delete socialLinks[platform];
+      }
+
+      const user = { ...currentUser, socialLinks };
+      set({ user, userDetails: get().userDetails ? user : get().userDetails });
+
+      const token = get().token ?? localStorage.getItem(AUTH_TOKEN_KEY);
+      if (token) {
+        saveAuth(token, user);
+      }
+    },
+
+    changePassword: async (formData: ChangePasswordInfo) =>
+      userApi.patch<ChangePasswordResponse | undefined, ChangePasswordInfo>(
+        "/change-password",
+        formData
+      ),
 
     logout: () => {
       clearAuth();
