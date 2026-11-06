@@ -28,6 +28,14 @@ export default function LoginModal() {
     try {
       const response = await authenticate(data);
       useToastStore.getState().showToast(response.message || "Logged in successfully!");
+      if (response.profileLoadError) {
+        useToastStore
+          .getState()
+          .showToast(
+            `Signed in, but profile details could not be loaded: ${response.profileLoadError}`,
+            "error"
+          );
+      }
       toggleLogin?.();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Login failed");

@@ -61,14 +61,17 @@ export default function SaveJobButton({
     >
       <svg
         viewBox="0 0 24 24"
-        fill={isSaved ? "currentColor" : "none"}
+        className="icon"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
+        style={{ color: isSaved ? "#d1525c" : "#277f6a" }}
       >
         <path
-          d="M12 21s-7.5-4.7-9.9-9.1C.2 8.3 2.2 5 5.5 5c1.7 0 3.3.8 4.5 2.1C11.2 5.8 12.8 5 14.5 5 17.8 5 19.8 8.3 21.9 11.9 19.5 16.3 12 21 12 21z"
+          d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"
+          fill={isSaved ? "currentColor" : "none"}
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="1.7"
+          strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>

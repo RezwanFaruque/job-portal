@@ -217,6 +217,7 @@ export interface JobState {
   isCreating: boolean;
   isApplying: boolean;
   applications: JobApplication[];
+  appliedJobIds: string [] | null;
   applicationsTotal: number;
   applicationsPage: number;
   applicationsLimit: number;
@@ -259,6 +260,7 @@ export const useJobStore = create<JobState>()(
     isCreating: false,
     isApplying: false,
     applications: [],
+    appliedJobIds: [],
     applicationsTotal: 0,
     applicationsPage: 1,
     applicationsLimit: 10,
@@ -415,6 +417,9 @@ export const useJobStore = create<JobState>()(
         );
         set({
           applications: response.data.applications ?? [],
+          appliedJobIds: response.data.applications.flatMap((application) =>
+            application.job?._id ? [application.job._id] : []
+          ),
           applicationsTotal: response.data.total ?? 0,
           applicationsPage: response.data.page ?? page,
           applicationsLimit: response.data.limit ?? limit,

@@ -43,9 +43,9 @@ export interface User {
 interface ApiUser {
   _id?: string;
   userId?: string;
-  userName: string;
-  email: string;
-  userType: string;
+  userName?: string;
+  email?: string;
+  userType?: string;
   createdAt?: string;
   profilePicture?: string;
   jobCategory?: string[];
@@ -56,9 +56,10 @@ interface ApiUser {
 }
 
 interface UserApiResponse {
-  message: string;
+  message?: string;
   token: string;
   user?: ApiUser;
+  profileLoadError?: string;
 }
 
 interface UserRegisterAPiResponse {
@@ -141,9 +142,9 @@ function normalizeUser(raw: ApiUser, existing?: User | null): User {
   return {
     profileId: profileId || authUserId,
     userId: authUserId || profileId,
-    userName: raw.userName,
-    email: raw.email,
-    userType: raw.userType,
+    userName: raw.userName ?? existing?.userName ?? "",
+    email: raw.email ?? existing?.email ?? "",
+    userType: raw.userType ?? existing?.userType ?? "",
     createdAt: raw.createdAt,
     profilePicture: raw.profilePicture ?? existing?.profilePicture,
     jobCategory: raw.jobCategory ?? existing?.jobCategory ?? [],
@@ -152,6 +153,69 @@ function normalizeUser(raw: ApiUser, existing?: User | null): User {
     company: raw.company,
     socialLinks: raw.socialLinks ?? existing?.socialLinks ?? {},
   };
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function findApiUser(value: unknown): ApiUser | null {
+  let current: unknown = value;
+
+  for (let depth = 0; depth < 4 && isRecord(current); depth += 1) {
+    if (
+      typeof current.userName === "string" ||
+      typeof current.email === "string"
+    ) {
+      return current as ApiUser;
+    }
+
+    if (isRecord(current.user)) {
+      current = current.user;
+    } else if (isRecord(current.data)) {
+      current = current.data;
+    } else if (isRecord(current.profile)) {
+      current = current.profile;
+    } else {
+      break;
+    }
+  }
+
+  return null;
+}
+
+function findAuthToken(value: unknown): string | null {
+  let current: unknown = value;
+
+  for (let depth = 0; depth < 4 && isRecord(current); depth += 1) {
+    if (typeof current.token === "string" && current.token) {
+      return current.token;
+    }
+    if (isRecord(current.data)) {
+      current = current.data;
+    } else if (isRecord(current.user)) {
+      current = current.user;
+    } else {
+      break;
+    }
+  }
+
+  return null;
+}
+
+function findApiMessage(value: unknown): string | undefined {
+  let current: unknown = value;
+
+  for (let depth = 0; depth < 4 && isRecord(current); depth += 1) {
+    if (typeof current.message === "string") return current.message;
+    if (isRecord(current.data)) {
+      current = current.data;
+    } else {
+      break;
+    }
+  }
+
+  return undefined;
 }
 
 export function getPostedById(user: User | null | undefined): string {
@@ -210,24 +274,45 @@ export const userStore = create<UserState>()(
     },
 
     authenticate: async (formData: loginInfo) => {
-      const response = await userApi.post<UserApiResponse, loginInfo>("/login", formData);
-
-      if (response.token && response.user) {
-        let existing: User | null = null;
-        try {
-          const stored = localStorage.getItem(AUTH_USER_KEY);
-          if (stored) existing = JSON.parse(stored) as User;
-        } catch {
-          existing = null;
-        }
-
-        const user = normalizeUser(response.user, existing);
-        saveAuth(response.token, user);
-        useSavedJobStore.getState().clearSavedJobs();
-        set({ token: response.token, user, userDetails: user });
+      const response = await userApi.post<unknown, loginInfo>("/login", formData);
+      const token = findAuthToken(response);
+      if (!token) {
+        throw new Error("Login succeeded without an authentication token.");
       }
 
-      return response;
+      const apiUser = findApiUser(response);
+      const fallbackName = formData.email.split("@")[0] || formData.email;
+      const user = normalizeUser(
+        {
+          ...apiUser,
+          userName: apiUser?.userName?.trim() || fallbackName,
+          email: apiUser?.email || formData.email,
+        },
+        get().user
+      );
+      saveAuth(token, user);
+      useSavedJobStore.getState().clearSavedJobs();
+      const hasProfileName = Boolean(apiUser?.userName?.trim());
+      set({ token, user, userDetails: hasProfileName ? user : null });
+
+      let profileLoadError: string | undefined;
+      if (!hasProfileName) {
+        try {
+          await get().fetchUserDetails();
+        } catch (error) {
+          profileLoadError =
+            error instanceof Error
+              ? error.message
+              : "Could not load your profile details.";
+        }
+      }
+
+      return {
+        token,
+        user: apiUser ?? undefined,
+        message: findApiMessage(response),
+        profileLoadError,
+      };
     },
 
     register: async (formData: RegisterInfo) => {
@@ -241,9 +326,14 @@ export const userStore = create<UserState>()(
     fetchUserDetails: async () => {
       set({ isLoadingDetails: true });
       try {
-        const response = await userApi.get<UserDetailsResponse>("/user-details");
+        const rawResponse = await userApi.get<unknown>("/user-details");
+        const apiUser = findApiUser(rawResponse);
+        if (!apiUser) {
+          throw new Error("The user details response did not include a user.");
+        }
+
         const existing = get().userDetails ?? get().user;
-        const user = normalizeUser(response.user, existing);
+        const user = normalizeUser(apiUser, existing);
         set({ userDetails: user, user: user });
 
         const token = get().token ?? localStorage.getItem(AUTH_TOKEN_KEY);
@@ -251,7 +341,10 @@ export const userStore = create<UserState>()(
           saveAuth(token, user);
         }
 
-        return response;
+        return {
+          message: findApiMessage(rawResponse) ?? "",
+          user: apiUser,
+        };
       } finally {
         set({ isLoadingDetails: false });
       }

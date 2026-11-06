@@ -27,6 +27,7 @@ export default function BrowseJobPage() {
     isLoadingJobs,
     searchFilters,
     searchInitialized,
+    appliedJobIds,
     fetchJobs,
     setSearchPage,
     hydrateSearchFromUrl,
@@ -94,9 +95,9 @@ export default function BrowseJobPage() {
                     {jobs.map((job) => (
                       <div
                         key={job._id}
-                        className="col-lg-4 col-md-6 col-sm-12 browse-job-col"
+                        className={`col-lg-4 col-md-6 col-sm-12 browse-job-col`}
                       >
-                        <div className="browse-job-card">
+                        <div className={`${appliedJobIds?.includes(job._id) ? 'browse-job-card bg-[#f0fdf4] border border-[#bbf7d0]' : 'browse-job-card'}`}>
                           <div className="header">
                             <div className="images">
                               <img
@@ -125,7 +126,7 @@ export default function BrowseJobPage() {
 
                           <div className="footer">
                             <div className="buttons">
-                              <button
+                              { appliedJobIds?.includes(job._id) ? <button type="button" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded disabled" disabled>Applied</button> : <button
                                 type="button"
                                 className="apply-now-button"
                                 onClick={() =>
@@ -138,7 +139,8 @@ export default function BrowseJobPage() {
                                 }
                               >
                                 Apply Now
-                              </button>
+                              </button> }
+                              
                               <SaveJobButton jobId={job._id} />
                             </div>
                           </div>

@@ -18,9 +18,9 @@ export default function ToastContainer() {
   }
 
   return createPortal(
-    <div className="toast-container" aria-live="polite" aria-atomic="true">
+    <div className="app-toast-container" aria-live="polite" aria-atomic="true">
       {toasts.map((toast) => (
-        <div key={toast.id} className={`toast toast-${toast.type}`}>
+        <div key={toast.id} className={`app-toast app-toast-${toast.type}`}>
           <span className="toast-message">{toast.message}</span>
           <button
             type="button"

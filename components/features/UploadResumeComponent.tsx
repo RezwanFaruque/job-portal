@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ResumeReviewView from "@/components/features/ResumeReviewView";
+import ResumeSuggestionsChat from "@/components/features/ResumeSuggestionsChat";
 import {
   createPdfPreviewUrl,
   extractTextFromPdf,
@@ -626,6 +627,10 @@ export default function UploadResumeComponent() {
           </div>
         </div>
       )}
+      <ResumeSuggestionsChat
+        fields={fields}
+        onApplySuggestion={handleFieldChange}
+      />
     </div>
   );
 }

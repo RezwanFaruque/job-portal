@@ -60,13 +60,34 @@
             align-items: center;
             justify-content: center;
             width: 20px;
+            height: 22px;
+            flex: 0 0 20px;
+            color: #64736f;
 
             .logo-img {
               width: 18px;
               height: 18px;
               object-fit: contain;
             }
+
+            .sidebar-icon-svg {
+              display: block;
+              width: 19px;
+              height: 19px;
+              overflow: visible;
+              color: inherit;
+              transition: color 0.18s ease, transform 0.18s ease;
+            }
           }
+
+          &:hover .logo {
+            color: #277f6a;
+          }
+
+          &.active .logo {
+            color: #277f6a;
+          }
+
           .links {
             padding-left: 14px;
 
