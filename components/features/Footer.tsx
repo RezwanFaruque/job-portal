@@ -176,16 +176,16 @@ const Footer: React.FC = () => (
 
           <div className="last-footer">
             <div className="title-text">Need Any Support? Call to</div>
-            <div className="logo-with-phone">
-              <div className="logo">
+            <a className="logo-with-phone" href="tel:+16507626683">
+              <span className="logo">
                 <img
                   className="img-fluid last-footer-logo"
                   src="/assets/Images/last-footer-logo.png"
                   alt=""
                 />
-              </div>
-              <div className="caller-text">+1 650-762-6683</div>
-            </div>
+              </span>
+              <span className="caller-text">+1 650-762-6683</span>
+            </a>
           </div>
         </div>
       </div>

@@ -1,39 +1,52 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const SubscribeSection: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!email.trim()) return;
+    setSubmitted(true);
+  }
+
   return (
-    <section className="subscribe">
+    <section className="subscribe" aria-labelledby="home-subscribe-title">
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="main-section" data-home-reveal="up">
-              <div className="title">
-                Subscribe Newsletter & 
-                <div>Ready for some good news?</div>
-              </div>
-
-              <div className="body">
-                Every other week, we’ll send you emails with uplifting news of people
-                banding together, opportunities to make a difference, and jobs that
-                help others.
-              </div>
-
-              <div className="search-section">
-                <div className="input-group mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Enter your email address"
-                    aria-label="Recipient's username"
-                    aria-describedby="basic-addon2"
-                  />
-                  <button className="search-subscribe" type="submit">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-            </div>
+        <div className="home-subscribe" data-home-reveal="up">
+          <div className="home-subscribe-copy">
+            <span className="home-section-eyebrow">Newsletter</span>
+            <h2 id="home-subscribe-title">Notes worth opening.</h2>
+            <p>
+              A short letter with career ideas, useful roles, and stories from people
+              making their next move.
+            </p>
           </div>
+
+          {submitted ? (
+            <p className="home-subscribe-thanks" role="status">
+              Thanks. You&apos;re on the list for the next letter.
+            </p>
+          ) : (
+            <form className="home-subscribe-form" onSubmit={handleSubmit}>
+              <label className="visually-hidden" htmlFor="home-newsletter-email">
+                Email address
+              </label>
+              <input
+                id="home-newsletter-email"
+                type="email"
+                required
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder="Email address"
+                autoComplete="email"
+              />
+              <button type="submit">Subscribe</button>
+              <p>Occasional notes. Unsubscribe whenever you like.</p>
+            </form>
+          )}
         </div>
       </div>
     </section>

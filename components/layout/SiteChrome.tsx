@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Footer from "@/components/features/Footer";
 import { Header } from "@/components/layout/Header";
+import SmoothScroll, { isPublicPage } from "@/components/layout/SmoothScroll";
 import ModalContainer from "@/components/ModalContainer";
 
 export default function SiteChrome({
@@ -15,6 +16,7 @@ export default function SiteChrome({
 
   return (
     <>
+      {isPublicPage(pathname) && <SmoothScroll />}
       {!isAdminRoute && <Header />}
       {children}
       {!isAdminRoute && <ModalContainer />}

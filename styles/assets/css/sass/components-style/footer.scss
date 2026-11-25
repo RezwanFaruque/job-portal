@@ -1,99 +1,111 @@
-#footer{
-    
-    padding-top: 70px;
-    border-top: 3px solid #DBDDDE;
-    .container{
-        .row{
-            .footer-content{
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                .fo-content{
-                    margin-right: 80px;
-                    .title{
-                        font-size: 18px;
-                        font-family: 'Poppin-Medium';
-                        color: #2F3639;
-                        line-height: 27px;
-                        margin-bottom: 30px;
-                    }
-                    .links{
-                        ul{
-                            list-style: none;
-                            padding-left: 0;
+#footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid #e3e8e6;
+  background: #fff;
 
-                            li{
-                                margin-bottom: 10px;
-                                .footer-link{
-                                    text-decoration: none;
-                                    font-size: 14px;
-                                    font-family: 'Poppin-Light';
-                                    color: #2F3639;
-                                    line-height: 21px;
-                                }
-                            }
-                        }
-                    }
-                    &.about-us{
-                       
-                    }
-                    &.career-res{
-                       
-                    }
-                    &.job-sec{
-                        
-                    }
+  .container .row {
+    margin: 0;
+  }
 
-                    &.employee{
-                        
-                    }
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px 28px;
+    width: 100%;
+  }
 
-                    &.so-section{
-                        
-                    }
-                    .title{
-                       
-                    }
-                    .links{
-                       
-                    }
-                }
-            }
-            .last-footer{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                margin-top: 100px;
-                margin-bottom: 20px;
-                .title-text{
-                    font-size: 18px;
-                    font-family: 'Poppin-Light';
-                    color: #2F3639;
-                    line-height: 27px;
-                    margin-right: 40px;
-                }
-                .logo-with-phone{
-                    display: flex;
-                    align-items: center;
-                    
-                    .logo{
-                        .last-footer-logo{
-                            width: 25px;
-                            height: 25px;
-                            margin-right: 10px;
+  .fo-content,
+  .career-resource {
+    min-width: 0;
+    margin: 0;
+  }
 
-                        }
-                    }
-                    .caller-text{
-                        font-size: 18px;
-                        font-family: 'Poppin-Medium';
-                        color: #2F3639;
-                        line-height: 27px;
-                    }
-                }
-            }
-        }
+  .title {
+    margin-bottom: 16px;
+    color: #2f3639;
+    font-family: "Poppin-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
+
+    .footer-link {
+      color: #5c676b;
+      font-family: "Poppin-Light", sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      text-decoration: none;
+
+      &:hover {
+        color: #14342c;
+      }
+    }
+  }
+
+  .last-footer {
+    display: flex;
+    grid-column: 1 / -1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px 20px;
+    width: 100%;
+    margin: 8px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid #e3e8e6;
+
+    .title-text {
+      margin: 0;
+      color: #2f3639;
+      font-family: "Poppin-Light", sans-serif;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .logo-with-phone {
+      display: inline-flex;
+      align-items: center;
+      color: inherit;
+      text-decoration: none;
+
+      .last-footer-logo {
+        width: 22px;
+        height: 22px;
+        margin-right: 8px;
+      }
+
+      .caller-text {
+        color: #2f3639;
+        font-family: "Poppin-Medium", sans-serif;
+        font-size: 18px;
+        line-height: 1.3;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 40px;
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .last-footer {
+      justify-content: flex-start;
+    }
+  }
 }
